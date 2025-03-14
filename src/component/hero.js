@@ -24,6 +24,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-[#0e6493]/90"></div>
             </div>
+            
 
             {/* Contenido en dos columnas */}
             <div className="relative z-10 flex flex-col md:flex-row justify-between items-center w-full max-w-6xl px-6 md:px-10 gap-10">

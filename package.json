@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "internet-psi": "file:",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.479.0",
     "next": "15.2.2",

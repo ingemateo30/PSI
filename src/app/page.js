@@ -6,25 +6,17 @@ import Navbar from '@/component/navbar';
 import Planes from '@/component/planes';
 import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
-import Mapa from '@/component/mapa';
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/component/mapa"), {
+  ssr: false, // 🚀 Desactiva el renderizado en servidor
+});
 import Caracteristica from '@/component/caracteristicas';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import { ArrowRight, MapPin, Phone, Mail, ChevronRight, Star, UserCheck, Users } from "lucide-react";
+import { ArrowRight, MapPin, Phone,Star, UserCheck,} from "lucide-react";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Handle scroll effect for navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
+   return (
     <div className="min-h-screen flex flex-col">
       <Head>
         <title>PSI - Internet y Televisión por Fibra Óptica</title>
@@ -37,7 +29,7 @@ export default function Home() {
       </Head>
 
       {/* Navbar with scroll effect */}
-      <div className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+      <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
         <Navbar />
       </div>
 
@@ -245,7 +237,7 @@ export default function Home() {
 
       {/* Mapa Section */}
       <section>
-        <Mapa />
+        <Map />
       </section>
 
 
