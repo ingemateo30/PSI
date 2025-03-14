@@ -33,7 +33,7 @@ export default function Home() {
         <meta property="og:title" content="PSI - Internet y Televisión por Fibra Óptica" />
         <meta property="og:description" content="Tu compañía de internet y televisión por fibra óptica" />
         <meta property="og:image" content="/og-image.jpg" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       {/* Navbar with scroll effect */}
