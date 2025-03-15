@@ -37,7 +37,7 @@ export default function Home() {
       <Hero />
 
       {/* Características Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-white to-blue-50">
         <Caracteristica />
       </section>
 
