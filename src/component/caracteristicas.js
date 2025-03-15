@@ -20,7 +20,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <div className="relative py-20 bg-gradient-to-b from-white to-blue-50">
+    <div className="relative py-1 bg-gradient-to-b from-white to-blue-50">
       {/* Fondo sutil */}
       <div className="absolute inset-0">
         <div className="bg-gradient-to-b from-white to-blue-50 w-full h-full opacity-80"></div>
