@@ -20,7 +20,7 @@ export default function Empresa() {
             <div className="bg-gradient-to-b from-white to-gray-50 min-h-screen text-gray-900 pt-16 pb-24">
                 {/* Hero Section */}
                 <div className="relative overflow-hidden bg-[#0e6493] text-white py-20 px-6 mb-16">
-                    <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
+                    <div className="absolute inset-0 bg-[url('/imagen.webp')] opacity-10"></div>
                     <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#e31e25]/20 rounded-full blur-3xl"></div>
                     <div className="absolute -top-24 -left-24 w-64 h-64 bg-[#e31e25]/20 rounded-full blur-3xl"></div>
                     

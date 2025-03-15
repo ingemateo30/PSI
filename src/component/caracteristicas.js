@@ -25,6 +25,7 @@ export default function WhyChooseUs() {
       <div className="absolute inset-0">
         <div className="bg-gradient-to-b from-white to-blue-50 w-full h-full opacity-80"></div>
       </div>
+      <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-20"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">

@@ -44,6 +44,7 @@ const plans = [
 export default function PlansSection() {
   return (
     <div className="relative py-20 bg-white overflow-hidden">
+      <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-20"></div>
       {/* Background decoration */}
       <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-50 rounded-full opacity-70"></div>
       <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-50 rounded-full opacity-70"></div>

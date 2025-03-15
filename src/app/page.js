@@ -13,10 +13,10 @@ const Map = dynamic(() => import("@/component/mapa"), {
 });
 import Caracteristica from '@/component/caracteristicas';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import { ArrowRight, MapPin, Phone,Star, UserCheck,} from "lucide-react";
+import { ArrowRight, MapPin, Phone, Star, UserCheck, } from "lucide-react";
 
 export default function Home() {
-   return (
+  return (
     <div className="min-h-screen flex flex-col">
       <Head>
         <title>PSI - Internet y Televisión por Fibra Óptica</title>
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-white"></div>
           <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-white"></div>
         </div>
-        
+
         <div className="relative container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
