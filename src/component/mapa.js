@@ -162,12 +162,7 @@ export default function MapaSedes() {
                   <p className="text-gray-700">{selectedSede.email}</p>
                 </div>
               </div>
-              
-              <button className="w-full mt-4 bg-[#0e6493] hover:bg-[#0a4f7a] text-white py-2 px-4 rounded flex items-center justify-center transition-colors">
-                <ExternalLink size={16} className="mr-2" />
-                Cómo llegar
-              </button>
-            </div>
+                      </div>
           )}
         </div>
         
