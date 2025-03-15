@@ -61,11 +61,6 @@ export default function Empresa() {
                         {/* Misión */}
                         <div className={`bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#0e6493] h-full transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "200ms" }}>
                             <div className="flex flex-col h-full">
-                                <div className="mb-4">
-                                    <div className="w-16 h-16 rounded-full bg-[#0e6493]/10 flex items-center justify-center mx-auto">
-                                        <span className="text-3xl">🎯</span>
-                                    </div>
-                                </div>
                                 <h3 className="text-2xl font-bold text-[#0e6493] mb-4 text-center">Misión</h3>
                                 <p className="text-gray-700 flex-grow">
                                     Prestar el mejor servicio de televisión por suscripción con un excelente servicio al cliente, 
@@ -78,11 +73,6 @@ export default function Empresa() {
                         {/* Visión */}
                         <div className={`bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#0e6493] h-full transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "400ms" }}>
                             <div className="flex flex-col h-full">
-                                <div className="mb-4">
-                                    <div className="w-16 h-16 rounded-full bg-[#0e6493]/10 flex items-center justify-center mx-auto">
-                                        <span className="text-3xl">🚀</span>
-                                    </div>
-                                </div>
                                 <h3 className="text-2xl font-bold text-[#0e6493] mb-4 text-center">Visión</h3>
                                 <p className="text-gray-700 flex-grow">
                                     Ser la empresa líder en la prestación del servicio de televisión por suscripción, generando bienestar 
@@ -96,11 +86,6 @@ export default function Empresa() {
                     {/* Políticas de Calidad */}
                     <div className={`bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#e31e25] transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "600ms" }}>
                         <div className="flex flex-col md:flex-row md:items-center gap-6">
-                            <div className="flex-shrink-0">
-                                <div className="w-20 h-20 rounded-full bg-[#e31e25]/10 flex items-center justify-center">
-                                    <span className="text-4xl">✅</span>
-                                </div>
-                            </div>
                             <div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-[#e31e25] mb-4">Políticas de Calidad</h3>
                                 <p className="text-gray-700 text-lg leading-relaxed">
