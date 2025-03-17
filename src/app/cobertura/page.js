@@ -6,6 +6,7 @@ import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 const Map = dynamic(() => import("@/component/mapa"), {
   ssr: false, // 🚀 Desactiva el renderizado en servidor
 });
