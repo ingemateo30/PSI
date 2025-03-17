@@ -148,8 +148,9 @@ export default function EnhancedPlansSection() {
 
     return (
         <>
-
-            <Navbar />
+ <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
+        <Navbar />
+      </div>
             <div className="relative py-16 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
                 {/* Decorative elements */}
                 <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-10"></div>

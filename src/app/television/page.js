@@ -51,7 +51,10 @@ export default function Television() {
 
   return (
     <>
-      <Navbar />
+      <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
+        <Navbar />
+      </div>
+      
       <div className="bg-gradient-to-b from-white to-gray-100 min-h-screen text-gray-900 py-16 px-6">
         {/* Hero Section */}
         <div className="relative overflow-hidden rounded-xl max-w-6xl mx-auto mb-16 bg-[#0e6493] shadow-2xl">

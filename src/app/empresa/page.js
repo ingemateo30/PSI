@@ -16,7 +16,10 @@ export default function Empresa() {
 
   return (
     <>
-      <Navbar />
+      <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
+        <Navbar />
+      </div>
+
       <div className="bg-gradient-to-b from-white to-gray-50 min-h-screen text-gray-900 pt-16 pb-24">
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-[#0e6493] text-white py-20 px-6 mb-16">

@@ -27,7 +27,7 @@ export default function Hero() {
             {/* Fondo con imagen y overlay */}
             <div className="absolute inset-0">
                 <Image
-                    src="/antena2.png"
+                    src="/jj.png"
                     alt="Fondo hero"
                     fill
                     style={{
