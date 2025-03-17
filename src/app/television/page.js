@@ -13,12 +13,12 @@ export default function Television() {
     "Noticias": {
       channels: ["CNN", "BBC News", "Caracol Noticias", "RCN Noticias", "NTN24"],
       icon: "/images/noticias-icon.png", // Asegúrate de tener estos íconos
-      bgImage: "/4.png" // Placeholder para demo
+      bgImage: "/deporte.png" // Placeholder para demo
     },
     "Deportes": {
-      channels: ["ESPN", "Fox Sports", "Win Sports", "Directv Sports", "Gol Caracol"],
+      channels: ["ESPN", "ESPN2", "ESPN3", "ESPN4", "ESPN5", "ESPN6", "ESPN7", "discovery turbo"],
       icon: "/4.png",
-      bgImage: "/api/placeholder/300/200"
+      bgImage: "/deporte2.png"
     },
     "Entretenimiento": {
       channels: ["FX", "TNT", "Warner Channel", "Sony", "Universal"],
@@ -133,60 +133,23 @@ export default function Television() {
           </div>
         </div>
 
-        {/* Canales Section */}
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-[#0e6493] mb-12">Explora Nuestros Canales</h3>
+        <div className="max-w-6xl mx-auto text-center my-16">
+      <h3 className="text-3xl md:text-4xl font-bold text-[#0e6493] mb-8">
+        Canales Disponibles
+      </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(canales).map(([categoria, data]) => (
-              <div
-                key={categoria}
-                className="relative group cursor-pointer rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2"
-                onClick={() => showChannels(categoria)}
-              >
-                {/* Background Image with Overlay */}
-                <div className="relative h-56">
-                  <img
-                    src={data.bgImage}
-                    alt={categoria}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+      <div className="relative w-[505px] h-[550px] mx-auto shadow-2xl rounded-xl overflow-hidden">
+        <Image
+          src="/canales.png"
+          alt="Canales Disponibles"
+          width={505}
+          height={550}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
 
-                  {/* Content */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                    <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 bg-white rounded-full p-2 mr-4">
-                        <img src={data.icon} alt="" className="w-full object-contain" />
-                      </div>
-                      <h4 className="text-2xl font-bold">{categoria}</h4>
-                    </div>
 
-                    <p className="text-sm opacity-90">
-                      {data.channels.length} canales disponibles
-                    </p>
-                  </div>
-                </div>
-
-                {/* Hover Content - Channel List */}
-                <div className={`absolute inset-0 bg-[#0e6493] bg-opacity-95 flex flex-col justify-center p-6 text-white transition-all duration-300 ${selectedCategory === categoria ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                  <h4 className="text-xl font-bold mb-4">Canales de {categoria}</h4>
-                  <ul className="space-y-2">
-                    {data.channels.map((canal, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <span className="w-2 h-2 bg-[#e31e25] rounded-full mr-2"></span>
-                        {canal}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="mt-4 self-start bg-[#e31e25] hover:bg-red-700 text-white text-sm py-2 px-4 rounded transition">
-                    Ver todos
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="max-w-4xl mx-auto mt-20 text-center bg-gradient-to-r from-[#0e6493] to-[#073a57] rounded-2xl shadow-xl p-12 text-white relative overflow-hidden">
