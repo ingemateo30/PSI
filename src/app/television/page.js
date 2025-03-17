@@ -133,21 +133,21 @@ export default function Television() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto text-center my-16">
-      <h3 className="text-3xl md:text-4xl font-bold text-[#0e6493] mb-8">
-        Canales Disponibles
-      </h3>
+        <div className="max-w-6xl mx-auto text-center my-16 px-4">
+          <h3 className="text-3xl md:text-4xl font-bold text-[#0e6493] mb-8">
+            Canales Disponibles
+          </h3>
 
-      <div className="relative w-[505px] h-[550px] mx-auto shadow-2xl rounded-xl overflow-hidden">
-        <Image
-          src="/canales.png"
-          alt="Canales Disponibles"
-          width={505}
-          height={550}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
+          <div className="relative w-full max-w-[505px] h-auto mx-auto shadow-2xl rounded-xl overflow-hidden">
+            <Image
+              src="/canales.png"
+              alt="Canales Disponibles"
+              width={505}
+              height={550}
+              className="w-full h-auto object-contain md:object-cover"
+            />
+          </div>
+        </div>
 
 
 
