@@ -13,10 +13,7 @@ export default function Navbar() {
             <div className="bg-[#0e6493] text-white text-xs py-2">
                 <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center space-x-2">
-                        <span className="hidden sm:inline font-medium">PROVEEDOR DE TELECOMUNICACIONES S.A.S</span>
-                    </div>
-                    <div className="flex flex-wrap gap-4 sm:gap-6 text-xs">
-                        <a
+                    <a
                             href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
                             className="hover:underline py-1 flex items-center group transition-all duration-300"
                         >
@@ -35,8 +32,11 @@ export default function Navbar() {
                             </svg>
                             <span className="group-hover:text-yellow-300">PAGA TU FACTURA</span>
                         </a>
+                    </div>
+                    <div className="flex flex-wrap gap-4 sm:gap-6 text-xs">
+                      
                         <a
-                            href="#"
+                            href="https://wa.me/573184550936"
                             className="hover:underline py-1 hidden md:flex items-center group transition-all duration-300"
                         >
                             <svg
@@ -52,10 +52,10 @@ export default function Navbar() {
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                 ></path>
                             </svg>
-                            <span className="group-hover:text-yellow-300">VENTAS 6013714000</span>
+                            <span className="group-hover:text-yellow-300">San Gil 3184550936</span>
                         </a>
                         <a
-                            href="#"
+                            href="https://wa.me/573188237392"
                             className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
                         >
                             <svg
@@ -71,7 +71,45 @@ export default function Navbar() {
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                 ></path>
                             </svg>
-                            <span className="group-hover:text-yellow-300">SOPORTE TECNICO 018000128999</span>
+                            <span className="group-hover:text-yellow-300">Socorro 3188237392</span>
+                        </a>
+                        <a
+                            href="https://wa.me/573187305239"
+                            className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
+                        >
+                            <svg
+                                className="w-3 h-3 mr-1 group-hover:text-yellow-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                ></path>
+                            </svg>
+                            <span className="group-hover:text-yellow-300">Piedecuesta 3187305239</span>
+                        </a>
+                        <a
+                            href="https://wa.me/573165602425<"
+                            className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
+                        >
+                            <svg
+                                className="w-3 h-3 mr-1 group-hover:text-yellow-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                ></path>
+                            </svg>
+                            <span className="group-hover:text-yellow-300">Campo alegre 3165602425</span>
                         </a>
                     </div>
                 </div>
@@ -141,7 +179,7 @@ export default function Navbar() {
                         {/* Desktop Call Button */}
                         <div className="hidden lg:flex items-center">
                             <a
-                                href="#"
+                                href="https://wa.me/573184550936"
                                 className="px-6 py-3 rounded-lg font-bold text-white bg-gradient-to-r from-[#e31e25] to-[#ff3c42] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg flex items-center space-x-2 relative overflow-hidden group"
                             >
                                 <svg
@@ -233,7 +271,7 @@ export default function Navbar() {
                     {/* Botón Cotizar */}
                     <div className="pt-4 mt-4 border-t border-gray-100">
                         <a
-                            href="#"
+                            href="https://wa.me/573184550936"
                             className="flex items-center justify-center space-x-2 w-full py-4 px-6 bg-gradient-to-r from-[#e31e25] to-[#ff3c42] text-white rounded-lg font-semibold hover:shadow-md transition-shadow"
                         >
                             <svg

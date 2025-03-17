@@ -217,14 +217,14 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="#"
+                href="/cobertura"
                 className="px-8 py-4 rounded-full bg-[#e31e25] text-white font-bold text-lg shadow-lg transition transform hover:scale-105 hover:bg-red-600 flex items-center justify-center"
               >
                 <span>Ver disponibilidad en tu zona</span>
                 <MapPin className="ml-2" size={18} />
               </a>
               <a
-                href="#"
+                href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+su+servicio"
                 className="px-8 py-4 rounded-full font-bold text-lg border-2 border-white shadow-lg transition transform hover:scale-105 hover:bg-white/10 flex items-center justify-center"
               >
                 <span>Contactar a un asesor</span>

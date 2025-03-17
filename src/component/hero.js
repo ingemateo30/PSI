@@ -17,7 +17,13 @@ export default function Hero() {
 
     return (
         <div className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden">
-            
+            <div className="absolute bottom-0 left-0 w-full z-20 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="w-full h-auto">
+                    <path fill="currentColor" fillOpacity="1" d="M0,80L48,75C96,70,192,60,288,55C384,50,480,50,576,55C672,60,768,70,864,75C960,80,1056,80,1152,75C1248,70,1344,60,1392,55L1440,50L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path>
+                </svg>
+            </div>
+
+
             {/* Fondo con imagen y overlay */}
             <div className="absolute inset-0">
                 <Image
@@ -25,7 +31,7 @@ export default function Hero() {
                     alt="Fondo hero"
                     fill
                     style={{
-                        objectFit: "cover", 
+                        objectFit: "cover",
                         transform: isVisible ? "scale(1.05)" : "scale(1)",
                         transition: "transform 10s ease-out"
                     }}
@@ -55,23 +61,23 @@ export default function Hero() {
                 </div>
 
                 {/* Tarjeta de oferta */}
-                <div className="relative bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-md border border-[#3a84b3]/30 transition-all duration-700 text-center">
-                    
+                <div className="relative bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-md border border-[#3a84b3]/30 transition-all duration-700 text-center flex flex-col items-center">
+
                     <div className="absolute -top-5 px-4 py-2 bg-[#e31e25] text-white font-bold rounded-bl-lg rounded-tr-lg shadow-lg text-xs uppercase tracking-wide">
                         🔥 ¡OFERTA EXCLUSIVA! 🔥
                     </div>
 
-                    <h2 className="text-2xl md:text-3xl font-bold mt-6 mb-4">
+                    <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-6 ">
                         PACK FIBRA + TV PREMIUM
                     </h2>
 
-                    <div className="relative inline-block">
-                        <span className="absolute -top-4 left-0 text-lg font-bold text-[#e31e25]">desde</span>
-                        <span className="text-5xl font-extrabold text-white">$89.900</span>
-                        <span className="text-md font-medium text-gray-100 ml-2">/mes</span>
+                    <div className="relative inline-block text-center">
+                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-lg font-bold text-[#e31e25]">desde</span>
+                        <span className="text-5xl font-extrabold text-white block">$89.900</span>
+                        <span className="text-md font-medium text-gray-100">/mes</span>
                     </div>
 
-                    <div className="bg-[#0a4f7a]/50 rounded-xl p-4 mt-6">
+                    <div className="bg-[#0a4f7a]/50 rounded-xl p-4 mt-6 w-full">
                         <p className="text-lg font-bold text-white mb-3">Tu pack incluye:</p>
                         <ul className="space-y-2 text-left">
                             {["300 Mbps simétricos", "+120 canales Premium"].map((item, index) => (
@@ -87,11 +93,14 @@ export default function Hero() {
 
                     <p className="text-sm text-gray-200 mt-4">Verifica la cobertura en tu zona.</p>
 
-                    <button className="mt-6 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform w-full text-lg uppercase tracking-wider shadow-lg hover:scale-105">
+                    <a href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+su+servicio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform w-full text-lg uppercase tracking-wider shadow-lg hover:scale-105 text-center block">
                         ¡CONTRATAR AHORA!
-                    </button>
-                </div>
+                    </a>
 
+                </div>
             </div>
         </div>
     );
