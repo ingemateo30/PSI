@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="bg-[#0e6493] text-white text-xs py-2">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2">
-            <span className="hidden sm:inline font-medium">Conexión de alta velocidad</span>
+            <span className="hidden sm:inline font-medium">PROVEEDOR DE TELECOMUNICACIONES S.A.S</span>
           </div>
           <div className="flex flex-wrap gap-4 sm:gap-6 text-xs">
             <a
@@ -156,7 +156,7 @@ export default function Navbar() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   ></path>
                 </svg>
-                <span>¿Te llamamos?</span>
+                <span>Cotizar ahora</span>
                 <div className="absolute inset-0 bg-white opacity-20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               </a>
             </div>
@@ -241,7 +241,7 @@ export default function Navbar() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 ></path>
               </svg>
-              <span>¿Te llamamos?</span>
+              <span>Cotizar ahora</span>
             </a>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="absolute inset-0">
 
                 <Image
-                    src="/hero.png"
+                    src="/antena2.png"
                     alt="Fondo hero"
                     fill
                     style={{

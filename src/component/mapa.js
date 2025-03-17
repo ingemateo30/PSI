@@ -90,8 +90,8 @@ export default function MapaSedes() {
       {/* Título con animación */}
       <div className="relative text-center mb-16">
         <h2 className="text-5xl font-bold text-[#0e6493] tracking-tight">
-          Nuestras <span className="relative inline-block">
-            Sedes
+          Nuestra <span className="relative inline-block">
+            Cobertura
             <span className="block w-20 h-2 bg-[#e31e25] mx-auto mt-3 rounded-full"></span>
           </span>
         </h2>
