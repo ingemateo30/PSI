@@ -9,26 +9,6 @@ import { motion } from "framer-motion";
 import Mapa from '@/component/mapa';
 
 export default function Cobertura() {
-  const [direccion, setDireccion] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [animateCards, setAnimateCards] = useState(false);
-
-  useEffect(() => {
-    // Activar animación de las tarjetas después de cargar la página
-    setAnimateCards(true);
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    // Simulación de verificación
-    setTimeout(() => {
-      setIsLoading(false);
-      alert(`Verificando cobertura para: ${direccion}`);
-    }, 1500);
-  };
-
   return (
     <>
       <Navbar />
