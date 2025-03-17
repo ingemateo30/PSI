@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Planes Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-white to-blue-50">
         <Planes />
       </section>
 
@@ -236,7 +236,7 @@ export default function Home() {
       </section>
 
       {/* Mapa Section */}
-      <section>
+      <section >
         <Map />
       </section>
 

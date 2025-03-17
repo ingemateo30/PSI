@@ -114,16 +114,7 @@ export default function PlansSection() {
             </div>
 
             {/* Botón */}
-            <button
-              className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${
-                plan.featured 
-                  ? "bg-white text-[#0e6493] hover:bg-gray-100" 
-                  : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
-              }`}
-            >
-              <ShoppingCart className={`${plan.featured ? "text-[#0e6493]" : "text-white"} h-5 w-5`} />
-              <span>Solicitar cotizacion</span>
-            </button>
+         
           </div>
         ))}
       </div>
