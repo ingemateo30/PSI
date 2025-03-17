@@ -177,57 +177,64 @@ export default function Navbar() {
             </nav>
 
             {/* Mobile Menu */}
-            <div className={`lg:hidden fixed inset-0 z-40 bg-white transition-transform duration-300 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-                <div className="pt-20 px-4 space-y-4">
+            <div className={`lg:hidden fixed inset-0 z-50 bg-white transition-transform duration-300 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} h-screen overflow-y-auto`}>
+                <div className="pt-24 px-4 space-y-4">
+
+                    {/* Fibra Óptica */}
                     <a
                         href="/fibra"
-                        className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Globe size={20} className="text-[#0e6493]" />
                         <span className="font-medium">Fibra Óptica</span>
                     </a>
 
+                    {/* Televisión */}
                     <a
                         href="/television"
-                        className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Tv size={20} className="text-[#0e6493]" />
                         <span className="font-medium">Televisión</span>
                     </a>
 
+                    {/* Pague en línea */}
                     <a
                         href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
-                        className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <CreditCard size={20} className="text-[#0e6493]" />
                         <span className="font-medium">Pague en línea</span>
                     </a>
 
+                    {/* Cobertura */}
                     <a
                         href="/cobertura"
-                        className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <MapPin size={20} className="text-[#0e6493]" />
                         <span className="font-medium">Cobertura</span>
                     </a>
 
+                    {/* Empresa */}
                     <a
                         href="/empresa"
-                        className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Building2 size={20} className="text-[#0e6493]" />
                         <span className="font-medium">Empresa</span>
                     </a>
 
+                    {/* Botón Cotizar */}
                     <div className="pt-4 mt-4 border-t border-gray-100">
                         <a
                             href="#"
-                            className="flex items-center justify-center space-x-2 w-full py-3 px-6 bg-gradient-to-r from-[#e31e25] to-[#ff3c42] text-white rounded-lg font-semibold hover:shadow-md transition-shadow"
+                            className="flex items-center justify-center space-x-2 w-full py-4 px-6 bg-gradient-to-r from-[#e31e25] to-[#ff3c42] text-white rounded-lg font-semibold hover:shadow-md transition-shadow"
                         >
                             <svg
                                 className="w-5 h-5 animate-pulse"
@@ -245,8 +252,10 @@ export default function Navbar() {
                             <span>Cotizar ahora</span>
                         </a>
                     </div>
+
                 </div>
             </div>
+
         </div>
     );
 }
