@@ -57,10 +57,10 @@ export default function Hero() {
 
                 {/* Texto a la izquierda con animaciones mejoradas */}
                 <div
-                    className={`max-w-xl transition-all duration-1000 ease-out text-left ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"
+                    className={`max-w-xl transition-all duration-1000 ease-out text-left px-4 sm:px-0 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8 sm:-translate-x-16"
                         }`}
                 >
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug text-white drop-shadow-lg">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight sm:leading-snug text-white drop-shadow-lg">
                         ¡Velocidad y entretenimiento{" "}
                         <span className="relative inline-block">
                             al mejor precio!
@@ -68,7 +68,7 @@ export default function Hero() {
                         </span>
                     </h1>
 
-                    <p className="text-lg sm:text-xl md:text-2xl mt-4 sm:mt-6 text-gray-100 font-medium leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl mt-3 sm:mt-6 text-gray-100 font-medium leading-normal sm:leading-relaxed">
                         Disfruta fibra óptica de alta velocidad y TV premium sin costos ocultos.
                         ¡Contrata hoy y aprovecha esta oferta exclusiva!
                     </p>
@@ -76,52 +76,53 @@ export default function Hero() {
 
 
 
+
                 <div className="relative bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57] p-8 md:p-10 rounded-3xl shadow-2xl w-full max-w-lg border border-[#3a84b3]/30 transition-all duration-700 ease-out hover:shadow-[0px_20px_50px_rgba(0,0,0,0.5)] overflow-visible flex flex-col items-center text-center">
-  
-  {/* Badge de oferta */}
-  <div className="absolute -top-5 px-6 py-2 bg-[#e31e25] text-white font-bold rounded-bl-lg rounded-tr-lg shadow-xl text-xs uppercase tracking-wide">
-    🔥 ¡OFERTA EXCLUSIVA! 🔥
-  </div>
 
-  {/* Título */}
-  <h2 className="text-2xl md:text-3xl font-bold leading-tight text-white mt-6 mb-4">
-    PACK FIBRA + TV PREMIUM
-  </h2>
+                    {/* Badge de oferta */}
+                    <div className="absolute -top-5 px-6 py-2 bg-[#e31e25] text-white font-bold rounded-bl-lg rounded-tr-lg shadow-xl text-xs uppercase tracking-wide">
+                        🔥 ¡OFERTA EXCLUSIVA! 🔥
+                    </div>
 
-  {/* Precio */}
-  <div className="relative inline-block text-center">
-    <span className="absolute -top-4 -left-4 text-lg font-bold text-[#e31e25]">desde</span>
-    <span className="text-6xl md:text-7xl font-extrabold text-white tracking-tight">$89.900</span>
-    <span className="text-md font-medium text-gray-100 ml-2 align-top">/mes</span>
-  </div>
+                    {/* Título */}
+                    <h2 className="text-2xl md:text-3xl font-bold leading-tight text-white mt-6 mb-4">
+                        PACK FIBRA + TV PREMIUM
+                    </h2>
 
-  {/* Beneficios */}
-  <div className="bg-[#0a4f7a]/50 rounded-xl p-6 mt-6 w-full">
-    <p className="text-lg font-bold text-white mb-4">Tu pack incluye:</p>
-    <ul className="space-y-3 text-left">
-      {[
-        "300 Mbps simétricos",
-        "+120 canales Premium"
-      ].map((item, index) => (
-        <li key={index} className="flex items-center gap-2">
-          <svg className="w-5 h-5 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-          </svg>
-          <span className="text-gray-100">{item}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
+                    {/* Precio */}
+                    <div className="relative inline-block text-center">
+                        <span className="absolute -top-4 -left-4 text-lg font-bold text-[#e31e25]">desde</span>
+                        <span className="text-6xl md:text-7xl font-extrabold text-white tracking-tight">$89.900</span>
+                        <span className="text-md font-medium text-gray-100 ml-2 align-top">/mes</span>
+                    </div>
 
-  {/* Nota de cobertura */}
-  <p className="text-sm text-gray-200 mt-4 font-medium">Verifica la cobertura en tu zona.</p>
+                    {/* Beneficios */}
+                    <div className="bg-[#0a4f7a]/50 rounded-xl p-6 mt-6 w-full">
+                        <p className="text-lg font-bold text-white mb-4">Tu pack incluye:</p>
+                        <ul className="space-y-3 text-left">
+                            {[
+                                "300 Mbps simétricos",
+                                "+120 canales Premium"
+                            ].map((item, index) => (
+                                <li key={index} className="flex items-center gap-2">
+                                    <svg className="w-5 h-5 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                                    </svg>
+                                    <span className="text-gray-100">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-  {/* Botón CTA */}
-  <button className="mt-6 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 transform w-full text-lg uppercase tracking-wider shadow-lg hover:scale-105">
-    ¡CONTRATAR AHORA!
-  </button>
+                    {/* Nota de cobertura */}
+                    <p className="text-sm text-gray-200 mt-4 font-medium">Verifica la cobertura en tu zona.</p>
 
-</div>
+                    {/* Botón CTA */}
+                    <button className="mt-6 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 transform w-full text-lg uppercase tracking-wider shadow-lg hover:scale-105">
+                        ¡CONTRATAR AHORA!
+                    </button>
+
+                </div>
 
 
 
