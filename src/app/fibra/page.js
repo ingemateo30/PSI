@@ -427,52 +427,53 @@ export default function EnhancedPlansSection() {
                 </div>
             </div>
             <footer className="bg-gray-800 text-white py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div className="flex flex-col items-center text-center">
-                            {/* Logo */}
-                            <div className="mb-2">
-                                <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
-                            </div>
-                        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center text-center">
+              {/* Logo */}
+              <div className="mb-2">
+                <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
+              </div>
+            </div>
 
 
-                        <div>
-                            <h4 className="text-lg font-bold mb-4">Servicios</h4>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-gray-300 hover:text-white">Internet Fibra Óptica</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Televisión HD</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Paquetes</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Empresas</a></li>
-                            </ul>
-                        </div>
+            <div>
+              <h4 className="text-lg font-bold mb-4">Servicios</h4>
+              <ul className="space-y-2">
+                <li><a href="/fibra" className="text-gray-300 hover:text-white">Internet Fibra Óptica</a></li>
+                <li><a href="/television" className="text-gray-300 hover:text-white">Televisión HD</a></li>
+                <li><a href="/fibra" className="text-gray-300 hover:text-white">Paquetes</a></li>
+                <li><a href="/empresa" className="text-gray-300 hover:text-white">Empresas</a></li>
+              </ul>
+            </div>
 
-                        <div>
-                            <h4 className="text-lg font-bold mb-4">Soporte</h4>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-gray-300 hover:text-white">Centro de Ayuda</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Contacto</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Reporte de Problemas</a></li>
-                            </ul>
-                        </div>
+            <div>
+              <h4 className="text-lg font-bold mb-4">Soporte</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-300 hover:text-white">Centro de Ayuda</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white">Contacto</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white">Reporte de Problemas</a></li>
+              </ul>
+            </div>
 
-                        <div>
-                            <h4 className="text-lg font-bold mb-4">Empresa</h4>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Noticias</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Trabaja con Nosotros</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
-                            </ul>
-                        </div>
-                    </div>
+            <div>
+              <h4 className="text-lg font-bold mb-4">Empresa</h4>
+              <ul className="space-y-2">
+                <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
+                <li><a href="/normatividad" className="text-gray-300 hover:text-white">Normatividad</a></li>
+                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiendo de datos</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+              </ul>
+            </div>
+          </div>
 
-                    <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-300">
-                        <p>&copy; 2025 PSI Fibra. Todos los derechos reservados.</p>
-                    </div>
-                </div>
-            </footer>
+          <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-300">
+            <p>&copy; {new Date().getFullYear()} PSI Fibra. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
             <FloatingSocial />
             <Boton />
             <FloatingWhatsApp

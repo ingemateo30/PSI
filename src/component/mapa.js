@@ -23,8 +23,8 @@ const iconoPersonalizado = new L.Icon({
 const sedes = [
   { 
     ciudad: "San Gil", 
-    lat: 6.561, 
-    lng: -73.131, 
+    lat: 6.5536, 
+    lng: -73.1308, 
     direccion: "Carrera 9 #9-94", 
     telefono: "(607) 724-5566",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
@@ -33,8 +33,8 @@ const sedes = [
   },
   { 
     ciudad: "Socorro", 
-    lat: 6.468, 
-    lng: -73.262, 
+    lat: 6.4668, 
+    lng: -73.2620, 
     direccion: "Carrera 14 #10-45", 
     telefono: "(607) 727-8800",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
@@ -43,8 +43,8 @@ const sedes = [
   },
   { 
     ciudad: "Campoalegre", 
-    lat: 2.684, 
-    lng: -75.325, 
+    lat: 2.6842, 
+    lng: -75.3257, 
     direccion: "Carrera 9 17-51", 
     telefono: "(608) 837-1122",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
@@ -53,8 +53,8 @@ const sedes = [
   },
   { 
     ciudad: "Piedecuesta", 
-    lat: 7.063, 
-    lng: -73.058, 
+    lat: 6.9895, 
+    lng: -73.0516, 
     direccion: "Carrera 7 4-63", 
     telefono: "(607) 655-9900",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",

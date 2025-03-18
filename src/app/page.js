@@ -11,8 +11,9 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 const Map = dynamic(() => import("@/component/mapa"), { ssr: false });
 import Caracteristica from '@/component/caracteristicas';
+import Enlaces from '@/component/enlaces'
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import { ArrowRight, MapPin, Phone, Star, UserCheck } from "lucide-react";
+import { ArrowRight, MapPin, Phone, Star, UserCheck} from "lucide-react";
 
 const testimonials = [
   {
@@ -95,7 +96,9 @@ export default function Home() {
       <section id="velocidad">
       <Velocidad />
       </section>
-
+<section>
+  <Enlaces />
+</section>
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -131,15 +134,15 @@ export default function Home() {
               <h4 className="text-lg font-bold mb-4">Empresa</h4>
               <ul className="space-y-2">
                 <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Noticias</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Politica privacidad</a></li>
+                <li><a href="/normatividad" className="text-gray-300 hover:text-white">Normatividad</a></li>
+                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiendo de datos</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
               </ul>
             </div>
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-300">
-            <p>&copy; 2025 PSI Fibra. Todos los derechos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} PSI Fibra. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
