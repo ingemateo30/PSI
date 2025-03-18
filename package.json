@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "fast-speedtest-api": "^0.3.2",
     "framer-motion": "^12.5.0",
     "internet-psi": "file:",
     "leaflet": "^1.9.4",

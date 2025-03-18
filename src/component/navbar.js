@@ -16,7 +16,7 @@ export default function Navbar() {
             <div className="bg-[#0e6493] text-white text-xs py-2">
                 <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center space-x-2">
-                    <a
+                        <a
                             href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
                             className="hover:underline py-1 flex items-center group transition-all duration-300"
                         >
@@ -35,9 +35,24 @@ export default function Navbar() {
                             </svg>
                             <span className="group-hover:text-yellow-300">PAGA TU FACTURA</span>
                         </a>
+                        <a
+                            href="#velocidad"
+                            className="hover:underline py-1 flex items-center group transition-all duration-300"
+                        >
+                            <svg
+                                className="w-6 h-6 mr-2 group-hover:text-yellow-300"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                            >
+                                -
+                            </svg>
+                            <span className="group-hover:text-yellow-300">PRUEBA TU VELOCIDAD</span>
+                        </a>
                     </div>
                     <div className="flex flex-wrap gap-4 sm:gap-6 text-xs">
-                      
+
                         <a
                             href="https://wa.me/573184550936"
                             className="hover:underline py-1 hidden md:flex items-center group transition-all duration-300"

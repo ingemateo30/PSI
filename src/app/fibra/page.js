@@ -22,9 +22,9 @@ import Image from "next/image";
 
 const internetPlans = [
     {
-        speed: "300",
-        name: "PLAN BÁSICO",
-        price: "$52.900",
+        speed: "100",
+        name: "PLAN TURBO",
+        price: "$74.900",
         uploadSpeed: "150",
         benefits: [
             "Ideal para 5-7 dispositivos",
@@ -34,61 +34,61 @@ const internetPlans = [
         color: "#0e6493",
     },
     {
-        speed: "500",
-        name: "PLAN PREMIUM",
-        price: "$71.100",
+        speed: "900",
+        name: "PLAN GIGABIT",
+        price: "$89.900",
         uploadSpeed: "250",
         benefits: [
             "Ideal para 10+ dispositivos",
             "Streaming 4K",
-            "Gaming online"
+            "Gaming profesional"
         ],
         featured: true,
         color: "#0e6493",
     },
     {
-        speed: "700",
-        name: "PLAN TURBO",
-        price: "$89.900",
+        speed: "500",
+        name: "PLAN PREMIUM",
+        price: "$79.900",
         uploadSpeed: "350",
         benefits: [
-            "Ideal para 15+ dispositivos",
-            "Streaming 4K HDR",
-            "Gaming profesional"
+            "Ideal para 8+ dispositivos",
+            "Streaming",
+            "Gaming online"
         ],
         color: "#0e6493",
     },
     {
-        speed: "1000",
-        name: "PLAN GIGABIT",
+        speed: "50",
+        name: "PLAN ESPECIAL",
         price: "$109.900",
         uploadSpeed: "500",
         benefits: [
-            "Ideal para 20+ dispositivos",
-            "Múltiples streams 4K",
-            "Gaming competitivo"
+            "Ideal para 5 dispositivos",
+            "perfecto para tareas basicas",
+            "Gaming basico"
         ],
         color: "#0e6493",
     },
     {
-        speed: "300",
+        speed: "10",
         name: "PLAN BÁSICO",
         price: "$52.900",
         uploadSpeed: "150",
         benefits: [
-            "Ideal para 5-7 dispositivos",
-            "Streaming HD",
+            "Ideal para 5 dispositivos",
+            "",
             "Gaming casual"
         ],
         color: "#0e6493",
     },
     {
-        speed: "300",
+        speed: "5",
         name: "PLAN BÁSICO",
         price: "$52.900",
         uploadSpeed: "150",
         benefits: [
-            "Ideal para 5-7 dispositivos",
+            "Ideal para +4 dispositivos",
             "Streaming HD",
             "Gaming casual"
         ],
@@ -148,9 +148,9 @@ export default function EnhancedPlansSection() {
 
     return (
         <>
- <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
-        <Navbar />
-      </div>
+            <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
+                <Navbar />
+            </div>
             <div className="relative py-16 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
                 {/* Decorative elements */}
                 <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-10"></div>
@@ -215,8 +215,8 @@ export default function EnhancedPlansSection() {
                                 <div
                                     key={index}
                                     className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl shadow-xl text-center transform transition-all duration-500 hover:translate-y-2 ${plan.featured
-                                            ? "bg-gradient-to-br from-[#0e6493] to-[#073a57] text-white"
-                                            : "bg-white border-2 border-gray-100"
+                                        ? "bg-gradient-to-br from-[#0e6493] to-[#073a57] text-white"
+                                        : "bg-white border-2 border-gray-100"
                                         }`}
                                 >
                                     {plan.featured && (
@@ -339,15 +339,17 @@ export default function EnhancedPlansSection() {
                                         </ul>
                                     </div>
 
-                                    {/* Button */}
-                                    <button
+                                    <a
+                                        href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+este+plan"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
                                                 ? "bg-white text-[#0e6493] hover:bg-gray-100"
                                                 : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
                                             }`}
                                     >
-                                        ¡CONTRATAR AHORA!
-                                    </button>
+                                        ¡LO QUIERO!
+                                    </a>
                                 </div>
                             ))}
                         </div>

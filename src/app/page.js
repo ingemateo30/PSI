@@ -5,6 +5,7 @@ import Hero from '@/component/hero';
 import Navbar from '@/component/navbar';
 import Planes from '@/component/planes';
 import FloatingSocial from '@/component/redes';
+import Velocidad from '@/component/velocidad';
 import Boton from '@/component/botonsubir';
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
@@ -56,6 +57,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-white to-blue-50">
         <Caracteristica />
       </section>
+      
 
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className="relative bg-gradient-to-r from-[#0e6493] to-[#073a57] py-20 text-white overflow-hidden">
         <div className="relative container mx-auto px-6 text-center">
@@ -89,6 +91,10 @@ export default function Home() {
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
         <Map />
       </motion.section>
+
+      <section id="velocidad">
+      <Velocidad />
+      </section>
 
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
