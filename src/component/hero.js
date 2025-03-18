@@ -59,53 +59,53 @@ export default function Hero() {
                         ¡Contrata hoy y aprovecha esta oferta exclusiva!
                     </p>
                 </div>
-
-                <div className="relative bg-gradient-to-br from-[#0e6493] to-[#0a4f7a] text-white p-6 md:p-8 rounded-3xl shadow-2xl w-full max-w-md border border-[#3a84b3]/40 transition-all duration-700 text-center flex flex-col items-center space-y-4">
+                <div className="relative bg-gradient-to-br from-[#0e6493] to-[#0a4f7a] text-white p-8 rounded-3xl shadow-2xl w-full max-w-md border border-[#3a84b3]/40 transition-all duration-700 text-center flex flex-col items-center space-y-6">
 
                     {/* Etiqueta de oferta */}
-                    <div className="absolute -top-4 px-4 py-1 bg-[#e31e25] text-white font-bold rounded-bl-lg rounded-tr-lg shadow-lg text-xs uppercase tracking-wide">
+                    <div className="absolute -top-4 px-5 py-2 bg-[#e31e25] text-white font-bold rounded-bl-lg rounded-tr-lg shadow-lg text-sm uppercase tracking-wide">
                         🔥 ¡OFERTA EXCLUSIVA! 🔥
                     </div>
 
                     {/* Título */}
-                    <h2 className="text-xl md:text-2xl font-bold mt-4">
+                    <h2 className="text-2xl md:text-3xl font-bold mt-6">
                         PACK FIBRA + TV PREMIUM
                     </h2>
 
                     {/* Precio */}
                     <div className="relative inline-block text-center">
-                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-sm font-bold text-[#e31e25]">desde</span>
-                        <span className="text-4xl font-extrabold text-white block">$89.900</span>
-                        <span className="text-sm font-medium text-gray-100">/mes</span>
+                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-base font-bold text-[#e31e25]">desde</span>
+                        <span className="text-5xl font-extrabold text-white block">$89.900</span>
+                        <span className="text-lg font-medium text-gray-100">/mes</span>
                     </div>
 
                     {/* Beneficios */}
-                    <div className="bg-[#0a4f7a]/60 rounded-xl p-3 w-full">
-                        <p className="text-md font-bold text-white mb-2">Tu pack incluye:</p>
-                        <ul className="space-y-2 text-left">
+                    <div className="bg-[#0a4f7a]/60 rounded-xl p-4 w-full">
+                        <p className="text-lg font-bold text-white mb-3">Tu pack incluye:</p>
+                        <ul className="space-y-3 text-left">
                             {["300 Mbps simétricos", "+120 canales Premium"].map((item, index) => (
-                                <li key={index} className="flex items-center gap-2">
-                                    <svg className="w-4 h-4 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
+                                <li key={index} className="flex items-center gap-3">
+                                    <svg className="w-5 h-5 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                                     </svg>
-                                    <span className="text-gray-100 text-sm">{item}</span>
+                                    <span className="text-gray-100 text-lg">{item}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Cobertura */}
-                    <p className="text-xs text-gray-300">Verifica la cobertura en tu zona.</p>
+                    <p className="text-sm text-gray-300">Verifica la cobertura en tu zona.</p>
 
                     {/* Botón de acción */}
                     <a href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+su+servicio"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform w-full text-md uppercase tracking-wider shadow-lg hover:scale-105 text-center">
+                        className="mt-4 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform w-full text-lg uppercase tracking-wider shadow-lg hover:scale-105 text-center">
                         ¡CONTRATAR AHORA!
                     </a>
 
                 </div>
+
 
             </div>
         </div>
