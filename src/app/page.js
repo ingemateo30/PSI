@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+      <section className="">
         <Planes />
       </section>
 
