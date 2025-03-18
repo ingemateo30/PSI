@@ -99,11 +99,12 @@ const internetPlans = [
 const bundlePlans = [
     {
         name: "PAQUETE FULL",
-        price: "$129.900",
+        price: "$89.900",
         includes: [
-            { icon: Wifi, text: "500 Megas" },
-            { icon: Smartphone, text: "Ilimitado" },
-            { icon: Tv, text: "TV Premium" },
+            { icon: Wifi, text: "900 Megas" },
+            { icon: Wifi, text: "Wifi y cable de red" },
+            { icon: Tv, text: "TV incluido" },
+            { icon: Tv, text: "+87 canales HD" },
         ],
         benefits: [
             "Múltiples dispositivos conectados",
@@ -113,30 +114,32 @@ const bundlePlans = [
         featured: true,
     },
     {
-        name: "PAQUETE FULL TIGO",
-        price: "$99.900",
+        name: "PAQUETE AVANZADO",
+        price: "$79.900",
         includes: [
             { icon: Wifi, text: "500 Megas" },
-            { icon: Smartphone, text: "Ilimitado" },
-            { icon: Tv, text: "Max" },
+            { icon: Wifi, text: "Wifi y cable de red" },
+            { icon: Tv, text: "Tv incluido" },
+            { icon: Tv, text: "+87 canales HD" },
         ],
         benefits: [
             "Gaming y streaming 4K",
-            "Llamadas sin límites",
+            "canales HD",
             "Contenido exclusivo"
         ],
     },
     {
-        name: "PAQUETE INTERNET + TV",
-        price: "$99.200",
+        name: "PAQUETE INTERMEDIO",
+        price: "$74.900",
         includes: [
-            { icon: Wifi, text: "500 Megas" },
-            { icon: Tv, text: "TV" },
-            { text: "", icon: null },
+            { icon: Wifi, text: "100 Megas" },
+            { icon: Wifi, text: "Wifi y cable de red" },
+            { icon: Tv, text: "TV incluido" },
+            { icon: Tv, text: "+87 canales HD" },
         ],
         benefits: [
             "Conexión ultrarrápida",
-            "Canales premium",
+            "Canales HD",
             "Ideal para gamers"
         ],
     }
@@ -415,7 +418,7 @@ export default function EnhancedPlansSection() {
                                             : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
                                             }`}
                                     >
-                                        ¡CONTRATAR AHORA!
+                                        ¡LO QUIERO!
                                     </button>
                                 </div>
                             ))}
@@ -473,12 +476,16 @@ export default function EnhancedPlansSection() {
             <FloatingSocial />
             <Boton />
             <FloatingWhatsApp
-                phoneNumber="573007235020"
-                accountName="Proveedor de Telecomunicaciones"
-                avatar="https://telecomunicaciones.com/logo.png"
-                chatMessage="¡Hola! ¿En qué podemos ayudarte?"
-                allowClickAway
-            />
+            phoneNumber="+573184550936"
+            accountName="PSI"
+            avatar="/logo.png"
+            darkMode={true}
+            statusMessage="Normalmente responde en 1 hora"
+            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
+            placeholder="Escribe un mensaje"
+            notification={true}
+            chatboxHeight={340}
+          />
         </>
     );
 }

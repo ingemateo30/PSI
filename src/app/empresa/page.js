@@ -215,12 +215,16 @@ export default function Empresa() {
       <FloatingSocial />
       <Boton />
       <FloatingWhatsApp
-        phoneNumber="573007235020"
-        accountName="Proveedor de Telecomunicaciones"
-        avatar="https://telecomunicaciones.com/logo.png"
-        chatMessage="¡Hola! ¿En qué podemos ayudarte?"
-        allowClickAway
-      />
+            phoneNumber="+573184550936"
+            accountName="PSI"
+            avatar="/logo.png"
+            darkMode={true}
+            statusMessage="Normalmente responde en 1 hora"
+            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
+            placeholder="Escribe un mensaje"
+            notification={true}
+            chatboxHeight={340}
+          />
     </>
   );
 }

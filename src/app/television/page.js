@@ -54,7 +54,7 @@ export default function Television() {
       <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
         <Navbar />
       </div>
-      
+
       <div className="bg-gradient-to-b from-white to-gray-100 min-h-screen text-gray-900 py-16 px-6">
         {/* Hero Section */}
         <div className="relative overflow-hidden rounded-xl max-w-6xl mx-auto mb-16 bg-[#0e6493] shadow-2xl">
@@ -105,7 +105,7 @@ export default function Television() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span>100+ canales HD</span>
+                  <span>87+ canales HD</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-[#0e6493] flex items-center justify-center text-white mr-3">
@@ -231,12 +231,16 @@ export default function Television() {
       <FloatingSocial />
       <Boton />
       <FloatingWhatsApp
-        phoneNumber="573007235020"
-        accountName="Proveedor de Telecomunicaciones"
-        avatar="https://telecomunicaciones.com/logo.png"
-        chatMessage="¡Hola! ¿En qué podemos ayudarte?"
-        allowClickAway
-      />
+            phoneNumber="+573184550936"
+            accountName="PSI"
+            avatar="/logo.png"
+            darkMode={true}
+            statusMessage="Normalmente responde en 1 hora"
+            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
+            placeholder="Escribe un mensaje"
+            notification={true}
+            chatboxHeight={340}
+          />
     </>
   );
 }

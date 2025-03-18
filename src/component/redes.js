@@ -1,38 +1,56 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaEnvelope, FaShareAlt, FaTimes } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaEnvelope, FaShareAlt, FaTimes } from "react-icons/fa";
 
 export default function FloatingSocial() {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Detectar si es un dispositivo móvil al cargar y cuando cambia el tamaño de la ventana
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
-    // Comprobar al cargar
+
     checkIfMobile();
-    
-    // Listener para cambios de tamaño de ventana
-    window.addEventListener('resize', checkIfMobile);
-    
-    // Limpieza al desmontar
-    return () => window.removeEventListener('resize', checkIfMobile);
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Redes sociales
+  // Redes sociales con enlaces específicos
   const socialNetworks = [
-    { name: "Facebook", icon: <FaFacebookF size={20} />, color: "bg-blue-700", hoverColor: "hover:bg-blue-800" },
-    { name: "Instagram", icon: <FaInstagram size={20} />, color: "bg-pink-500", hoverColor: "hover:bg-pink-600" },
-    { name: "Twitter", icon: <FaTwitter size={20} />, color: "bg-sky-500", hoverColor: "hover:bg-sky-600" },
-    { name: "YouTube", icon: <FaYoutube size={20} />, color: "bg-red-600", hoverColor: "hover:bg-red-700" },
-    { name: "Email", icon: <FaEnvelope size={20} />, color: "bg-gray-700", hoverColor: "hover:bg-gray-800" },
+    { 
+      name: "Facebook", 
+      icon: <FaFacebookF size={20} />, 
+      color: "bg-blue-700", 
+      hoverColor: "hover:bg-blue-800",
+      link: "https://www.facebook.com/psitelevision"
+    },
+    { 
+      name: "Instagram", 
+      icon: <FaInstagram size={20} />, 
+      color: "bg-pink-500", 
+      hoverColor: "hover:bg-pink-600",
+      link: "https://www.instagram.com/psi.telecomunicaciones/"
+    },
+    { 
+      name: "YouTube", 
+      icon: <FaYoutube size={20} />, 
+      color: "bg-red-600", 
+      hoverColor: "hover:bg-red-700",
+      link: "https://www.youtube.com/channel/UCw6BoOdhZb6ae3HaLwKzojQ"
+    },
+    { 
+      name: "Email", 
+      icon: <FaEnvelope size={20} />, 
+      color: "bg-gray-700", 
+      hoverColor: "hover:bg-gray-800",
+      link: "mailto:tuemail@ejemplo.com"
+    },
   ];
 
   // Versión para escritorio
@@ -42,10 +60,12 @@ export default function FloatingSocial() {
         {socialNetworks.map((network, index) => (
           <a 
             key={network.name}
-            href="#" 
+            href={network.link} 
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={network.name}
             className={`${network.color} ${network.hoverColor} p-3 text-white transition-all duration-300 flex items-center justify-center ${
-              index < socialNetworks.length - 1 ? 'border-b border-white/10' : ''
+              index < socialNetworks.length - 1 ? "border-b border-white/10" : ""
             }`}
           >
             {network.icon}
@@ -71,9 +91,7 @@ export default function FloatingSocial() {
 
       {/* Menú desplegable de redes sociales */}
       <div className={`fixed z-40 transition-all duration-300 ${
-        isOpen 
-          ? "opacity-100 pointer-events-auto" 
-          : "opacity-0 pointer-events-none"
+        isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}>
         <div className="fixed inset-0 bg-black/30" onClick={toggleMenu}></div>
         <div className={`fixed right-4 bottom-36 z-50 flex flex-col-reverse gap-2 transition-all duration-500 ${
@@ -82,7 +100,9 @@ export default function FloatingSocial() {
           {socialNetworks.map((network, index) => (
             <a 
               key={network.name}
-              href="#" 
+              href={network.link}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={network.name}
               className={`${network.color} ${network.hoverColor} p-3 text-white transition-all duration-300 flex items-center justify-center rounded-full shadow-lg ${
                 isOpen ? "scale-100" : "scale-0"

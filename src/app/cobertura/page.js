@@ -17,7 +17,7 @@ export default function Cobertura() {
       <div className={`sticky top-0 z-50 transition-all duration-300 "}`}>
         <Navbar />
       </div>
-      
+
       <Map />
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,14 +68,17 @@ export default function Cobertura() {
       </footer>
       <FloatingSocial />
       <Boton />
-      <FloatingWhatsApp
-        phoneNumber="573204000000"
-        accountName="PSI Fibra"
-        avatar="https://psi-fibra.vercel.app/logo.png"
-        chatMessage="¡Hola! ¿En qué podemos ayudarte?"
-        allowClickAway
-        darkMode={false}
-      />
+     <FloatingWhatsApp
+            phoneNumber="+573184550936"
+            accountName="PSI"
+            avatar="/logo.png"
+            darkMode={true}
+            statusMessage="Normalmente responde en 1 hora"
+            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
+            placeholder="Escribe un mensaje"
+            notification={true}
+            chatboxHeight={340}
+          />
     </>
   );
 }
