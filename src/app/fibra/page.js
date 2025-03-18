@@ -25,7 +25,7 @@ const internetPlans = [
         speed: "100",
         name: "PLAN TURBO",
         price: "$74.900",
-        uploadSpeed: "150",
+        uploadSpeed: "100",
         benefits: [
             "Ideal para 5-7 dispositivos",
             "Streaming HD",
@@ -37,7 +37,7 @@ const internetPlans = [
         speed: "900",
         name: "PLAN GIGABIT",
         price: "$89.900",
-        uploadSpeed: "250",
+        uploadSpeed: "900",
         benefits: [
             "Ideal para 10+ dispositivos",
             "Streaming 4K",
@@ -50,7 +50,7 @@ const internetPlans = [
         speed: "500",
         name: "PLAN PREMIUM",
         price: "$79.900",
-        uploadSpeed: "350",
+        uploadSpeed: "500",
         benefits: [
             "Ideal para 8+ dispositivos",
             "Streaming",
@@ -62,7 +62,7 @@ const internetPlans = [
         speed: "50",
         name: "PLAN ESPECIAL",
         price: "$109.900",
-        uploadSpeed: "500",
+        uploadSpeed: "50",
         benefits: [
             "Ideal para 5 dispositivos",
             "perfecto para tareas basicas",
@@ -74,7 +74,7 @@ const internetPlans = [
         speed: "10",
         name: "PLAN BÁSICO",
         price: "$52.900",
-        uploadSpeed: "150",
+        uploadSpeed: "10",
         benefits: [
             "Ideal para 5 dispositivos",
             "",
@@ -86,7 +86,7 @@ const internetPlans = [
         speed: "5",
         name: "PLAN BÁSICO",
         price: "$52.900",
-        uploadSpeed: "150",
+        uploadSpeed: "5",
         benefits: [
             "Ideal para +4 dispositivos",
             "Streaming HD",

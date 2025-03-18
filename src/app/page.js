@@ -110,10 +110,10 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-bold mb-4">Servicios</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white">Internet Fibra Óptica</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Televisión HD</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Paquetes</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Empresas</a></li>
+                <li><a href="/fibra" className="text-gray-300 hover:text-white">Internet Fibra Óptica</a></li>
+                <li><a href="/television" className="text-gray-300 hover:text-white">Televisión HD</a></li>
+                <li><a href="/fibra" className="text-gray-300 hover:text-white">Paquetes</a></li>
+                <li><a href="/empresa" className="text-gray-300 hover:text-white">Empresas</a></li>
               </ul>
             </div>
 
@@ -130,9 +130,9 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-bold mb-4">Empresa</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
+                <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-white">Noticias</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Trabaja con Nosotros</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white">Politica privacidad</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
               </ul>
             </div>
