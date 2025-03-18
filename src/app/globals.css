@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-branding-sf: "BrandingSF", sans-serif;
 }
 
 @theme inline {
