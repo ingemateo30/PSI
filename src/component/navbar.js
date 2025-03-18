@@ -3,12 +3,15 @@
 import Image from "next/image";
 import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X } from "lucide-react";
 import { useState } from "react";
+import localFont from 'next/font/local';
+
+
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="relative">
+        <div>
             {/* Top info bar */}
             <div className="bg-[#0e6493] text-white text-xs py-2">
                 <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-8">
@@ -137,7 +140,7 @@ export default function Navbar() {
                         <div className="hidden lg:flex items-center space-x-2">
                             <a
                                 href="/fibra"
-                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493]"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
                             >
                                 <Globe size={18} />
                                 <span>Fibra Óptica</span>
@@ -145,7 +148,7 @@ export default function Navbar() {
 
                             <a
                                 href="/television"
-                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493]"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
                             >
                                 <Tv size={18} />
                                 <span>Televisión</span>
@@ -153,7 +156,7 @@ export default function Navbar() {
 
                             <a
                                 href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
-                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493]"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
                             >
                                 <CreditCard size={18} />
                                 <span>Pague en línea</span>
@@ -161,7 +164,7 @@ export default function Navbar() {
 
                             <a
                                 href="/cobertura"
-                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493]"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
                             >
                                 <MapPin size={18} />
                                 <span>Cobertura</span>
@@ -169,7 +172,7 @@ export default function Navbar() {
 
                             <a
                                 href="/empresa"
-                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493]"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
                             >
                                 <Building2 size={18} />
                                 <span>Empresa</span>
@@ -180,7 +183,7 @@ export default function Navbar() {
                         <div className="hidden lg:flex items-center">
                             <a
                                 href="https://wa.me/573184550936"
-                                className="px-6 py-3 rounded-lg font-bold text-white bg-gradient-to-r from-[#e31e25] to-[#ff3c42] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg flex items-center space-x-2 relative overflow-hidden group"
+                                className="px-6 py-3 rounded-lg font-bold text-white bg-gradient-to-r from-[#e31e25] to-[#ff3c42] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg flex items-center space-x-2 relative overflow-hidden group font-branding-sf"
                             >
                                 <svg
                                     className="w-5 h-5 animate-pulse"
@@ -221,7 +224,7 @@ export default function Navbar() {
                     {/* Fibra Óptica */}
                     <a
                         href="/fibra"
-                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Globe size={20} className="text-[#0e6493]" />
@@ -231,7 +234,7 @@ export default function Navbar() {
                     {/* Televisión */}
                     <a
                         href="/television"
-                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Tv size={20} className="text-[#0e6493]" />
@@ -241,7 +244,7 @@ export default function Navbar() {
                     {/* Pague en línea */}
                     <a
                         href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
-                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <CreditCard size={20} className="text-[#0e6493]" />
@@ -251,7 +254,7 @@ export default function Navbar() {
                     {/* Cobertura */}
                     <a
                         href="/cobertura"
-                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <MapPin size={20} className="text-[#0e6493]" />
@@ -261,7 +264,7 @@ export default function Navbar() {
                     {/* Empresa */}
                     <a
                         href="/empresa"
-                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Building2 size={20} className="text-[#0e6493]" />
@@ -272,7 +275,7 @@ export default function Navbar() {
                     <div className="pt-4 mt-4 border-t border-gray-100">
                         <a
                             href="https://wa.me/573184550936"
-                            className="flex items-center justify-center space-x-2 w-full py-4 px-6 bg-gradient-to-r from-[#e31e25] to-[#ff3c42] text-white rounded-lg font-semibold hover:shadow-md transition-shadow"
+                            className="flex items-center justify-center space-x-2 w-full py-4 px-6 bg-gradient-to-r from-[#e31e25] to-[#ff3c42] text-white rounded-lg font-semibold hover:shadow-md transition-shadow font-branding-sf"
                         >
                             <svg
                                 className="w-5 h-5 animate-pulse"

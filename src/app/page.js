@@ -8,11 +8,31 @@ import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-
 const Map = dynamic(() => import("@/component/mapa"), { ssr: false });
 import Caracteristica from '@/component/caracteristicas';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { ArrowRight, MapPin, Phone, Star, UserCheck } from "lucide-react";
+
+const testimonials = [
+  {
+    name: "María García",
+    year: 2022,
+    review: "El servicio es excelente, muy rápido y confiable.",
+    image: "/avatars/maria.jpg",
+  },
+  {
+    name: "Carlos Rodríguez",
+    year: 2023,
+    review: "Increíble experiencia, atención al cliente de primer nivel.",
+    image: "/avatars/carlos.jpg",
+  },
+  {
+    name: "Ana Martínez",
+    year: 2024,
+    review: "Muy recomendable, siempre cumplen con lo prometido.",
+    image: "/avatars/ana.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -65,31 +85,6 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-white to-blue-50">
         <Planes />
       </section>
-
-      <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-[#0e6493]">
-              Lo que dicen nuestros clientes
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["María García", "Carlos Rodríguez", "Ana Martínez"].map((name, index) => (
-              <motion.div key={name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 * index }} viewport={{ once: true }} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <h4 className="text-xl font-bold text-[#0e6493]">{name}</h4>
-                <p className="text-sm text-gray-600">Cliente desde {2022 + index}</p>
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-lg">"Increíble servicio y velocidad."</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
 
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
         <Map />
