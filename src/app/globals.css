@@ -30,7 +30,7 @@ body {
 
   @font-face {
     font-family: "BrandingSF";
-    src: url("../fonts/BrandingSF-semibold.woff2") format("woff2");
+    src: url("/fonts/BrandingSF-semibold.woff2") format("woff2");
     font-display: swap;
   }
 
