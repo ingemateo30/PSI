@@ -6,12 +6,11 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapPin, Phone, Clock, Mail, ExternalLink } from "lucide-react";
 
-// Prevent Leaflet icons from missing in production build
 
 
 // Ícono personalizado para los marcadores
 const iconoPersonalizado = new L.Icon({
-  iconUrl: "/logo.png", // Asegúrate de tener este archivo en tu carpeta public
+  iconUrl: "/logo.png",
   iconSize: [38, 48],
   iconAnchor: [19, 48],
   popupAnchor: [0, -42],
@@ -61,7 +60,7 @@ const sedes = [
 
 export default function MapaSedes() {
   const [selectedSede, setSelectedSede] = useState(null);
-  const [mapKey, setMapKey] = useState(1); // For map rerendering when needed
+  const [mapKey, setMapKey] = useState(1);
 
   useEffect(() => {
     delete L.Icon.Default.prototype._getIconUrl;
@@ -80,10 +79,9 @@ export default function MapaSedes() {
 
   return (
     <div className="bg-gradient-to-b from-white to-blue-50 py-20 px-6 -z-10">
-      {/* Decorative elements */}
+      
       <div className="absolute left-0 right-0 h-32 bg-[#0e6493]/5 -skew-y-3 transform z-10"></div>
       
-      {/* Título con animación */}
       <div className="relative text-center mb-16">
         <h2 className="text-5xl font-bold text-[#0e6493] tracking-tight">
           Nuestra <span className="relative inline-block">
@@ -96,7 +94,7 @@ export default function MapaSedes() {
         </p>
       </div>
 
-      {/* Map and Locations Container */}
+      
       <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8 ">
         {/* Sedes Panel */}
         <div className="lg:col-span-1 bg-white p-6 rounded-xl shadow-xl">
@@ -132,7 +130,7 @@ export default function MapaSedes() {
             ))}
           </div>
           
-          {/* Selected Sede Details */}
+          {/* Seleccion y detalles */}
           {selectedSede && (
             <div className="mt-8 p-5 bg-gray-50 rounded-lg border-l-4 border-[#0e6493]">
               <h4 className="text-xl font-bold text-[#0e6493] mb-2">{selectedSede.ciudad}</h4>
@@ -162,7 +160,7 @@ export default function MapaSedes() {
           )}
         </div>
         
-        {/* Map Container */}
+        {/* Contenedor Mapa */}
         <div className="lg:col-span-2 relative z-20">
           <div className="bg-white p-2 rounded-xl shadow-xl overflow-hidden">
             <MapContainer

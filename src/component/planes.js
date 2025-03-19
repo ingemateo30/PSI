@@ -43,11 +43,11 @@ export default function PlansSection() {
     <div className="relative py-12 bg-white overflow-hidden">
       <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-20"></div>
 
-      {/* Background decoration */}
+      {/* decoracion fondo */}
       <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-50 rounded-full opacity-70"></div>
       <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-50 rounded-full opacity-70"></div>
 
-      {/* Título con animación */}
+      {/* Título animado */}
       <div className="relative text-center mb-16 px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-[#0e6493] tracking-tight">
           Nuestros <span className="relative inline-block">
@@ -60,7 +60,7 @@ export default function PlansSection() {
         </p>
       </div>
 
-      {/* Contenedor de Planes */}
+      {/*Planes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto px-6">
         {plans.map((plan, index) => (
           <div
@@ -76,7 +76,7 @@ export default function PlansSection() {
               </div>
             )}
 
-            {/* Header */}
+           
             <div>
               <h3 className={`text-2xl font-extrabold ${plan.featured ? "text-white" : "text-[#0e6493]"} mb-4`}>
                 {plan.name}
@@ -88,7 +88,7 @@ export default function PlansSection() {
                 IVA Incluido
               </p>
 
-              {/* Divider */}
+              
               <div className={`w-16 h-1 mx-auto ${plan.featured ? "bg-white/30" : "bg-[#0e6493]/20"} rounded-full mb-6`}></div>
             </div>
 
@@ -109,8 +109,6 @@ export default function PlansSection() {
                 ))}
               </ul>
             </div>
-
-            {/* Mensaje adicional mt-4 text-xs text-gray-600 italic*/}
             <div className={`mt-4 text-xs ${plan.featured ? "text-white" : "text-[#0e6493]"}`}>
               * Para empresas, se cobra un adicional de $10.000.
             </div>

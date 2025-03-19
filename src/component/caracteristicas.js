@@ -21,7 +21,6 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <div className="relative py-1 bg-gradient-to-b from-white to-blue-50">
-      {/* Fondo sutil */}
       <div className="absolute inset-0">
         <div className="bg-gradient-to-b from-white to-blue-50 w-full h-full opacity-80"></div>
       </div>
@@ -40,7 +39,6 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        {/* Contenedor de Características */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md border-l-4 border-[#0e6493] hover:shadow-lg transition-shadow duration-300">
@@ -56,7 +54,7 @@ export default function WhyChooseUs() {
           ))}
         </div>
         
-        {/* Elemento corporativo final */}
+        
         <div className="mt-16 text-center">
           <div className="inline-block px-8 py-3 border border-[#0e6493] text-[#0e6493] font-medium rounded">
             Internet de alta velocidad garantizado

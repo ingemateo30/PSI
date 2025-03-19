@@ -12,7 +12,6 @@ export default function Navbar() {
 
     return (
         <div>
-            {/* Top info bar */}
             <div className="bg-[#0e6493] text-white text-xs py-2">
                 <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center space-x-2">
@@ -132,12 +131,9 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-
-            {/* Main navbar */}
             <nav className="bg-white shadow-lg sticky top-0 w-full z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-24 items-center">
-                        {/* Logo */}
                         <div className="flex items-center group cursor-pointer transition-all scale-200 duration-300 sm:hover:scale-105 p-2 sm:p-0">
                             <a href="/" className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16">
                                 <Image
@@ -149,9 +145,6 @@ export default function Navbar() {
                                 />
                             </a>
                         </div>
-
-
-                        {/* Desktop Navigation */}
                         <div className="hidden lg:flex items-center space-x-2">
                             <a
                                 href="/fibra"
@@ -193,8 +186,6 @@ export default function Navbar() {
                                 <span>Empresa</span>
                             </a>
                         </div>
-
-                        {/* Desktop Call Button */}
                         <div className="hidden lg:flex items-center">
                             <a
                                 href="https://wa.me/573184550936"
@@ -217,8 +208,6 @@ export default function Navbar() {
                                 <div className="absolute inset-0 bg-white opacity-20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                             </a>
                         </div>
-
-                        {/* Mobile menu button */}
                         <div className="lg:hidden flex items-center">
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -232,11 +221,11 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Menu */}
+            
             <div className={`lg:hidden fixed inset-0 z-50 bg-white transition-transform duration-300 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} h-screen overflow-y-auto`}>
                 <div className="pt-24 px-4 space-y-4">
 
-                    {/* Fibra Óptica */}
+                
                     <a
                         href="/fibra"
                         className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
@@ -246,7 +235,7 @@ export default function Navbar() {
                         <span className="font-medium">Fibra Óptica</span>
                     </a>
 
-                    {/* Televisión */}
+                   
                     <a
                         href="/television"
                         className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
@@ -256,7 +245,7 @@ export default function Navbar() {
                         <span className="font-medium">Televisión</span>
                     </a>
 
-                    {/* Pague en línea */}
+                    
                     <a
                         href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
                         className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
@@ -266,7 +255,7 @@ export default function Navbar() {
                         <span className="font-medium">Pague en línea</span>
                     </a>
 
-                    {/* Cobertura */}
+                    
                     <a
                         href="/cobertura"
                         className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
@@ -276,7 +265,7 @@ export default function Navbar() {
                         <span className="font-medium">Cobertura</span>
                     </a>
 
-                    {/* Empresa */}
+                    
                     <a
                         href="/empresa"
                         className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
@@ -286,7 +275,7 @@ export default function Navbar() {
                         <span className="font-medium">Empresa</span>
                     </a>
 
-                    {/* Botón Cotizar */}
+                    
                     <div className="pt-4 mt-4 border-t border-gray-100">
                         <a
                             href="https://wa.me/573184550936"

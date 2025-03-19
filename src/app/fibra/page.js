@@ -155,12 +155,12 @@ export default function EnhancedPlansSection() {
                 <Navbar />
             </div>
             <div className="relative py-16 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
-                {/* Decorative elements */}
+                
                 <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-10"></div>
                 <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-100 rounded-full opacity-50"></div>
                 <div className="absolute top-1/3 -left-20 w-64 h-64 bg-blue-100 rounded-full opacity-40"></div>
 
-                {/* Fiber optic decorative lines */}
+             
                 <div className="absolute inset-0 overflow-hidden opacity-10">
                     <div className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-[#e31e25] rounded animate-pulse"></div>
                     <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#e31e25] to-blue-400 rounded animate-pulse"></div>
@@ -168,7 +168,7 @@ export default function EnhancedPlansSection() {
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Section header */}
+                    
                     <div className="text-center mb-12">
                         <div className="inline-block">
                             <div className="flex items-center justify-center mb-3 bg-blue-100 text-[#0e6493] py-2 px-4 rounded-full">
@@ -187,7 +187,7 @@ export default function EnhancedPlansSection() {
                         </p>
                     </div>
 
-                    {/* Tabs */}
+                    
                     <div className="flex justify-center mb-12">
                         <div className="inline-flex p-1 rounded-full bg-blue-50 shadow-md">
                             <button
@@ -211,7 +211,7 @@ export default function EnhancedPlansSection() {
                         </div>
                     </div>
 
-                    {/* Internet Planes */}
+                    
                     {activeTab === "internet" && (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {internetPlans.map((plan, index) => (
@@ -228,7 +228,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     )}
 
-                                    {/* Speed highlight */}
+                                   
                                     <div className="mb-6">
                                         <div
                                             className={`text-7xl font-extrabold leading-none ${plan.featured ? "text-white" : "text-[#e31e25]"
@@ -244,7 +244,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     </div>
 
-                                    {/* Name and price */}
+                                  
                                     <div className="mb-8">
                                         <h3
                                             className={`text-2xl font-bold ${plan.featured ? "text-white" : "text-[#0e6493]"
@@ -274,7 +274,7 @@ export default function EnhancedPlansSection() {
                                         </p>
                                     </div>
 
-                                    {/* Speed details */}
+                                    
                                     <div
                                         className={`flex justify-between p-4 mb-6 rounded-xl ${plan.featured ? "bg-white/10" : "bg-blue-50"
                                             }`}
@@ -327,7 +327,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     </div>
 
-                                    {/* Benefits */}
+                                  
                                     <div className="flex-grow">
                                         <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
                                             {plan.benefits.map((benefit, i) => (
@@ -366,7 +366,7 @@ export default function EnhancedPlansSection() {
 
 
 
-                    {/* Bundle Plans */}
+                    
                     {activeTab === "bundles" && (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {bundlePlans.map((plan, index) => (
@@ -383,7 +383,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     )}
 
-                                    {/* Header */}
+                                    
                                     <div>
                                         <h3 className={`text-2xl font-extrabold ${plan.featured ? "text-white" : "text-[#0e6493]"} mb-4`}>
                                             {plan.name}
@@ -395,11 +395,11 @@ export default function EnhancedPlansSection() {
                                             IVA Incluido
                                         </p>
 
-                                        {/* Divider */}
+                                        
                                         <div className={`w-16 h-1 mx-auto ${plan.featured ? "bg-white/30" : "bg-[#0e6493]/20"} rounded-full mb-6`}></div>
                                     </div>
 
-                                    {/* Lista de beneficios */}
+                                  
                                     <div className="flex-grow">
                                         <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
                                             {plan.includes.map((item, i) => (
@@ -417,7 +417,7 @@ export default function EnhancedPlansSection() {
                                         </ul>
                                     </div>
 
-                                    {/* Botón */}
+                                   
                                     <button
                                         className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
                                             ? "bg-white text-[#0e6493] hover:bg-gray-100"
@@ -439,7 +439,7 @@ export default function EnhancedPlansSection() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <div className="flex flex-col items-center text-center">
-                            {/* Logo */}
+                           
                             <div className="mb-2">
                                 <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
                             </div>

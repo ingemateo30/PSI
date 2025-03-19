@@ -23,7 +23,6 @@ export default function InternetSano() {
                 <Navbar />
             </motion.div>
 
-            {/* Encabezado */}
             <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -41,9 +40,8 @@ export default function InternetSano() {
                 </div>
             </motion.section>
 
-            {/* Contenido principal */}
             <div className="relative py-16 bg-gradient-to-b from-white to-blue-50">
-                {/* Fondo sutil */}
+               
                 <div className="absolute inset-0">
                     <div className="bg-gradient-to-b from-white to-blue-50 w-full h-full opacity-80"></div>
                 </div>
@@ -51,7 +49,7 @@ export default function InternetSano() {
 
                 <div className="relative container mx-auto px-6 md:px-8">
                     <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8 md:p-10">
-                        {/* Introducción */}
+                        
                         <div className="mb-10">
                             <motion.div
                                 initial={{ scale: 0.95, opacity: 0 }}
@@ -84,7 +82,7 @@ export default function InternetSano() {
                             </p>
                         </div>
 
-                        {/* Canales de denuncia */}
+                       
                         <motion.div
                             initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -106,7 +104,7 @@ export default function InternetSano() {
                             </p>
 
                             <div className="space-y-6">
-                                {/* Ministerio de Comunicaciones */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">Ministerio De Comunicaciones</h3>
                                     <div className="space-y-3">
@@ -141,7 +139,7 @@ export default function InternetSano() {
                                     </div>
                                 </div>
 
-                                {/* CONTRA LA PORNOGRAFÍA INFANTIL */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">CONTRA LA PORNOGRAFÍA INFANTIL</h3>
                                     <div className="space-y-3">
@@ -161,7 +159,7 @@ export default function InternetSano() {
                                     </div>
                                 </div>
 
-                                {/* Fiscalía General De La Nación */}
+                               
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">Fiscalía General De La Nación</h3>
                                     <div className="space-y-3">
@@ -185,7 +183,7 @@ export default function InternetSano() {
                                     </div>
                                 </div>
 
-                                {/* Dirección Central De Policía Judicial – DIJIN */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">Dirección Central De Policía Judicial – DIJIN</h3>
                                     <div className="space-y-3">
@@ -206,7 +204,7 @@ export default function InternetSano() {
                                     </div>
                                 </div>
 
-                                {/* Instituto Colombiano De Bienestar Familiar */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">Instituto Colombiano De Bienestar Familiar</h3>
                                     <div className="space-y-3">
@@ -229,7 +227,7 @@ export default function InternetSano() {
                             </div>
                         </motion.div>
 
-                        {/* Normatividad */}
+                       
                         <motion.div
                             initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -247,7 +245,7 @@ export default function InternetSano() {
                             </div>
 
                             <div className="space-y-6">
-                                {/* Ley 679 de 2001 */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">LEY 679 DE 2001 (agosto 3)</h3>
                                     <p className="text-gray-700 mb-4">
@@ -262,7 +260,7 @@ export default function InternetSano() {
                                     </a>
                                 </div>
 
-                                {/* DECRETO 067 DE 2003 */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">DECRETO NÚMERO 067 DE 2003 (enero 15)</h3>
                                     <p className="text-gray-700 mb-4">
@@ -279,7 +277,7 @@ export default function InternetSano() {
                                     </a>
                                 </div>
 
-                                {/* DECRETO 1524 DE 2002 */}
+                               
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">DECRETO NÚMERO 1524 DE 2002 (julio 24)</h3>
                                     <p className="text-gray-700 mb-4">
@@ -297,7 +295,7 @@ export default function InternetSano() {
                             </div>
                         </motion.div>
 
-                        {/* Recomendaciones de Seguridad */}
+                       
                         <motion.div
                             initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -319,7 +317,7 @@ export default function InternetSano() {
                             </p>
 
                             <div className="space-y-6">
-                                {/* Software K9 Web Protection */}
+                               
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">Software K9 Web Protection</h3>
                                     <p className="text-gray-700 mb-4">
@@ -334,7 +332,7 @@ export default function InternetSano() {
                                     </a>
                                 </div>
 
-                                {/* Software Qustodio */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                                     <h3 className="text-xl font-bold text-[#0e6493] mb-3">Software Qustodio</h3>
                                     <p className="text-gray-700 mb-4">
@@ -349,9 +347,9 @@ export default function InternetSano() {
                                     </a>
                                 </div>
 
-                                {/* Control Parental con Windows 7 */}
+                                
                                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                                    <h3 className="text-xl font-bold text-[#0e6493] mb-3">Control Parental con Windows 7</h3>
+                                    <h3 className="text-xl font-bold text-[#0e6493] mb-3">Control Parental con Windows </h3>
                                     <p className="text-gray-700 mb-4">
                                         Instalando en su ordenador Windows Live Protección Infantil se puede controlar el tiempo de uso del computador, los programas que se podrán
                                         o no utilizar, limitar los tipos de juegos que serán permitidos, bloquear sitios web, entre otros.
@@ -365,16 +363,16 @@ export default function InternetSano() {
                                 </div>
                             </div>
 
-                            {/* Configuración de navegadores */}
+                            
                             <div className="mt-10">
                                 <h3 className="text-2xl font-bold text-[#0e6493] mb-6">Configuración de Navegadores</h3>
 
                                 <div className="space-y-8">
-                                    {/* Internet Explorer */}
+                                    
                                     <div>
                                         <h4 className="text-xl font-bold text-[#0e6493] mb-4 flex items-center">
                                             <List size={20} className="mr-2" />
-                                            INTERNET EXPLORER
+                                            EDGE
                                         </h4>
                                         <ol className="list-decimal list-outside ml-6 text-gray-700 space-y-2">
                                             <li>DA CLIC EN HERRAMIENTAS (ICONO EN LA ESQUINA SUPERIOR DERECHA) U OPRIMIR LA COMBINACIÓN DE TECLAS ALT+X.</li>
@@ -386,7 +384,7 @@ export default function InternetSano() {
                                         </ol>
                                     </div>
 
-                                    {/* Firefox */}
+                                    
                                     <div>
                                         <h4 className="text-xl font-bold text-[#0e6493] mb-4 flex items-center">
                                             <List size={20} className="mr-2" />
@@ -402,7 +400,7 @@ export default function InternetSano() {
                                         </ol>
                                     </div>
 
-                                    {/* Chrome */}
+                                    
                                     <div>
                                         <h4 className="text-xl font-bold text-[#0e6493] mb-4 flex items-center">
                                             <List size={20} className="mr-2" />
@@ -434,7 +432,7 @@ export default function InternetSano() {
                 </div>
             </div>
 
-            {/* Botón de descarga */}
+            
             <div className="bg-white py-12 text-center">
                 <a href="/internet-sano-politica.pdf" download className="inline-flex items-center px-6 py-3 bg-[#0e6493] text-white font-medium rounded-md hover:bg-[#073a57] transition-colors">
                     <FileText size={20} className="mr-2" />
@@ -445,7 +443,6 @@ export default function InternetSano() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <div className="flex flex-col items-center text-center">
-                          {/* Logo */}
                           <div className="mb-2">
                             <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
                           </div>

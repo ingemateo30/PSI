@@ -4,7 +4,6 @@ import FastSpeedtest from "fast-speedtest-api";
 export async function GET() {
   try {
     let speedtest = new FastSpeedtest({
-      // Necesitas una clave de Fast.com
       token: "YXNkZmFzZGxmbnNkYWZoYXNkZmhrYWxm&urlCount=5",
       verbose: false,
       timeout: 5000,

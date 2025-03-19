@@ -21,7 +21,7 @@ export default function Empresa() {
       </div>
 
       <div className="bg-gradient-to-b from-white to-gray-50 min-h-screen text-gray-900 pt-16 pb-24">
-        {/* Hero Section */}
+        
         <div className="relative overflow-hidden bg-[#0e6493] text-white py-20 px-6 mb-16">
           <div className="absolute inset-0 bg-[url('/imagen.webp')] opacity-10"></div>
           <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#e31e25]/20 rounded-full blur-3xl"></div>
@@ -38,9 +38,9 @@ export default function Empresa() {
           </div>
         </div>
 
-        {/* Información de la empresa */}
+       
         <div className="max-w-6xl mx-auto px-6 space-y-12">
-          {/* Empresa */}
+        
           <div className={`bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#e31e25] transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-shrink-0">
@@ -59,9 +59,9 @@ export default function Empresa() {
             </div>
           </div>
 
-          {/* Misión y Visión - Lado a lado en pantallas medianas y grandes */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Misión */}
+          
             <div className={`bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#0e6493] h-full transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "200ms" }}>
               <div className="flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-[#0e6493] mb-4 text-center">Misión</h3>
@@ -73,7 +73,7 @@ export default function Empresa() {
               </div>
             </div>
 
-            {/* Visión */}
+          
             <div className={`bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#0e6493] h-full transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "400ms" }}>
               <div className="flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-[#0e6493] mb-4 text-center">Visión</h3>
@@ -86,7 +86,7 @@ export default function Empresa() {
             </div>
           </div>
 
-          {/* Políticas de Calidad */}
+        
           <div className={`bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#e31e25] transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "600ms" }}>
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               <div>
@@ -100,7 +100,7 @@ export default function Empresa() {
           </div>
         </div>
 
-        {/* Líneas de Atención con diseño mejorado */}
+       
         <div className="max-w-6xl mx-auto px-6 mt-20">
           <div className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "800ms" }}>
             <div className="text-center mb-10">
@@ -111,7 +111,7 @@ export default function Empresa() {
               </p>
             </div>
 
-            {/* Contenedor Scrollable */}
+          
             <div className="overflow-x-auto rounded-xl shadow-lg">
               <table className="min-w-full bg-white text-left">
                 <thead className="bg-gradient-to-r from-[#0e6493] to-[#1a7eb6] text-white">
@@ -169,7 +169,6 @@ export default function Empresa() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
-              {/* Logo */}
               <div className="mb-2">
                 <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
               </div>

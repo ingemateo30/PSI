@@ -23,8 +23,6 @@ export default function Hero() {
                 </svg>
             </div>
 
-
-            {/* Fondo con imagen y overlay */}
             <div className="absolute inset-0">
                 <Image
                     src="/hero4.png"
@@ -60,25 +58,21 @@ export default function Hero() {
                     </p>
                 </div>
                 <div className="relative bg-gradient-to-br from-[#0e6493] to-[#0a4f7a] text-white p-8 rounded-3xl shadow-2xl w-full max-w-md border border-[#3a84b3]/40 transition-all duration-700 text-center flex flex-col items-center space-y-6">
-
-                    {/* Etiqueta de oferta */}
                     <div className="absolute -top-4 px-5 py-2 bg-[#e31e25] text-white font-bold rounded-bl-lg rounded-tr-lg shadow-lg text-sm uppercase tracking-wide">
                         🔥 ¡OFERTA EXCLUSIVA! 🔥
                     </div>
-
-                    {/* Título */}
                     <h2 className="text-2xl md:text-3xl font-bold mt-6">
                         PACK FIBRA + TV PREMIUM
                     </h2>
 
-                    {/* Precio */}
+                    
                     <div className="relative inline-block text-center">
                         <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-base font-bold text-[#e31e25]">desde</span>
                         <span className="text-5xl font-extrabold text-white block">$89.900</span>
                         <span className="text-lg font-medium text-gray-100">/mes</span>
                     </div>
 
-                    {/* Beneficios */}
+                    
                     <div className="bg-[#0a4f7a]/60 rounded-xl p-4 w-full">
                         <p className="text-lg font-bold text-white mb-3">Tu pack incluye:</p>
                         <ul className="space-y-3 text-left">
@@ -93,10 +87,10 @@ export default function Hero() {
                         </ul>
                     </div>
 
-                    {/* Cobertura */}
+                  
                     <p className="text-sm text-gray-300">Verifica la cobertura en tu zona.</p>
 
-                    {/* Botón de acción */}
+                    
                     <a href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+su+servicio"
                         target="_blank"
                         rel="noopener noreferrer"

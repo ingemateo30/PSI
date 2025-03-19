@@ -21,7 +21,7 @@ export default function FloatingSocial() {
     setIsOpen(!isOpen);
   };
 
-  // Redes sociales con enlaces específicos
+  // Redes sociales
   const socialNetworks = [
     { 
       name: "Facebook", 
@@ -53,7 +53,7 @@ export default function FloatingSocial() {
     },
   ];
 
-  // Versión para escritorio
+  // Versión escritorio
   if (!isMobile) {
     return (
       <div className="fixed left-0 top-1/3 z-50 flex flex-col shadow-lg rounded-r-lg overflow-hidden">
@@ -75,10 +75,10 @@ export default function FloatingSocial() {
     );
   }
 
-  // Versión para móvil
+  // Versión móvil
   return (
     <>
-      {/* Botón flotante de compartir para móviles */}
+    
       <button 
         onClick={toggleMenu} 
         className={`fixed z-50 shadow-lg rounded-full p-3 text-white transition-all duration-300 flex items-center justify-center ${
@@ -89,7 +89,7 @@ export default function FloatingSocial() {
         {isOpen ? <FaTimes size={20} /> : <FaShareAlt size={20} />}
       </button>
 
-      {/* Menú desplegable de redes sociales */}
+      
       <div className={`fixed z-40 transition-all duration-300 ${
         isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}>

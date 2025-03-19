@@ -58,11 +58,11 @@ export default function Velocidad() {
 
   return (
     <section className="relative bg-gradient-to-r from-[#0e6493] to-[#073a57] py-16 text-white overflow-hidden">
-      {/* Decorative elements */}
+      
       
 
       <div className="relative container mx-auto px-6 text-center">
-        {/* Title */}
+        
         <h2 className="text-5xl font-bold mb-6">
           Test de Velocidad
         </h2>
@@ -70,11 +70,11 @@ export default function Velocidad() {
           Comprueba la velocidad de tu conexión a internet con nuestra herramienta rápida y precisa.
         </p>
 
-        {/* Main content */}
+        
         <div className="max-w-xl mx-auto">
           <div className="bg-white/10 p-8 rounded-xl shadow-xl hover:bg-white/15 transition-all duration-300">
             <div className="flex flex-col items-center">
-              {/* Gauge display */}
+             
               <div className="relative w-64 h-64 mb-8">
                 {!loading && !testComplete && !speed && (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -133,7 +133,7 @@ export default function Velocidad() {
                 )}
               </div>
 
-              {/* Speed information */}
+             
               {testComplete && speed && (
                 <div className="w-full bg-white/10 rounded-xl p-4 mb-8">
                   <div className="flex justify-between items-center">
@@ -161,7 +161,7 @@ export default function Velocidad() {
                 </div>
               )}
 
-              {/* Error message */}
+             
               {error && (
                 <div className="w-full bg-red-500/20 text-white p-4 rounded-xl mb-8 flex items-center">
                   <AlertTriangle className="h-5 w-5 mr-2 flex-shrink-0" />
@@ -169,7 +169,7 @@ export default function Velocidad() {
                 </div>
               )}
 
-              {/* Action button */}
+              
               <button
                 onClick={medirVelocidad}
                 disabled={loading}
@@ -191,7 +191,6 @@ export default function Velocidad() {
                 </span>
               </button>
 
-              {/* Recommendation */}
               {testComplete && speed && parseFloat(speed) < 30 && (
                 <div className="w-full mt-8 bg-white/10 p-4 rounded-xl">
                   <h3 className="font-semibold text-lg text-white mb-2">

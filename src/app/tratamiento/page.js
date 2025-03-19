@@ -18,8 +18,7 @@ export default function PoliticaTratamientoDatos() {
       <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className="sticky top-0 z-50">
         <Navbar />
       </motion.div>
-
-      {/* Encabezado */}
+      
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -37,9 +36,8 @@ export default function PoliticaTratamientoDatos() {
         </div>
       </motion.section>
 
-      {/* Contenido principal */}
       <div className="relative py-16 bg-gradient-to-b from-white to-blue-50">
-        {/* Fondo sutil */}
+  
         <div className="absolute inset-0">
           <div className="bg-gradient-to-b from-white to-blue-50 w-full h-full opacity-80"></div>
         </div>
@@ -213,7 +211,6 @@ export default function PoliticaTratamientoDatos() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
-              {/* Logo */}
               <div className="mb-2">
                 <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
               </div>

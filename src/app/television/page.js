@@ -56,7 +56,7 @@ export default function Television() {
       </div>
 
       <div className="bg-gradient-to-b from-white to-gray-100 min-h-screen text-gray-900 py-16 px-6">
-        {/* Hero Section */}
+        
         <div className="relative overflow-hidden rounded-xl max-w-6xl mx-auto mb-16 bg-[#0e6493] shadow-2xl">
           <div className="absolute inset-0 opacity-20 bg-[url('/tv.jpg')] bg-cover bg-center"></div>
           <div className="relative z-10 text-white p-12 md:p-16 flex flex-col md:flex-row items-center">
@@ -80,7 +80,7 @@ export default function Television() {
           </div>
         </div>
 
-        {/* Plan Card Section */}
+
         <div className="max-w-4xl mx-auto mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
             <div className="bg-[#0e6493] p-6 text-white">
@@ -154,15 +154,15 @@ export default function Television() {
 
 
 
-        {/* Call to Action */}
+        
         <div className="max-w-4xl mx-auto mt-20 text-center bg-gradient-to-r from-[#0e6493] to-[#073a57] rounded-2xl shadow-xl p-12 text-white relative overflow-hidden">
-          {/* Elementos decorativos */}
+          
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-white"></div>
             <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-white"></div>
           </div>
 
-          {/* Contenido principal */}
+      
           <div className="relative">
             <h3 className="text-3xl font-bold mb-4">¿Listo para disfrutar la mejor TV?</h3>
             <p className="text-lg mb-8 max-w-xl mx-auto">
@@ -185,7 +185,7 @@ export default function Television() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
-              {/* Logo */}
+             
               <div className="mb-2">
                 <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
               </div>
