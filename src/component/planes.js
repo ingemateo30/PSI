@@ -65,18 +65,17 @@ export default function PlansSection() {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl border border-gray-200 text-center transform transition-all duration-500 shadow-2xl hover:shadow-3xl hover:-translate-y-3 ${
-              plan.featured
+            className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl border border-gray-200 text-center transform transition-all duration-500 shadow-2xl hover:shadow-3xl hover:-translate-y-3 ${plan.featured
                 ? "bg-gradient-to-br from-[#0e6493] to-[#073a57] text-white"
                 : "bg-white bg-opacity-90"
-            }`}
+              }`}
           >
             {plan.featured && (
               <div className="absolute -top-3 -right-3 bg-[#e31e25] text-white text-sm font-bold p-3 rounded-full shadow-lg flex items-center justify-center">
                 <Star className="h-5 w-5 fill-white" />
               </div>
             )}
-            
+
             {/* Header */}
             <div>
               <h3 className={`text-2xl font-extrabold ${plan.featured ? "text-white" : "text-[#0e6493]"} mb-4`}>
@@ -110,9 +109,15 @@ export default function PlansSection() {
                 ))}
               </ul>
             </div>
+
+            {/* Mensaje adicional mt-4 text-xs text-gray-600 italic*/}
+            <div className={`mt-4 text-xs ${plan.featured ? "text-white" : "text-[#0e6493]"}`}>
+              * Para empresas, se cobra un adicional de $10.000.
+            </div>
           </div>
         ))}
       </div>
+
 
       {/* Botón para ver todos los planes */}
       <div className="flex justify-center mt-12">

@@ -26,19 +26,17 @@ const sedes = [
     lat: 6.5536, 
     lng: -73.1308, 
     direccion: "Carrera 9 #9-94", 
-    telefono: "(607) 724-5566",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
-    email: "sangil@conexionesrapidas.com",
-    imagen: "/sedes/sangil.jpg" // Asegúrate de tener estas imágenes
+    telefono: "3184550936",
+    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
+    imagen: "/sedes/sangil.jpg"
   },
   { 
     ciudad: "Socorro", 
     lat: 6.4668, 
     lng: -73.2620, 
     direccion: "Carrera 14 #10-45", 
-    telefono: "(607) 727-8800",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
-    email: "socorro@conexionesrapidas.com",
+    telefono: "3188237392",
+    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/socorro.jpg"
   },
   { 
@@ -46,9 +44,8 @@ const sedes = [
     lat: 2.6842, 
     lng: -75.3257, 
     direccion: "Carrera 9 17-51", 
-    telefono: "(608) 837-1122",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
-    email: "campoalegre@conexionesrapidas.com",
+    telefono: "3165602425",
+    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/campoalegre.jpg"
   },
   { 
@@ -56,9 +53,8 @@ const sedes = [
     lat: 6.9895, 
     lng: -73.0516, 
     direccion: "Carrera 7 4-63", 
-    telefono: "(607) 655-9900",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM",
-    email: "piedecuesta@conexionesrapidas.com",
+    telefono: "3187305239",
+    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/piedecuesta.jpg"
   },
 ];

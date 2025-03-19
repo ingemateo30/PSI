@@ -27,7 +27,7 @@ export default function Hero() {
             {/* Fondo con imagen y overlay */}
             <div className="absolute inset-0">
                 <Image
-                    src="/jj.png"
+                    src="/hero3.jpg"
                     alt="Fondo hero"
                     fill
                     style={{
@@ -82,7 +82,7 @@ export default function Hero() {
                     <div className="bg-[#0a4f7a]/60 rounded-xl p-4 w-full">
                         <p className="text-lg font-bold text-white mb-3">Tu pack incluye:</p>
                         <ul className="space-y-3 text-left">
-                            {["900 Mbps simétricos", "+80 canales Premium"].map((item, index) => (
+                            {["900 Mbps en fibra optica", "+80 canales Premium"].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <svg className="w-5 h-5 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
