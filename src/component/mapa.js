@@ -149,12 +149,7 @@ export default function MapaSedes() {
                 <div className="flex items-start">
                   <Clock className="text-[#e31e25] mr-3 mt-1" size={18} />
                   <p className="text-gray-700">{selectedSede.horario}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <Mail className="text-[#e31e25] mr-3 mt-1" size={18} />
-                  <p className="text-gray-700">{selectedSede.email}</p>
-                </div>
+                </div>s
               </div>
                       </div>
           )}
