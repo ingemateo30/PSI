@@ -8,7 +8,7 @@ const plans = [
     price: "$89.900",
     includes: [
       { icon: Wifi, text: "900 Megas" },
-      { icon: Tv, text: "TV incluida" },
+      { icon: Tv, text: "+87 canales hd" },
     ],
     featured: true,
   },
@@ -17,7 +17,7 @@ const plans = [
     price: "$79.900",
     includes: [
       { icon: Wifi, text: "500 Megas" },
-      { icon: Tv, text: "TV incluida" },
+      { icon: Tv, text: "+87 canales hd" },
     ],
   },
   {
@@ -25,7 +25,7 @@ const plans = [
     price: "$74.900",
     includes: [
       { icon: Wifi, text: "100 Megas" },
-      { icon: Tv, text: "TV incluida" },
+      { icon: Tv, text: "+87 canales hd" },
     ],
   },
   {
@@ -33,7 +33,7 @@ const plans = [
     price: "$69.900",
     includes: [
       { icon: Wifi, text: "50 Megas" },
-      { icon: Tv, text: "TV incluida" },
+      { icon: Tv, text: "+87 canales hd" },
     ],
   },
 ];
