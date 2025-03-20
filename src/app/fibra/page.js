@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
+import WhatsAppModal from '@/component/modal';
 import Boton from '@/component/botonsubir';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Image from "next/image";
@@ -93,11 +94,85 @@ const internetPlans = [
         color: "#0e6493",
     },
 ];
+const internetPlans2 = [
+    {
+        speed: "100",
+        name: "PLAN TURBO",
+        price: "$84.900",
+        uploadSpeed: "100",
+        benefits: [
+            "Ideal para 3 dispositivos",
+            "Streaming HD",
+            "Gaming casual"
+        ],
+        color: "#0e6493",
+    },
+    {
+        speed: "900",
+        name: "PLAN GIGABIT",
+        price: "$99.900",
+        uploadSpeed: "450",
+        benefits: [
+            "Ideal para +5 dispositivos",
+            "Streaming 4K",
+            "Gaming profesional"
+        ],
+        featured: true,
+        color: "#0e6493",
+    },
+    {
+        speed: "500",
+        name: "PLAN PREMIUM",
+        price: "$89.900",
+        uploadSpeed: "250",
+        benefits: [
+            "Ideal para 5 dispositivos",
+            "Streaming",
+            "Gaming online"
+        ],
+        color: "#0e6493",
+    },
+    {
+        speed: "50",
+        name: "PLAN ESPECIAL",
+        price: "$79.900",
+        uploadSpeed: "40",
+        benefits: [
+            "Ideal para 2 dispositivos",
+            "perfecto para tareas basicas",
+            "Gaming basico"
+        ],
+        color: "#0e6493",
+    },
+    {
+        speed: "10",
+        name: "PLAN BÁSICO",
+        price: "$69.900",
+        uploadSpeed: "10",
+        benefits: [
+            "Ideal para 1 dispositivo",
+            "precio valido estrato 1 y 2"
+        ],
+        color: "#0e6493",
+    },
+    {
+        speed: "5",
+        name: "PLAN BÁSICO",
+        price: "$59.900",
+        uploadSpeed: "5",
+        benefits: [
+            "Ideal para 1 dispositivo",
+            "precio valido estrato 1 y 2"
+        ],
+        color: "#0e6493",
+    },
+];
+
 
 const bundlePlans = [
     {
         name: "PAQUETE FULL",
-        price: "$89.900",
+        price: "$99.900",
         includes: [
             { icon: Wifi, text: "900 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
@@ -113,7 +188,7 @@ const bundlePlans = [
     },
     {
         name: "PAQUETE AVANZADO",
-        price: "$79.900",
+        price: "$89.900",
         includes: [
             { icon: Wifi, text: "500 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
@@ -128,7 +203,7 @@ const bundlePlans = [
     },
     {
         name: "PAQUETE INTERMEDIO",
-        price: "$74.900",
+        price: "$84.900",
         includes: [
             { icon: Wifi, text: "100 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
@@ -146,6 +221,18 @@ const bundlePlans = [
 export default function EnhancedPlansSection() {
     const [activeTab, setActiveTab] = useState("internet");
     const [selectedPlan, setSelectedPlan] = useState(1);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedPlanId, setSelectedPlanId] = useState(null);
+
+
+    const openModal = (planIndex) => {
+        setSelectedPlanId(planIndex);
+    };
+
+    // Función para cerrar el modal
+    const closeModal = () => {
+        setSelectedPlanId(null);
+    };
 
     return (
         <>
@@ -153,12 +240,12 @@ export default function EnhancedPlansSection() {
                 <Navbar />
             </div>
             <div className="relative py-16 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
-                
+
                 <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-10"></div>
                 <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-100 rounded-full opacity-50"></div>
                 <div className="absolute top-1/3 -left-20 w-64 h-64 bg-blue-100 rounded-full opacity-40"></div>
 
-             
+
                 <div className="absolute inset-0 overflow-hidden opacity-10">
                     <div className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-[#e31e25] rounded animate-pulse"></div>
                     <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#e31e25] to-blue-400 rounded animate-pulse"></div>
@@ -166,7 +253,7 @@ export default function EnhancedPlansSection() {
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    
+
                     <div className="text-center mb-12">
                         <div className="inline-block">
                             <div className="flex items-center justify-center mb-3 bg-blue-100 text-[#0e6493] py-2 px-4 rounded-full">
@@ -185,7 +272,7 @@ export default function EnhancedPlansSection() {
                         </p>
                     </div>
 
-                    
+
                     <div className="flex justify-center mb-12">
                         <div className="inline-flex p-1 rounded-full bg-blue-50 shadow-md">
                             <button
@@ -195,21 +282,21 @@ export default function EnhancedPlansSection() {
                                     : "text-[#0e6493] hover:bg-blue-100"
                                     }`}
                             >
-                                Internet Fibra Óptica
+                                Internet Fibra Hogar
                             </button>
                             <button
-                                onClick={() => setActiveTab("bundles")}
-                                className={`px-6 py-3 rounded-full font-bold transition-all duration-300 ${activeTab === "bundles"
+                                onClick={() => setActiveTab("internet2")}
+                                className={`px-6 py-3 rounded-full font-bold transition-all duration-300 ${activeTab === "internet2"
                                     ? "bg-gradient-to-r from-[#0e6493] to-[#073a57] text-white shadow-lg"
                                     : "text-[#0e6493] hover:bg-blue-100"
                                     }`}
                             >
-                                Paquetes Combinados
+                                Internet Fibra Comercial
                             </button>
                         </div>
                     </div>
 
-                    
+
                     {activeTab === "internet" && (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {internetPlans.map((plan, index) => (
@@ -226,7 +313,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     )}
 
-                                   
+
                                     <div className="mb-6">
                                         <div
                                             className={`text-7xl font-extrabold leading-none ${plan.featured ? "text-white" : "text-[#e31e25]"
@@ -242,7 +329,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     </div>
 
-                                  
+
                                     <div className="mb-8">
                                         <h3
                                             className={`text-2xl font-bold ${plan.featured ? "text-white" : "text-[#0e6493]"
@@ -272,7 +359,7 @@ export default function EnhancedPlansSection() {
                                         </p>
                                     </div>
 
-                                    
+
                                     <div
                                         className={`flex justify-between p-4 mb-6 rounded-xl ${plan.featured ? "bg-white/10" : "bg-blue-50"
                                             }`}
@@ -325,7 +412,7 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     </div>
 
-                                  
+
                                     <div className="flex-grow">
                                         <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
                                             {plan.benefits.map((benefit, i) => (
@@ -340,20 +427,27 @@ export default function EnhancedPlansSection() {
                                         </ul>
                                     </div>
 
-                                    <a
-                                        href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+este+plan"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
-                                            ? "bg-white text-[#0e6493] hover:bg-gray-100"
-                                            : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
-                                            }`}
-                                    >
-                                        ¡LO QUIERO!
-                                    </a>
-                                    <div className={`mt-4 text-xs ${plan.featured ? "text-white" : "text-[#0e6493]"}`}>
-                                        * Para empresas, se cobra un adicional de $10.000.
-                                    </div>
+                                    <>
+                                        <button
+                                            onClick={() => openModal(index)}
+                                            className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
+                                                ? "bg-white text-[#0e6493] hover:bg-gray-100"
+                                                : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
+                                                }`}
+                                        >
+                                            <span>¡LO QUIERO!</span>
+                                        </button>
+
+                                        {selectedPlanId === index && (
+                                            <WhatsAppModal
+                                                isOpen={true}
+                                                onClose={closeModal}
+                                                plan={plan}
+                                            />
+                                        )}
+
+                                    </>
+
                                 </div>
 
                             ))}
@@ -362,12 +456,9 @@ export default function EnhancedPlansSection() {
 
                     )}
 
-
-
-                    
-                    {activeTab === "bundles" && (
+                    {activeTab === "internet2" && (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {bundlePlans.map((plan, index) => (
+                            {internetPlans2.map((plan, index) => (
                                 <div
                                     key={index}
                                     className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl shadow-xl text-center transform transition-all duration-500 hover:translate-y-2 ${plan.featured
@@ -381,54 +472,145 @@ export default function EnhancedPlansSection() {
                                         </div>
                                     )}
 
-                                    
-                                    <div>
-                                        <h3 className={`text-2xl font-extrabold ${plan.featured ? "text-white" : "text-[#0e6493]"} mb-4`}>
-                                            {plan.name}
-                                        </h3>
-                                        <div className={`text-5xl font-bold ${plan.featured ? "text-white" : "text-[#e31e25]"} mb-1`}>
-                                            {plan.price}
-                                        </div>
-                                        <p className={`text-sm ${plan.featured ? "text-gray-200" : "text-gray-600"} mb-8`}>
-                                            IVA Incluido
-                                        </p>
 
-                                        
-                                        <div className={`w-16 h-1 mx-auto ${plan.featured ? "bg-white/30" : "bg-[#0e6493]/20"} rounded-full mb-6`}></div>
+                                    <div className="mb-6">
+                                        <div
+                                            className={`text-7xl font-extrabold leading-none ${plan.featured ? "text-white" : "text-[#e31e25]"
+                                                }`}
+                                        >
+                                            {plan.speed}
+                                        </div>
+                                        <div
+                                            className={`text-xl font-medium ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
+                                                }`}
+                                        >
+                                            Megas
+                                        </div>
                                     </div>
 
-                                  
+
+                                    <div className="mb-8">
+                                        <h3
+                                            className={`text-2xl font-bold ${plan.featured ? "text-white" : "text-[#0e6493]"
+                                                }`}
+                                        >
+                                            {plan.name}
+                                        </h3>
+                                        <div className="flex justify-center items-baseline">
+                                            <span
+                                                className={`text-4xl font-bold ${plan.featured ? "text-white" : "text-[#e31e25]"
+                                                    }`}
+                                            >
+                                                {plan.price}
+                                            </span>
+                                            <span
+                                                className={`text-sm ml-2 ${plan.featured ? "text-blue-100" : "text-gray-500"
+                                                    }`}
+                                            >
+                                                /mes
+                                            </span>
+                                        </div>
+                                        <p
+                                            className={`text-sm mt-1 ${plan.featured ? "text-gray-200" : "text-gray-600"
+                                                }`}
+                                        >
+                                            IVA Incluido
+                                        </p>
+                                    </div>
+
+
+                                    <div
+                                        className={`flex justify-between p-4 mb-6 rounded-xl ${plan.featured ? "bg-white/10" : "bg-blue-50"
+                                            }`}
+                                    >
+                                        <div className="text-center">
+                                            <div className="flex justify-center">
+                                                <Download
+                                                    className={`h-5 w-5 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
+                                                        }`}
+                                                />
+                                            </div>
+                                            <div
+                                                className={`font-bold text-lg ${plan.featured ? "text-white" : "text-[#0e6493]"
+                                                    }`}
+                                            >
+                                                {plan.speed} MB
+                                            </div>
+                                            <div
+                                                className={`text-xs ${plan.featured ? "text-blue-100" : "text-gray-500"
+                                                    }`}
+                                            >
+                                                Descarga
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            className={`h-auto w-px ${plan.featured ? "bg-white/20" : "bg-gray-300"
+                                                }`}
+                                        ></div>
+
+                                        <div className="text-center">
+                                            <div className="flex justify-center">
+                                                <Upload
+                                                    className={`h-5 w-5 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
+                                                        }`}
+                                                />
+                                            </div>
+                                            <div
+                                                className={`font-bold text-lg ${plan.featured ? "text-white" : "text-[#0e6493]"
+                                                    }`}
+                                            >
+                                                {plan.uploadSpeed} MB
+                                            </div>
+                                            <div
+                                                className={`text-xs ${plan.featured ? "text-blue-100" : "text-gray-500"
+                                                    }`}
+                                            >
+                                                Subida
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                     <div className="flex-grow">
                                         <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
-                                            {plan.includes.map((item, i) => (
+                                            {plan.benefits.map((benefit, i) => (
                                                 <li key={i} className="flex justify-center items-center space-x-3">
-                                                    {item.icon ? (
-                                                        <div className={`flex items-center justify-center p-2 rounded-full ${plan.featured ? "bg-white/20" : "bg-[#0e6493]/10"}`}>
-                                                            <item.icon className={`${plan.featured ? "text-white" : "text-[#0e6493]"} h-5 w-5`} />
-                                                        </div>
-                                                    ) : (
-                                                        <div className="w-9"></div>
-                                                    )}
-                                                    <span className="font-medium">{item.text}</span>
+                                                    <CheckCircle
+                                                        className={`h-4 w-4 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
+                                                            }`}
+                                                    />
+                                                    <span className="font-medium">{benefit}</span>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
 
-                                   
-                                    <button
-                                        className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
-                                            ? "bg-white text-[#0e6493] hover:bg-gray-100"
-                                            : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
-                                            }`}
-                                    >
-                                        ¡LO QUIERO!
-                                    </button>
-                                    <div className={`mt-4 text-xs ${plan.featured ? "text-white" : "text-[#0e6493]"}`}>
-                                        * Para empresas, se cobra un adicional de $10.000.
-                                    </div>
+                                    <>
+                                        <button
+                                            onClick={() => openModal(index)}
+                                            className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
+                                                ? "bg-white text-[#0e6493] hover:bg-gray-100"
+                                                : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
+                                                }`}
+                                        >
+                                            <span>¡LO QUIERO!</span>
+                                        </button>
+
+                                        {selectedPlanId === index && (
+                                            <WhatsAppModal
+                                                isOpen={true}
+                                                onClose={closeModal}
+                                                plan={plan}
+                                            />
+                                        )}
+
+                                    </>
+
                                 </div>
+
                             ))}
+
                         </div>
                     )}
                 </div>
@@ -437,7 +619,7 @@ export default function EnhancedPlansSection() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <div className="flex flex-col items-center text-center">
-                           
+
                             <div className="mb-2">
                                 <img src="/psi.png" alt="PSI Fibra" className="w-32 md:w-40" />
                             </div>

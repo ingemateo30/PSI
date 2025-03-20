@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Hero from '@/component/hero';
 import Navbar from '@/component/navbar';
 import Planes from '@/component/planes';
+import Image from 'next/image';
 import FloatingSocial from '@/component/redes';
 import Velocidad from '@/component/velocidad';
 import Boton from '@/component/botonsubir';
@@ -13,7 +14,7 @@ const Map = dynamic(() => import("@/component/mapa"), { ssr: false });
 import Caracteristica from '@/component/caracteristicas';
 import Enlaces from '@/component/enlaces'
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import { ArrowRight, MapPin, Phone, Star, UserCheck} from "lucide-react";
+import { ArrowRight, MapPin, Phone, Star, UserCheck, Leaf, Recycle, Sun, Truck, CloudLightning} from "lucide-react";
 
 const testimonials = [
   {
@@ -96,6 +97,78 @@ export default function Home() {
       <section id="velocidad">
       <Velocidad />
       </section>
+        {/* Sostenibilidad */}
+        <section id="sostenibilidad" className="py-10 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+          {/* Elementos decorativos de fondo */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-green-100 rounded-full opacity-20 -translate-y-1/2 translate-x-1/4"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 rounded-full opacity-20 translate-y-1/2 -translate-x-1/4"></div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-xl mx-auto text-center mb-12">
+              <h2 className="text-4xl font-bold text-[#126491] mb-4">Sostenibilidad Ambiental</h2>
+              <div className="w-16 h-1 bg-[#af5661] mx-auto mb-6"></div>
+              <p className="text-gray-600">Nuestra contribución a un futuro más sostenible para Colombia y el planeta</p>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              {/* Imagen con efectos mejorados */}
+              <div className="w-full md:w-1/2 relative">
+                <div className="relative h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl transform md:rotate-1 transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
+                  <Image
+                    src="/paneles1.jpeg"
+                    alt="Sostenibilidad Ambiental"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/60 to-transparent"></div>
+
+                </div>
+              </div>
+
+              <div className="md:w-1/2 w-full mt-8 md:mt-0">
+                <h3 className="text-2xl font-semibold text-[#126491] mb-6 flex items-center">
+                  Nuestra Visión Sostenible
+                </h3>
+
+                <p className="text-lg text-gray-700 mb-6">
+                  Creemos firmemente en la necesidad de impulsar la transición energética y apostamos por las energías renovables como pilar de nuestro futuro.
+                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-md mb-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg mb-3 flex items-center text-gray-800">
+                    <CloudLightning className="w-5 h-5 mr-2 text-[#af5661]" />
+                    Energía Solar
+                  </h4>
+                  <p className="text-gray-600">
+                    Con la instalación de paneles solares en nuestra sede principal, aportamos significativamente a la reducción de emisiones de CO₂, disminuyendo nuestra huella de carbono en el transporte de carga colombiano.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg mb-3 flex items-center text-gray-800">
+                    <Recycle className="w-5 h-5 mr-2 text-[#af5661]" />
+                    Digitalización Verde
+                  </h4>
+                  <p className="text-gray-600">
+                    Adoptamos políticas de reducción en el uso de papel implementando trámites digitales, facturación electrónica y comunicación digital para minimizar nuestro impacto ambiental en todas nuestras operaciones logísticas.
+                  </p>
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <div className="flex items-center bg-green-50 py-2 px-4 rounded-full">
+                    <Leaf className="w-4 h-4 text-green-600 mr-2" />
+                    <span className="text-green-800 text-sm">Reducción de emisiones</span>
+                  </div>
+                  <div className="flex items-center bg-blue-50 py-2 px-4 rounded-full">
+                    <Truck className="w-4 h-4 text-blue-600 mr-2" />
+                    <span className="text-blue-800 text-sm">Logística sostenible</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 <section>
   <Enlaces />
 </section>
