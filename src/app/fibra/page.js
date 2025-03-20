@@ -30,7 +30,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 3 dispositivos",
             "Streaming HD",
-            "Gaming casual"
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -42,7 +42,7 @@ const internetPlans = [
         benefits: [
             "Ideal para +5 dispositivos",
             "Streaming 4K",
-            "Gaming profesional"
+            "+87 canales hd"
         ],
         featured: true,
         color: "#0e6493",
@@ -55,7 +55,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 5 dispositivos",
             "Streaming",
-            "Gaming online"
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -67,7 +67,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
-            "Gaming basico"
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -78,7 +78,8 @@ const internetPlans = [
         uploadSpeed: "10",
         benefits: [
             "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2"
+            "precio valido estrato 1 y 2",
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -89,7 +90,8 @@ const internetPlans = [
         uploadSpeed: "5",
         benefits: [
             "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2"
+            "precio valido estrato 1 y 2",
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -103,7 +105,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 3 dispositivos",
             "Streaming HD",
-            "Gaming casual"
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -115,7 +117,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para +5 dispositivos",
             "Streaming 4K",
-            "Gaming profesional"
+            "+87 canales hd"
         ],
         featured: true,
         color: "#0e6493",
@@ -128,7 +130,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 5 dispositivos",
             "Streaming",
-            "Gaming online"
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -140,7 +142,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
-            "Gaming basico"
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -151,7 +153,8 @@ const internetPlans2 = [
         uploadSpeed: "10",
         benefits: [
             "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2"
+            "precio valido estrato 1 y 2",
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
@@ -162,7 +165,8 @@ const internetPlans2 = [
         uploadSpeed: "5",
         benefits: [
             "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2"
+            "precio valido estrato 1 y 2",
+            "+87 canales hd"
         ],
         color: "#0e6493",
     },
