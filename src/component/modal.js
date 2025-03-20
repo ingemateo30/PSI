@@ -8,22 +8,22 @@ const WhatsAppModal = ({ isOpen, onClose, plan }) => {
   const sedes = [
     {
       name: "Sede San Gil",
-      address: "Calle 67 #87-03, Bogotá",
+      address: "Carrera 9 # 9-94",
       phone: "573184550936"
     },
     {
       name: "Sede Socorro",
-      address: "Avenida 19 #126-42, Bogotá",
+      address: "Carrera 14 # 10-45",
       phone: "573188237392"
     },
     {
       name: "Sede Piedecuesta",
-      address: "Carrera 78 #26-35 Sur, Bogotá",
+      address: "Carrera 7 # 4-63",
       phone: "573187305239"
     },
     {
         name: "Sede Campoalegre",
-        address: "Carrera 78 #26-35 Sur, Bogotá",
+        address: "Carrera 9 # 17-51",
         phone: "573165602425"
       }
   ];
