@@ -30,7 +30,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 3 dispositivos",
             "Streaming HD",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -42,7 +43,8 @@ const internetPlans = [
         benefits: [
             "Ideal para +5 dispositivos",
             "Streaming 4K",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         featured: true,
         color: "#0e6493",
@@ -55,7 +57,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 5 dispositivos",
             "Streaming",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -67,7 +70,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -79,7 +83,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -91,7 +96,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -105,7 +111,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 3 dispositivos",
             "Streaming HD",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -117,7 +124,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para +5 dispositivos",
             "Streaming 4K",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         featured: true,
         color: "#0e6493",
@@ -130,7 +138,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 5 dispositivos",
             "Streaming",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -142,7 +151,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -154,7 +164,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
@@ -166,7 +177,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "+87 canales hd"
+            "+87 canales hd",
+            "Wifi y cable de red"
         ],
         color: "#0e6493",
     },
