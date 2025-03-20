@@ -30,8 +30,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 3 dispositivos",
             "Streaming HD",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -43,8 +43,8 @@ const internetPlans = [
         benefits: [
             "Ideal para +5 dispositivos",
             "Streaming 4K",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         featured: true,
         color: "#0e6493",
@@ -57,8 +57,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 5 dispositivos",
             "Streaming",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -66,12 +66,12 @@ const internetPlans = [
         speed: "50",
         name: "PLAN ESPECIAL",
         price: "$69.900",
-        uploadSpeed: "40",
+        uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -83,8 +83,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -96,8 +96,8 @@ const internetPlans = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -111,8 +111,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 3 dispositivos",
             "Streaming HD",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -124,8 +124,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para +5 dispositivos",
             "Streaming 4K",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         featured: true,
         color: "#0e6493",
@@ -138,8 +138,8 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 5 dispositivos",
             "Streaming",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -147,12 +147,12 @@ const internetPlans2 = [
         speed: "50",
         name: "PLAN ESPECIAL",
         price: "$79.900",
-        uploadSpeed: "40",
+        uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -163,9 +163,8 @@ const internetPlans2 = [
         uploadSpeed: "10",
         benefits: [
             "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -176,9 +175,8 @@ const internetPlans2 = [
         uploadSpeed: "5",
         benefits: [
             "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2",
-            "+87 canales hd",
-            "Wifi y cable de red"
+            "87 canales hd",
+            "Wifi 5G"
         ],
         color: "#0e6493",
     },
@@ -193,7 +191,7 @@ const bundlePlans = [
             { icon: Wifi, text: "900 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
             { icon: Tv, text: "TV incluido" },
-            { icon: Tv, text: "+87 canales HD" },
+            { icon: Tv, text: "87 canales HD" },
         ],
         benefits: [
             "Múltiples dispositivos conectados",
@@ -209,7 +207,7 @@ const bundlePlans = [
             { icon: Wifi, text: "500 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
             { icon: Tv, text: "Tv incluido" },
-            { icon: Tv, text: "+87 canales HD" },
+            { icon: Tv, text: "87 canales HD" },
         ],
         benefits: [
             "Gaming y streaming 4K",
@@ -224,7 +222,7 @@ const bundlePlans = [
             { icon: Wifi, text: "100 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
             { icon: Tv, text: "TV incluido" },
-            { icon: Tv, text: "+87 canales HD" },
+            { icon: Tv, text: "87 canales HD" },
         ],
         benefits: [
             "Conexión ultrarrápida",

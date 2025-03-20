@@ -3,12 +3,12 @@
 const features = [
   {
     title: "Máxima velocidad",
-    description: "Navega a velocidades de hasta 1 Gbps simétricos con nuestra tecnología de fibra óptica avanzada.",
-    highlight: "HASTA 1 GBPS",
+    description: "Navega a velocidades de hasta 900 Mbps simétricos con nuestra tecnología de fibra óptica avanzada.",
+    highlight: "HASTA 900 MBPS",
   },
   {
     title: "Televisión en HD",
-    description: " 87 canales en alta definición y contenido exclusivo para toda la familia.",
+    description: "87 canales con la mejor calidad y contenido  exclusivo para toda la familia.",
     highlight: "87 CANALES HD",
   },
   {
