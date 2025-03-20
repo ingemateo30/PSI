@@ -1,7 +1,7 @@
 "use client";
-
+import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
-import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X } from "lucide-react";
+import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X, Home } from "lucide-react";
 import { useState } from "react";
 import localFont from 'next/font/local';
 
@@ -56,77 +56,29 @@ export default function Navbar() {
                             href="https://wa.me/573184550936"
                             className="hover:underline py-1 hidden md:flex items-center group transition-all duration-300"
                         >
-                            <svg
-                                className="w-3 h-3 mr-1 group-hover:text-yellow-300"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                ></path>
-                            </svg>
+                            <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300"/>
                             <span className="group-hover:text-yellow-300">San Gil 3184550936</span>
                         </a>
                         <a
                             href="https://wa.me/573188237392"
                             className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
                         >
-                            <svg
-                                className="w-3 h-3 mr-1 group-hover:text-yellow-300"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                ></path>
-                            </svg>
+                           <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300"/>
                             <span className="group-hover:text-yellow-300">Socorro 3188237392</span>
                         </a>
                         <a
                             href="https://wa.me/573187305239"
                             className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
                         >
-                            <svg
-                                className="w-3 h-3 mr-1 group-hover:text-yellow-300"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                ></path>
-                            </svg>
+                          <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300"/>
                             <span className="group-hover:text-yellow-300">Piedecuesta 3187305239</span>
                         </a>
                         <a
                             href="https://wa.me/573165602425<"
                             className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
                         >
-                            <svg
-                                className="w-3 h-3 mr-1 group-hover:text-yellow-300"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                ></path>
-                            </svg>
-                            <span className="group-hover:text-yellow-300">Campo alegre 3165602425</span>
+                           <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300"/>
+                            <span className="group-hover:text-yellow-300">Campoalegre 3165602425</span>
                         </a>
                     </div>
                 </div>
@@ -146,6 +98,13 @@ export default function Navbar() {
                             </a>
                         </div>
                         <div className="hidden lg:flex items-center space-x-2">
+                        <a
+                                href="/"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
+                            >
+                                <Home size={18} />
+                                <span>Inicio</span>
+                            </a>
                             <a
                                 href="/fibra"
                                 className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
@@ -191,19 +150,7 @@ export default function Navbar() {
                                 href="https://wa.me/573184550936"
                                 className="px-6 py-3 rounded-lg font-bold text-white bg-gradient-to-r from-[#e31e25] to-[#ff3c42] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg flex items-center space-x-2 relative overflow-hidden group font-branding-sf"
                             >
-                                <svg
-                                    className="w-5 h-5 animate-pulse"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                    ></path>
-                                </svg>
+                                <FaWhatsapp className="w-5 h-5 animate-pulse" />
                                 <span>Cotizar ahora</span>
                                 <div className="absolute inset-0 bg-white opacity-20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                             </a>

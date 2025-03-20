@@ -474,7 +474,7 @@ export default function InternetSano() {
                           <ul className="space-y-2">
                             <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
                             <li><a href="#" className="text-gray-300 hover:text-white">Normatividad</a></li>
-                            <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiendo de datos</a></li>
+                            <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiento de datos</a></li>
                             <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
                           </ul>
                         </div>

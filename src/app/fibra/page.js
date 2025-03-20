@@ -25,9 +25,9 @@ const internetPlans = [
         speed: "100",
         name: "PLAN TURBO",
         price: "$74.900",
-        uploadSpeed: "90",
+        uploadSpeed: "100",
         benefits: [
-            "Ideal para 5-7 dispositivos",
+            "Ideal para 3 dispositivos",
             "Streaming HD",
             "Gaming casual"
         ],
@@ -37,9 +37,9 @@ const internetPlans = [
         speed: "900",
         name: "PLAN GIGABIT",
         price: "$89.900",
-        uploadSpeed: "500",
+        uploadSpeed: "450",
         benefits: [
-            "Ideal para 10+ dispositivos",
+            "Ideal para +5 dispositivos",
             "Streaming 4K",
             "Gaming profesional"
         ],
@@ -50,9 +50,9 @@ const internetPlans = [
         speed: "500",
         name: "PLAN PREMIUM",
         price: "$79.900",
-        uploadSpeed: "300",
+        uploadSpeed: "250",
         benefits: [
-            "Ideal para 8+ dispositivos",
+            "Ideal para 5 dispositivos",
             "Streaming",
             "Gaming online"
         ],
@@ -61,10 +61,10 @@ const internetPlans = [
     {
         speed: "50",
         name: "PLAN ESPECIAL",
-        price: "$109.900",
+        price: "$69.900",
         uploadSpeed: "40",
         benefits: [
-            "Ideal para 5 dispositivos",
+            "Ideal para 2 dispositivos",
             "perfecto para tareas basicas",
             "Gaming basico"
         ],
@@ -73,24 +73,22 @@ const internetPlans = [
     {
         speed: "10",
         name: "PLAN BÁSICO",
-        price: "$52.900",
+        price: "$59.900",
         uploadSpeed: "10",
         benefits: [
-            "Ideal para 5 dispositivos",
-            "",
-            "Gaming casual"
+            "Ideal para 1 dispositivo",
+            "precio valido estrato 1 y 2"
         ],
         color: "#0e6493",
     },
     {
         speed: "5",
         name: "PLAN BÁSICO",
-        price: "$52.900",
+        price: "$49.900",
         uploadSpeed: "5",
         benefits: [
-            "Ideal para +4 dispositivos",
-            "Streaming HD",
-            "Gaming casual"
+            "Ideal para 1 dispositivo",
+            "precio valido estrato 1 y 2"
         ],
         color: "#0e6493",
     },
@@ -471,7 +469,7 @@ export default function EnhancedPlansSection() {
                             <ul className="space-y-2">
                                 <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
                                 <li><a href="/normatividad" className="text-gray-300 hover:text-white">Normatividad</a></li>
-                                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiendo de datos</a></li>
+                                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiento de datos</a></li>
                                 <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
                             </ul>
                         </div>

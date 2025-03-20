@@ -24,7 +24,7 @@ const sedes = [
     ciudad: "San Gil", 
     lat: 6.5536, 
     lng: -73.1308, 
-    direccion: "Carrera 9 #9-94", 
+    direccion: "Carrera 9 # 9-94", 
     telefono: "3184550936",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/sangil.jpg"
@@ -33,7 +33,7 @@ const sedes = [
     ciudad: "Socorro", 
     lat: 6.4668, 
     lng: -73.2620, 
-    direccion: "Carrera 14 #10-45", 
+    direccion: "Carrera 14 # 10-45", 
     telefono: "3188237392",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/socorro.jpg"
@@ -42,7 +42,7 @@ const sedes = [
     ciudad: "Campoalegre", 
     lat: 2.6842, 
     lng: -75.3257, 
-    direccion: "Carrera 9 17-51", 
+    direccion: "Carrera 9 # 17-51", 
     telefono: "3165602425",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/campoalegre.jpg"
@@ -51,7 +51,7 @@ const sedes = [
     ciudad: "Piedecuesta", 
     lat: 6.9895, 
     lng: -73.0516, 
-    direccion: "Carrera 7 4-63", 
+    direccion: "Carrera 7 # 4-63", 
     telefono: "3187305239",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/piedecuesta.jpg"

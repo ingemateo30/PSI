@@ -90,7 +90,7 @@ export default function Television() {
             <div className="p-8">
               <div className="flex justify-between items-center mb-8">
                 <div>
-                  <p className="text-4xl font-bold text-[#e31e25]">$49.900 <span className="text-lg text-gray-600 font-normal">/mes</span></p>
+                  <p className="text-4xl font-bold text-[#e31e25]">$44.900 <span className="text-lg text-gray-600 font-normal">/mes</span></p>
                   <p className="text-gray-600 mt-1">Sin cláusulas de permanencia</p>
                 </div>
                 <button className="bg-[#e31e25] text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition shadow-md">
@@ -217,7 +217,7 @@ export default function Television() {
               <ul className="space-y-2">
                 <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
                 <li><a href="/normatividad" className="text-gray-300 hover:text-white">Normatividad</a></li>
-                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiendo de datos</a></li>
+                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiento de datos</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
               </ul>
             </div>

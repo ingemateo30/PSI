@@ -3,6 +3,7 @@
 import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
+import { FaWhatsapp } from "react-icons/fa";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -126,37 +127,37 @@ export default function Empresa() {
                     <td className="py-4 px-6 font-medium whitespace-nowrap">San Gil</td>
                     <td className="py-4 px-6 whitespace-nowrap">
                       <div className="flex items-center">
-                        <span className="text-[#e31e25] mr-2">📞</span> 7236020
+                        <FaWhatsapp className="text-[#e31e25] mr-2" /> +573184550936
                       </div>
                     </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 9 #9-94</td>
+                    <td className="py-4 px-6 whitespace-nowrap">Carrera 9 # 9-94</td>
                   </tr>
                   <tr className="border-b hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-medium whitespace-nowrap">Socorro</td>
                     <td className="py-4 px-6 whitespace-nowrap">
                       <div className="flex items-center">
-                        <span className="text-[#e31e25] mr-2">📞</span> 7273300
+                      <FaWhatsapp className="text-[#e31e25] mr-2" /> +573188237392
                       </div>
                     </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 14 #10-45</td>
+                    <td className="py-4 px-6 whitespace-nowrap">Carrera 14 # 10-45</td>
                   </tr>
                   <tr className="border-b hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-medium whitespace-nowrap">Campoalegre</td>
                     <td className="py-4 px-6 whitespace-nowrap">
                       <div className="flex items-center">
-                        <span className="text-[#e31e25] mr-2">📞</span> 3182711387
+                      <FaWhatsapp className="text-[#e31e25] mr-2" /> +573165602425
                       </div>
                     </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 9 17-51</td>
+                    <td className="py-4 px-6 whitespace-nowrap">Carrera 9 # 17-51</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-medium whitespace-nowrap">Piedecuesta</td>
                     <td className="py-4 px-6 whitespace-nowrap">
                       <div className="flex items-center">
-                        <span className="text-[#e31e25] mr-2">📞</span> 3187305239
+                      <FaWhatsapp className="text-[#e31e25] mr-2" /> +573187305239
                       </div>
                     </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 7 4-63</td>
+                    <td className="py-4 px-6 whitespace-nowrap">Carrera 7 # 4-63</td>
                   </tr>
                 </tbody>
               </table>
@@ -200,7 +201,7 @@ export default function Empresa() {
               <ul className="space-y-2">
                 <li><a href="/empresa" className="text-gray-300 hover:text-white">Sobre PSI</a></li>
                 <li><a href="/normatividad" className="text-gray-300 hover:text-white">Normatividad</a></li>
-                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiendo de datos</a></li>
+                <li><a href="/tratamiento" className="text-gray-300 hover:text-white">Tratamiento de datos</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
               </ul>
             </div>
