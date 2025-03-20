@@ -141,7 +141,7 @@ export default function Home() {
                     Energía Solar
                   </h4>
                   <p className="text-gray-600">
-                    Con la instalación de paneles solares en nuestra sede principal, aportamos significativamente a la reducción de emisiones de CO₂, disminuyendo nuestra huella de carbono en el transporte de carga colombiano.
+                    Con la instalación de paneles solares en nuestra sede principal, aportamos significativamente a la reducción de emisiones de CO₂.
                   </p>
                 </div>
 
