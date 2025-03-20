@@ -8,8 +8,8 @@ const features = [
   },
   {
     title: "Televisión en HD",
-    description: "Más de 80 canales en alta definición y contenido exclusivo para toda la familia.",
-    highlight: "+80 CANALES HD",
+    description: " 87 canales en alta definición y contenido exclusivo para toda la familia.",
+    highlight: "87 CANALES HD",
   },
   {
     title: "Mejor precio",
