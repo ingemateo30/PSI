@@ -105,7 +105,15 @@ export default function Television() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span>87+ canales HD</span>
+                  <span>87 canales digitales</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-[#0e6493] flex items-center justify-center text-white mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>7 canales radio</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-[#0e6493] flex items-center justify-center text-white mr-3">

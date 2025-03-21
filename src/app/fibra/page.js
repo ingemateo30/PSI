@@ -30,7 +30,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 3 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -43,7 +43,7 @@ const internetPlans = [
         benefits: [
             "Ideal para +5 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         featured: true,
@@ -57,7 +57,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 5 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -70,7 +70,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 2 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -83,7 +83,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "87 canales hd - 7 canales radio",
+            "87 canales digitales - 7 canales radio",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -96,7 +96,7 @@ const internetPlans = [
         benefits: [
             "Ideal para 1 dispositivo",
             "precio valido estrato 1 y 2",
-            "87 canales hd - 7 canales radio",
+            "87 canales digitales - 7 canales radio",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -124,7 +124,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para +5 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         featured: true,
@@ -138,7 +138,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 5 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -151,7 +151,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 2 dispositivos",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -164,7 +164,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 1 dispositivo",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -177,7 +177,7 @@ const internetPlans2 = [
         benefits: [
             "Ideal para 1 dispositivo",
             "7 canales radio",
-            "87 canales hd",
+            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
