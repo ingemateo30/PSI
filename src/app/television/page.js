@@ -5,6 +5,7 @@ import Image from "next/image";
 import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
+import Suscribirse from '@/component/botonsuscripcion'
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { motion } from "framer-motion";
 
@@ -93,9 +94,7 @@ export default function Television() {
                   <p className="text-4xl font-bold text-[#e31e25]">$44.900 <span className="text-lg text-gray-600 font-normal">/mes</span></p>
                   <p className="text-gray-600 mt-1">Sin cláusulas de permanencia</p>
                 </div>
-                <button className="bg-[#e31e25] text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition shadow-md">
-                  Suscribirse
-                </button>
+                <Suscribirse />
               </div>
 
               <div className="grid grid-cols-2 gap-6">
