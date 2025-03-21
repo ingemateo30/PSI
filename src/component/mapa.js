@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import Boton from "@/component/contratarmapa"
 import L from "leaflet";
 import { MapPin, Phone, Clock, Mail, ExternalLink } from "lucide-react";
 
@@ -200,9 +201,7 @@ export default function MapaSedes() {
         <p className="text-gray-600 mb-6">
           Nuestros asesores están listos para atenderte y ofrecerte la mejor solución para tus necesidades de conectividad.
         </p>
-        <a href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+su+servicio" className="inline-block px-8 py-3 rounded-lg bg-[#e31e25] text-white font-bold hover:bg-[#c71a1f] transition-colors shadow-lg">
-          Contáctanos ahora
-        </a>
+        <Boton />
       </div>
     </div>
   );

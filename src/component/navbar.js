@@ -3,6 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X, Home } from "lucide-react";
 import { useState } from "react";
+import Boton from "@/component/contratarnav"
 import localFont from 'next/font/local';
 
 
@@ -146,14 +147,7 @@ export default function Navbar() {
                             </a>
                         </div>
                         <div className="hidden lg:flex items-center">
-                            <a
-                                href="https://wa.me/573184550936"
-                                className="px-6 py-3 rounded-lg font-bold text-white bg-gradient-to-r from-[#e31e25] to-[#ff3c42] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg flex items-center space-x-2 relative overflow-hidden group font-branding-sf"
-                            >
-                                <FaWhatsapp className="w-5 h-5 animate-pulse" />
-                                <span>Cotizar ahora</span>
-                                <div className="absolute inset-0 bg-white opacity-20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-                            </a>
+                         <Boton />
                         </div>
                         <div className="lg:hidden flex items-center">
                             <button

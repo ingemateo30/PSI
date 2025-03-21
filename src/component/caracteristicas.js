@@ -3,7 +3,7 @@
 const features = [
   {
     title: "Máxima velocidad",
-    description: "Navega a velocidades de hasta 900 Mbps simétricos con nuestra tecnología de fibra óptica avanzada.",
+    description: "Navega a velocidades de hasta 900 Mbps con nuestra tecnología de fibra óptica avanzada.",
     highlight: "HASTA 900 MBPS",
   },
   {

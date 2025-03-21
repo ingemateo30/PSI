@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import BotonContratacion from '@/component/contratarahora'
 
 export default function Hero() {
     const [isVisible, setIsVisible] = useState(false);
@@ -90,14 +91,7 @@ export default function Hero() {
                   
                     <p className="text-sm text-gray-300">Verifica la cobertura en tu zona.</p>
 
-                    
-                    <a href="https://wa.me/573184550936?text=Hola%2C+quiero+más+información+sobre+su+servicio"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 bg-[#e31e25] hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform w-full text-lg uppercase tracking-wider shadow-lg hover:scale-105 text-center">
-                        ¡CONTRATAR AHORA!
-                    </a>
-
+                    <BotonContratacion />
                 </div>
 
 
