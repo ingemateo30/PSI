@@ -7,9 +7,9 @@ const features = [
     highlight: "HASTA 900 MBPS",
   },
   {
-    title: "Televisión en HD",
+    title: "Televisión digital",
     description: "87 canales con la mejor calidad y contenido  exclusivo para toda la familia.",
-    highlight: "87 CANALES HD",
+    highlight: "87 CANALES DIGITALES",
   },
   {
     title: "Mejor precio",
