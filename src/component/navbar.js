@@ -74,13 +74,6 @@ export default function Navbar() {
                           <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300"/>
                             <span className="group-hover:text-yellow-300">Piedecuesta 3187305239</span>
                         </a>
-                        <a
-                            href="https://wa.me/573165602425<"
-                            className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
-                        >
-                           <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300"/>
-                            <span className="group-hover:text-yellow-300">Campoalegre 3165602425</span>
-                        </a>
                     </div>
                 </div>
             </div>

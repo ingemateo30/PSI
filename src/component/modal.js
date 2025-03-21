@@ -20,11 +20,6 @@ const WhatsAppModal = ({ isOpen, onClose, plan }) => {
             name: "Sede Piedecuesta",
             address: "Carrera 7 # 4-63",
             phone: "573187305239"
-        },
-        {
-            name: "Sede Campoalegre",
-            address: "Carrera 9 # 17-51",
-            phone: "573165602425"
         }
     ];
 

@@ -70,19 +70,26 @@ export default function Home() {
             Conéctate a la mejor red de fibra óptica en las siguientes ciudades:
           </p>
 
-          <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {["San Gil", "Socorro", "Piedecuesta", "Campoalegre"].map((city, index) => (
-              <motion.div key={city} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.1 * index }} className="bg-white/10 p-6 rounded-xl shadow-xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex items-center justify-center mb-4">
-                  <div className="p-3 bg-white/20 rounded-full">
-                    <MapPin size={28} />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-center">{city}</h3>
-                <p className="text-gray-100 text-center">Conectividad premium en {city}.</p>
-              </motion.div>
-            ))}
-          </motion.div>
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
+  {["San Gil", "Socorro", "Piedecuesta"].map((city, index) => (
+    <motion.div 
+      key={city} 
+      initial={{ scale: 0.8, opacity: 0 }} 
+      animate={{ scale: 1, opacity: 1 }} 
+      transition={{ delay: 0.1 * index }} 
+      className="bg-white/10 p-6 rounded-xl shadow-xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs"
+    >
+      <div className="flex items-center justify-center mb-4">
+        <div className="p-3 bg-white/20 rounded-full">
+          <MapPin size={28} />
+        </div>
+      </div>
+      <h3 className="text-2xl font-bold mb-3 text-center">{city}</h3>
+      <p className="text-gray-100 text-center">Conectividad premium en {city}.</p>
+    </motion.div>
+  ))}
+</motion.div>
+
         </div>
       </motion.section>
 

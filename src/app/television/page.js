@@ -63,7 +63,7 @@ export default function Television() {
             <div className="md:w-1/2 md:pr-8">
               <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Plan de Televisión</h2>
               <p className="text-lg md:text-xl mb-8">
-                Disfruta de una experiencia visual inigualable con nuestra selección premium de canales HD.
+                Disfruta de una experiencia visual inigualable con nuestra selección premium de canales digitales.
               </p>
               <button className="bg-[#e31e25] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105">
                 ¡Descubre más!
@@ -84,7 +84,7 @@ export default function Television() {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
             <div className="bg-[#0e6493] p-6 text-white">
-              <h3 className="text-3xl font-bold">Plan Full HD</h3>
+              <h3 className="text-3xl font-bold">Plan digital</h3>
               <p className="opacity-90">La mejor experiencia de televisión para tu hogar</p>
             </div>
             <div className="p-8">

@@ -53,7 +53,7 @@ export default function Empresa() {
                 <h3 className="text-2xl md:text-3xl font-bold text-[#e31e25] mb-4">PROVEEDOR DE TELECOMUNICACIONES S.A.S.</h3>
                 <p className="text-gray-700 text-lg leading-relaxed">
                   Somos una empresa prestadora de servicios de Televisión por cable e Internet, con cobertura en
-                  <span className="font-semibold text-[#0e6493]"> San Gil (Santander), Socorro (Santander), Piedecuesta (Santander) y Campoalegre (Huila)</span>.
+                  <span className="font-semibold text-[#0e6493]"> San Gil (Santander), Socorro (Santander) y Piedecuesta (Santander)</span>.
                   Nos comprometemos a ofrecer la mejor calidad en servicios de telecomunicaciones para nuestros usuarios.
                 </p>
               </div>
@@ -140,15 +140,6 @@ export default function Empresa() {
                       </div>
                     </td>
                     <td className="py-4 px-6 whitespace-nowrap">Carrera 14 # 10-45</td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-50 transition-colors">
-                    <td className="py-4 px-6 font-medium whitespace-nowrap">Campoalegre</td>
-                    <td className="py-4 px-6 whitespace-nowrap">
-                      <div className="flex items-center">
-                      <FaWhatsapp className="text-[#e31e25] mr-2" /> +573165602425
-                      </div>
-                    </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 9 # 17-51</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-medium whitespace-nowrap">Piedecuesta</td>

@@ -28,7 +28,6 @@ export default function BotonContratacion() {
   const sedes = [
     { id: 1, nombre: "San Gil", direccion: "Carrera 9 # 9-94", telefono: "573184550936", mensaje: "Hola, quiero más información sobre su servicio en San Gil" },
     { id: 2, nombre: "Socorro", direccion: "Carrera 14 # 10-45", telefono: "573188237392", mensaje: "Hola, quiero más información sobre su servicio en Socorro" },
-    { id: 3, nombre: "Campoalegre", direccion: "Carrera 9 # 17-51", telefono: "573165602425", mensaje: "Hola, quiero más información sobre su servicio en Campoalegre" },
     { id: 4, nombre: "Piedecuesta", direccion: "Carrera 7 # 4-63", telefono: "573187305239", mensaje: "Hola, quiero más información sobre su servicio en Piedecuesta" },
   ];
 

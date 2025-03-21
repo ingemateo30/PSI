@@ -75,7 +75,7 @@ export default function Hero() {
                     <div className="bg-[#0a4f7a]/60 rounded-lg p-3 w-full">
                         <p className="text-base font-bold text-white mb-2">Tu pack incluye:</p>
                         <ul className="space-y-2 text-left">
-                            {["900 Mbps en fibra óptica", "+80 canales Digitales", "+7 canales de radio"].map((item, index) => (
+                            {["900 Mbps en fibra óptica", "80 canales Digitales", "7 canales de radio"].map((item, index) => (
                                 <li key={index} className="flex items-center gap-2 text-sm">
                                     <svg className="w-4 h-4 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>

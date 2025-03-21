@@ -40,15 +40,6 @@ const sedes = [
     imagen: "/sedes/socorro.jpg"
   },
   { 
-    ciudad: "Campoalegre", 
-    lat: 2.6842, 
-    lng: -75.3257, 
-    direccion: "Carrera 9 # 17-51", 
-    telefono: "3165602425",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
-    imagen: "/sedes/campoalegre.jpg"
-  },
-  { 
     ciudad: "Piedecuesta", 
     lat: 6.9895, 
     lng: -73.0516, 
