@@ -8,6 +8,7 @@ import Image from 'next/image';
 import FloatingSocial from '@/component/redes';
 import Velocidad from '@/component/velocidad';
 import Boton from '@/component/botonsubir';
+import Cobertura from '@/component/cobertura'
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 const Map = dynamic(() => import("@/component/mapa"), { ssr: false });
@@ -60,38 +61,9 @@ export default function Home() {
         <Caracteristica />
       </section>
 
-
-      <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className="relative bg-gradient-to-r from-[#0e6493] to-[#073a57] py-20 text-white overflow-hidden">
-        <div className="relative container mx-auto px-6 text-center">
-          <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-5xl font-bold mb-6">
-            ¡Cobertura de PSI Fibra/TV!
-          </motion.h2>
-          <p className="text-xl mb-10 max-w-3xl mx-auto opacity-90">
-            Conéctate a la mejor red de fibra óptica en las siguientes ciudades:
-          </p>
-
-          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
-  {["San Gil", "Socorro", "Piedecuesta"].map((city, index) => (
-    <motion.div 
-      key={city} 
-      initial={{ scale: 0.8, opacity: 0 }} 
-      animate={{ scale: 1, opacity: 1 }} 
-      transition={{ delay: 0.1 * index }} 
-      className="bg-white/10 p-6 rounded-xl shadow-xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs"
-    >
-      <div className="flex items-center justify-center mb-4">
-        <div className="p-3 bg-white/20 rounded-full">
-          <MapPin size={28} />
-        </div>
-      </div>
-      <h3 className="text-2xl font-bold mb-3 text-center">{city}</h3>
-      <p className="text-gray-100 text-center">Conectividad premium en {city}.</p>
-    </motion.div>
-  ))}
-</motion.div>
-
-        </div>
-      </motion.section>
+      <section>
+        <Cobertura />
+      </section>
 
       <section className="">
         <Planes />
