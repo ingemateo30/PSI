@@ -14,7 +14,7 @@ export default function CoberturaSection() {
         {
             ciudad: "Socorro",
             descripcion: "Conectividad de última generación en Socorro.",
-            imagen: "/socorro.jpeg", 
+            imagen: "/Socorro.jpeg", 
             alt: "Sede de Socorro",
         },
         {
