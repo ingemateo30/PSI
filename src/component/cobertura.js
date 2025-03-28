@@ -20,7 +20,7 @@ export default function CoberturaSection() {
         {
             ciudad: "Piedecuesta",
             descripcion: "Infraestructura de fibra óptica en Piedecuesta.",
-            imagen: "/piedecuesta.jpeg",
+            imagen: "/psi.jpeg",
             alt: "Sede de Bucaramanga",
         }
     ];
