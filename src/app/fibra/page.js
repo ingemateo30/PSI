@@ -29,8 +29,6 @@ const internetPlans = [
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
-            "7 canales radio",
-            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -42,8 +40,6 @@ const internetPlans = [
         uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
-            "7 canales radio",
-            "87 canales digitales",
             "Wifi 5G"
         ],
         featured: true,
@@ -56,8 +52,6 @@ const internetPlans = [
         uploadSpeed: "150",
         benefits: [
             "Ideal para 4 dispositivos",
-            "7 canales radio",
-            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -69,7 +63,6 @@ const internetPlans = [
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
-            "7 canales radio",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -83,8 +76,6 @@ const internetPlans2 = [
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
-            "7 canales radio",
-            "87 canales hd",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -96,8 +87,6 @@ const internetPlans2 = [
         uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
-            "7 canales radio",
-            "87 canales digitales",
             "Wifi 5G"
         ],
         featured: true,
@@ -110,8 +99,6 @@ const internetPlans2 = [
         uploadSpeed: "150",
         benefits: [
             "Ideal para 5 dispositivos",
-            "7 canales radio",
-            "87 canales digitales",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -123,7 +110,6 @@ const internetPlans2 = [
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
-            "7 canales radio",
             "Wifi 5G"
         ],
         color: "#0e6493",
@@ -137,9 +123,7 @@ const bundlePlans = [
         price: "$99.900",
         includes: [
             { icon: Wifi, text: "300 Megas" },
-            { icon: Wifi, text: "Wifi y cable de red" },
-            { icon: Tv, text: "TV incluido" },
-            { icon: Tv, text: "87 canales HD" },
+            { icon: Wifi, text: "Wifi y cable de red" }
         ],
         benefits: [
             "Múltiples dispositivos conectados",
@@ -153,9 +137,7 @@ const bundlePlans = [
         price: "$89.900",
         includes: [
             { icon: Wifi, text: "200 Megas" },
-            { icon: Wifi, text: "Wifi y cable de red" },
-            { icon: Tv, text: "Tv incluido" },
-            { icon: Tv, text: "87 canales HD" },
+            { icon: Wifi, text: "Wifi y cable de red" }
         ],
         benefits: [
             "Gaming y streaming 4K",
@@ -169,12 +151,10 @@ const bundlePlans = [
         includes: [
             { icon: Wifi, text: "100 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
-            { icon: Tv, text: "TV incluido" },
             { icon: Tv, text: "87 canales HD" },
         ],
         benefits: [
             "Conexión ultrarrápida",
-            "Canales HD",
             "Ideal para gamers"
         ],
     }
