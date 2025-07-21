@@ -3,8 +3,8 @@
 const features = [
   {
     title: "Máxima velocidad",
-    description: "Navega a velocidades de hasta 900 Mbps con nuestra tecnología de fibra óptica avanzada.",
-    highlight: "HASTA 900 MBPS",
+    description: "Navega a velocidades de hasta 300 Mbps con nuestra tecnología de fibra óptica avanzada.",
+    highlight: "HASTA 300 MBPS",
   },
   {
     title: "Televisión digital",
