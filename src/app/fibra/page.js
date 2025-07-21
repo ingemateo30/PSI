@@ -39,7 +39,7 @@ const internetPlans = [
         speed: "300",
         name: "PLAN DELUXE",
         price: "$89.900",
-        uploadSpeed: "450",
+        uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
             "7 canales radio",
@@ -53,7 +53,7 @@ const internetPlans = [
         speed: "200",
         name: "PLAN PREMIUM",
         price: "$79.900",
-        uploadSpeed: "250",
+        uploadSpeed: "150",
         benefits: [
             "Ideal para 4 dispositivos",
             "7 canales radio",
