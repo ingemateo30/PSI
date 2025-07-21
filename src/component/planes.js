@@ -36,7 +36,6 @@ const plans = [
     price: "$59.900",
     includes: [
       { icon: Wifi, text: "50 Megas" },
-      { icon: Tv, text: "87 canales digitales" },
       { icon: Tv, text: "7 canales radio" },
     ],
   },
