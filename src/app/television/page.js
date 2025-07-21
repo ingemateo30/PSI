@@ -91,7 +91,7 @@ export default function Television() {
             <div className="p-8">
               <div className="flex justify-between items-center mb-8">
                 <div>
-                  <p className="text-4xl font-bold text-[#e31e25]">$44.900 <span className="text-lg text-gray-600 font-normal">/mes</span></p>
+                  <p className="text-4xl font-bold text-[#e31e25]">$30.000 <span className="text-lg text-gray-600 font-normal">/mes</span></p>
                   <p className="text-gray-600 mt-1">Sin cláusulas de permanencia</p>
                 </div>
                 <Suscribirse />

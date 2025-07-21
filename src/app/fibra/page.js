@@ -25,7 +25,7 @@ const internetPlans = [
     {
         speed: "100",
         name: "PLAN TURBO",
-        price: "$74.900",
+        price: "$69.900",
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
@@ -36,8 +36,8 @@ const internetPlans = [
         color: "#0e6493",
     },
     {
-        speed: "900",
-        name: "PLAN GIGABIT",
+        speed: "300",
+        name: "PLAN DELUXE",
         price: "$89.900",
         uploadSpeed: "450",
         benefits: [
@@ -50,12 +50,12 @@ const internetPlans = [
         color: "#0e6493",
     },
     {
-        speed: "500",
+        speed: "200",
         name: "PLAN PREMIUM",
         price: "$79.900",
         uploadSpeed: "250",
         benefits: [
-            "Ideal para 5 dispositivos",
+            "Ideal para 4 dispositivos",
             "7 canales radio",
             "87 canales digitales",
             "Wifi 5G"
@@ -65,7 +65,7 @@ const internetPlans = [
     {
         speed: "50",
         name: "PLAN ESPECIAL",
-        price: "$69.900",
+        price: "$59.900",
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
@@ -74,39 +74,13 @@ const internetPlans = [
             "Wifi 5G"
         ],
         color: "#0e6493",
-    },
-    {
-        speed: "10",
-        name: "PLAN BÁSICO",
-        price: "$59.900",
-        uploadSpeed: "10",
-        benefits: [
-            "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2",
-            "87 canales digitales - 7 canales radio",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    },
-    {
-        speed: "5",
-        name: "PLAN BÁSICO",
-        price: "$49.900",
-        uploadSpeed: "5",
-        benefits: [
-            "Ideal para 1 dispositivo",
-            "precio valido estrato 1 y 2",
-            "87 canales digitales - 7 canales radio",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    },
+    }
 ];
 const internetPlans2 = [
     {
         speed: "100",
         name: "PLAN TURBO",
-        price: "$84.900",
+        price: "$79.900",
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
@@ -117,10 +91,10 @@ const internetPlans2 = [
         color: "#0e6493",
     },
     {
-        speed: "900",
-        name: "PLAN GIGABIT",
+        speed: "300",
+        name: "PLAN DELUXE",
         price: "$99.900",
-        uploadSpeed: "450",
+        uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
             "7 canales radio",
@@ -131,10 +105,10 @@ const internetPlans2 = [
         color: "#0e6493",
     },
     {
-        speed: "500",
+        speed: "200",
         name: "PLAN PREMIUM",
         price: "$89.900",
-        uploadSpeed: "250",
+        uploadSpeed: "150",
         benefits: [
             "Ideal para 5 dispositivos",
             "7 canales radio",
@@ -146,7 +120,7 @@ const internetPlans2 = [
     {
         speed: "50",
         name: "PLAN ESPECIAL",
-        price: "$79.900",
+        price: "$69.900",
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
@@ -155,33 +129,7 @@ const internetPlans2 = [
             "Wifi 5G"
         ],
         color: "#0e6493",
-    },
-    {
-        speed: "10",
-        name: "PLAN BÁSICO",
-        price: "$69.900",
-        uploadSpeed: "10",
-        benefits: [
-            "Ideal para 1 dispositivo",
-            "7 canales radio",
-            "87 canales digitales",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    },
-    {
-        speed: "5",
-        name: "PLAN BÁSICO",
-        price: "$59.900",
-        uploadSpeed: "5",
-        benefits: [
-            "Ideal para 1 dispositivo",
-            "7 canales radio",
-            "87 canales digitales",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    },
+    }
 ];
 
 
@@ -190,7 +138,7 @@ const bundlePlans = [
         name: "PAQUETE FULL",
         price: "$99.900",
         includes: [
-            { icon: Wifi, text: "900 Megas" },
+            { icon: Wifi, text: "300 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
             { icon: Tv, text: "TV incluido" },
             { icon: Tv, text: "87 canales HD" },
@@ -206,7 +154,7 @@ const bundlePlans = [
         name: "PAQUETE AVANZADO",
         price: "$89.900",
         includes: [
-            { icon: Wifi, text: "500 Megas" },
+            { icon: Wifi, text: "200 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },
             { icon: Tv, text: "Tv incluido" },
             { icon: Tv, text: "87 canales HD" },
@@ -219,7 +167,7 @@ const bundlePlans = [
     },
     {
         name: "PAQUETE INTERMEDIO",
-        price: "$84.900",
+        price: "$79.900",
         includes: [
             { icon: Wifi, text: "100 Megas" },
             { icon: Wifi, text: "Wifi y cable de red" },

@@ -7,14 +7,14 @@ const plans = [
     name: "PAQUETE FULL",
     price: "$89.900",
     includes: [
-      { icon: Wifi, text: "900 Megas" },
+      { icon: Wifi, text: "300 Megas" },
       { icon: Tv, text: "87 canales digitales" },
       { icon: Tv, text: "7 canales radio" },
     ],
     featured: true,
   },
   {
-    name: "PAQUETE 500MB",
+    name: "PAQUETE 200MB",
     price: "$79.900",
     includes: [
       { icon: Wifi, text: "500 Megas" },
@@ -24,7 +24,7 @@ const plans = [
   },
   {
     name: "PAQUETE 100MB",
-    price: "$74.900",
+    price: "$69.900",
     includes: [
       { icon: Wifi, text: "100 Megas" },
       { icon: Tv, text: "87 canales digitales" },
@@ -33,7 +33,7 @@ const plans = [
   },
   {
     name: "PAQUETE 50MB",
-    price: "$69.900",
+    price: "$59.900",
     includes: [
       { icon: Wifi, text: "50 Megas" },
       { icon: Tv, text: "87 canales digitales" },
