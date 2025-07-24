@@ -25,22 +25,26 @@ const internetPlans = [
     {
         speed: "100",
         name: "PLAN TURBO",
-        price: "$69.900",
+        price: "$59.900",
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
-            "Wifi 5G"
+            "Wifi 5G",
+            "87 canales digitales",
+            "7 canales radio"
         ],
         color: "#0e6493",
     },
     {
         speed: "300",
         name: "PLAN DELUXE",
-        price: "$89.900",
+        price: "$79.900",
         uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
-            "Wifi 5G"
+            "Wifi 5G",
+            "87 canales digitales",
+            "7 canales radio"
         ],
         featured: true,
         color: "#0e6493",
@@ -48,11 +52,13 @@ const internetPlans = [
     {
         speed: "200",
         name: "PLAN PREMIUM",
-        price: "$79.900",
+        price: "$69.900",
         uploadSpeed: "150",
         benefits: [
             "Ideal para 4 dispositivos",
-            "Wifi 5G"
+            "Wifi 5G",
+            "87 canales digitales",
+            "7 canales radio"
         ],
         color: "#0e6493",
     },
@@ -63,7 +69,10 @@ const internetPlans = [
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
-            "Wifi 5G"
+            "Wifi 5G",
+            "87 canales digitales",
+            "7 canales radio"
+
         ],
         color: "#0e6493",
     }
@@ -72,7 +81,7 @@ const internetPlans2 = [
     {
         speed: "100",
         name: "PLAN TURBO",
-        price: "$79.900",
+        price: "$69.900",
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
@@ -83,7 +92,7 @@ const internetPlans2 = [
     {
         speed: "300",
         name: "PLAN DELUXE",
-        price: "$99.900",
+        price: "$89.900",
         uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
@@ -95,7 +104,7 @@ const internetPlans2 = [
     {
         speed: "200",
         name: "PLAN PREMIUM",
-        price: "$89.900",
+        price: "$79.900",
         uploadSpeed: "150",
         benefits: [
             "Ideal para 5 dispositivos",
@@ -106,7 +115,7 @@ const internetPlans2 = [
     {
         speed: "50",
         name: "PLAN ESPECIAL",
-        price: "$69.900",
+        price: "$59.900",
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",

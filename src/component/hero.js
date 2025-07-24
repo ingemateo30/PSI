@@ -68,7 +68,7 @@ export default function Hero() {
 
                     <div className="relative inline-block text-center">
                         <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-sm font-bold text-[#e31e25]">desde</span>
-                        <span className="text-4xl font-extrabold text-white block">$89.900</span>
+                        <span className="text-4xl font-extrabold text-white block">$79.900</span>
                         <span className="text-base font-medium text-gray-100">/mes</span>
                     </div>
 
