@@ -1,7 +1,7 @@
 "use client";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
-import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X, Home } from "lucide-react";
+import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X, Home, UserPlus, Search } from "lucide-react";
 import { useState } from "react";
 import Boton from "@/component/contratarnav"
 import localFont from 'next/font/local';
@@ -138,6 +138,22 @@ export default function Navbar() {
                                 <Building2 size={18} />
                                 <span>Empresa</span>
                             </a>
+                            <a
+                                                        href="/consultar"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
+                            >
+                                <Search size={18} />
+                                <span>Consultar</span>
+                            </a>
+                            {/*  BOTÓN DE REGISTRO */}
+                            <a
+
+                                href="/Registro"
+                                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
+                            >
+                                <UserPlus size={18} />
+                                <span>Registro</span>
+                            </a>
                         </div>
                         <div className="hidden lg:flex items-center">
                          <Boton />
@@ -208,7 +224,24 @@ export default function Navbar() {
                         <Building2 size={20} className="text-[#0e6493]" />
                         <span className="font-medium">Empresa</span>
                     </a>
+                    {/* 🆕 BOTÓN DE REGISTRO MÓVIL */}
+                    <a
 
+                        href="/Registro"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        <UserPlus size={20} className="text-[#0e6493]" />
+                        <span className="font-medium">Registro</span>
+                    </a>
+                    <a
+                        href="/consultar"
+                        className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-gray-50 rounded-lg font-branding-sf"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        <Search size={20} className="text-[#0e6493]" />
+                        <span className="font-medium">Consultar</span>
+                    </a>
                     
                     <div className="pt-4 mt-4 border-t border-gray-100">
                         <a
