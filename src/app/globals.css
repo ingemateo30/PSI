@@ -33,4 +33,36 @@ body {
     src: url("/fonts/BrandingSF-semibold.woff2") format("woff2");
     font-display: swap;
   }
+/* Agregar estas líneas al archivo globals.css existente */
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Estilos adicionales para mejorar la experiencia */
+.font-branding-sf {
+  font-family: "BrandingSF", sans-serif;
+}
+
+/* Mejora para el dropdown */
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-out;
+}

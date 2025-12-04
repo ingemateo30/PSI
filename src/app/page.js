@@ -16,6 +16,7 @@ import Caracteristica from '@/component/caracteristicas';
 import Enlaces from '@/component/enlaces'
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { ArrowRight, MapPin, Phone, Star, UserCheck, Leaf, Recycle, Sun, Truck, CloudLightning } from "lucide-react";
+import BotonPagaAhora from '@/component/BotonPagaAhora';
 
 const testimonials = [
   {
@@ -254,6 +255,7 @@ export default function Home() {
       />
       <FloatingSocial />
       <Boton />
+      <BotonPagaAhora />
     </div>
   );
 }
