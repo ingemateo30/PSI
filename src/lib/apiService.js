@@ -1,6 +1,6 @@
 ﻿// src/lib/apiService.js - Cliente API para PSI Web
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://45.173.69.5:3000/api/v1';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://administrativo.psi.net.co/api/v1';
 
 class ApiService {
   constructor() {
