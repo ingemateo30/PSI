@@ -40,7 +40,7 @@ const [formData, setFormData] = useState({
   barrio: "",
   estrato: "3",
   planesSeleccionados: [],
-  tipoPermanencia: "sin_permanencia", // ← AGREGAR ESTA LÍNEA
+  tipoPermanencia: "sin_permanencia",
   aceptaTerminos: false,
   aceptaTratamientoDatos: false,
 });
@@ -225,6 +225,7 @@ const [formData, setFormData] = useState({
     setLoading(false);
   }
 };
+
   const calcularTotal = () => {
     return formData.planesSeleccionados.reduce((total, planId) => {
       const plan = planes.find(p => p.id === planId);
@@ -293,7 +294,7 @@ const [formData, setFormData] = useState({
                         value={formData.nombres}
                         onChange={handleChange}
                         placeholder="Nombres *"
-                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                       />
                       {errors.nombres && <p className="text-red-500 text-sm mt-1">{errors.nombres}</p>}
                     </div>
@@ -305,7 +306,7 @@ const [formData, setFormData] = useState({
                         value={formData.apellidos}
                         onChange={handleChange}
                         placeholder="Apellidos *"
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                       />
                       {errors.apellidos && <p className="text-red-500 text-sm mt-1">{errors.apellidos}</p>}
                     </div>
@@ -318,7 +319,7 @@ const [formData, setFormData] = useState({
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Email *"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                     />
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
@@ -331,7 +332,7 @@ const [formData, setFormData] = useState({
                         value={formData.celular}
                         onChange={handleChange}
                         placeholder="Celular *"
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                       />
                       {errors.celular && <p className="text-red-500 text-sm mt-1">{errors.celular}</p>}
                     </div>
@@ -343,7 +344,7 @@ const [formData, setFormData] = useState({
                         value={formData.numeroDocumento}
                         onChange={handleChange}
                         placeholder="Número de Documento *"
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                       />
                       {errors.numeroDocumento && <p className="text-red-500 text-sm mt-1">{errors.numeroDocumento}</p>}
                     </div>
@@ -376,7 +377,7 @@ const [formData, setFormData] = useState({
                             sector: ''
                           }));
                         }}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900"
                       >
                         <option value="">Seleccione su ciudad</option>
                         {ciudades.map((ciudad) => (
@@ -410,7 +411,7 @@ const [formData, setFormData] = useState({
                               sector: sector ? sector.nombre : ''
                             }));
                           }}
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900"
                         >
                           <option value="">Seleccione un sector (opcional)</option>
                           {sectores.map((sector) => (
@@ -432,7 +433,7 @@ const [formData, setFormData] = useState({
                       value={formData.direccion}
                       onChange={handleChange}
                       placeholder="Dirección completa *"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                     />
                     {errors.direccion && <p className="text-red-500 text-sm mt-1">{errors.direccion}</p>}
                   </div>
@@ -444,365 +445,360 @@ const [formData, setFormData] = useState({
                       value={formData.barrio}
                       onChange={handleChange}
                       placeholder="Barrio *"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900 placeholder-gray-500"
                     />
                     {errors.barrio && <p className="text-red-500 text-sm mt-1">{errors.barrio}</p>}
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Estrato Socioeconómico *
+                      Estrato Socioeconómico *
                     </label>
                     <select
-                        name="estrato"
-                        value={formData.estrato || '3'}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white"
+                      name="estrato"
+                      value={formData.estrato || '3'}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-300 bg-gray-50 focus:bg-white text-gray-900"
                     >
-                        <option value="1">Estrato 1</option>
-                        <option value="2">Estrato 2</option>
-                        <option value="3">Estrato 3</option>
-                        <option value="4">Estrato 4</option>
-                        <option value="5">Estrato 5</option>
-                        <option value="6">Estrato 6</option>
+                      <option value="1">Estrato 1</option>
+                      <option value="2">Estrato 2</option>
+                      <option value="3">Estrato 3</option>
+                      <option value="4">Estrato 4</option>
+                      <option value="5">Estrato 5</option>
+                      <option value="6">Estrato 6</option>
                     </select>
-                    </div>
+                  </div>
                 </div>
               )}
 
               {step === 3 && (
-                    <div className="space-y-6">
-                        <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-4">
-                            Seleccione sus planes *
-                        </label>
+                <div className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-4">
+                      Seleccione sus planes *
+                    </label>
 
-                        {loadingPlanes ? (
-                            <div className="text-center py-12">
-                            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                            <p className="text-gray-600">Cargando planes disponibles...</p>
-                            </div>
-                        ) : planes.length === 0 ? (
-                            <div className="text-center py-12 bg-yellow-50 rounded-lg">
-                            <AlertCircle className="w-16 h-16 text-yellow-600 mx-auto mb-4" />
-                            <p className="text-yellow-800 font-semibold">No hay planes disponibles</p>
-                            <p className="text-yellow-600 text-sm mt-2">Por favor, contacte con soporte</p>
-                            </div>
-                        ) : (
-                            <div className="grid md:grid-cols-2 gap-4">
-                            {planes.map((plan) => (
-                                <motion.div
-                                  key={plan.id}
-                                  whileHover={{ scale: 1.03, rotate: 0.5 }}
-                                  whileTap={{ scale: 0.98 }}
-                                  onClick={() => handlePlanToggle(plan.id)}
-                                  className={`
-                                    relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300
-                                    ${formData.planesSeleccionados.includes(plan.id)
-                                      ? 'border-blue-600 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-2xl ring-4 ring-blue-100'
-                                      : 'border-gray-200 hover:border-blue-300 hover:shadow-xl bg-white'
-                                    }
-                                  `}
-                                >
-                                {formData.planesSeleccionados.includes(plan.id) && (
-                                    <CheckCircle className="absolute top-4 right-4 w-6 h-6 text-blue-600" />
-                                )}
-
-                                <div className="mb-3">
-                                    <span className={`
-                                    inline-block px-3 py-1 text-xs font-semibold rounded-full
-                                    ${plan.tipo === 'internet' ? 'bg-blue-100 text-blue-800' :
-                                        plan.tipo === 'television' ? 'bg-purple-100 text-purple-800' :
-                                        'bg-green-100 text-green-800'}
-                                    `}>
-                                    {plan.tipo === 'internet' ? '🌐 Internet' :
-                                    plan.tipo === 'television' ? '📺 TV' :
-                                    '📦 Combo'}
-                                    </span>
-                                </div>
-
-                                <h3 className="font-bold text-lg mb-3">{plan.nombre}</h3>
-
-                                <div className="space-y-1 text-sm text-gray-600 mb-4">
-                                    {plan.velocidad_bajada && (
-                                    <p className="flex items-center">
-                                        <span className="mr-2">⬇️</span>
-                                        {plan.velocidad_bajada} Mbps bajada
-                                    </p>
-                                    )}
-                                    {plan.velocidad_subida && (
-                                    <p className="flex items-center">
-                                        <span className="mr-2">⬆️</span>
-                                        {plan.velocidad_subida} Mbps subida
-                                    </p>
-                                    )}
-                                    {plan.canales_tv && (
-                                    <p className="flex items-center">
-                                        <span className="mr-2">📺</span>
-                                        {plan.canales_tv} canales
-                                    </p>
-                                    )}
-                                    {plan.tecnologia && (
-                                    <p className="flex items-center">
-                                        <span className="mr-2">🔧</span>
-                                        {plan.tecnologia}
-                                    </p>
-                                    )}
-                                </div>
-
-                                <div className="border-t pt-4">
-                                    <p className="text-3xl font-bold text-blue-600">
-                                    ${parseFloat(plan.precio).toLocaleString('es-CO')}
-                                    <span className="text-sm text-gray-600 font-normal">/mes</span>
-                                    </p>
-                                    {plan.aplica_iva && (
-                                    <p className="text-xs text-gray-500 mt-1">+ IVA (19%)</p>
-                                    )}
-                                </div>
-                                </motion.div>
-                            ))}
-                            </div>
-                        )}
-
-                        {errors.planes && <p className="text-red-500 text-sm mt-3">{errors.planes}</p>}
-                        </div>
-
-                        {/* ============================================ */}
-                        {/* SELECTOR DE TIPO DE PERMANENCIA */}
-                        {/* ============================================ */}
-                        <div className="space-y-4 pt-6 border-t">
-                        <h3 className="font-bold text-lg text-gray-900 mb-4">
-                            Tipo de Instalación *
-                        </h3>
-                        
-                        <div className="grid md:grid-cols-2 gap-4">
-                            {/* Opción: Sin Permanencia */}
-                            <motion.div
-                              whileHover={{ scale: 1.03 }}
-                              whileTap={{ scale: 0.98 }}
-                              onClick={() => setFormData(prev => ({ ...prev, tipoPermanencia: 'sin_permanencia' }))}
-                              className={`
-                                relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 overflow-hidden
-                                ${formData.tipoPermanencia === 'sin_permanencia'
-                                  ? 'border-blue-600 bg-gradient-to-br from-blue-50 via-blue-50 to-indigo-50 shadow-2xl ring-4 ring-blue-100'
-                                  : 'border-gray-200 hover:border-blue-300 hover:shadow-xl bg-white'
-                                }
-                              `}
-                            >
-                              {formData.tipoPermanencia === 'sin_permanencia' && (
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 rounded-full filter blur-3xl opacity-20 -mr-16 -mt-16"></div>
-                              )}
-                            
-                            <div className="mb-3">
-                                <h4 className="font-bold text-xl text-gray-900">Sin Permanencia</h4>
-                                <p className="text-3xl font-bold text-blue-600 mt-2">
-                                $150,000
-                                </p>
-                                <p className="text-sm text-gray-600 mt-1">Una sola instalación - IVA incluido</p>
-                            </div>
-                            
-                            <ul className="space-y-2 text-sm text-gray-700">
-                                <li className="flex items-start">
-                                <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>Sin compromisos de tiempo</span>
-                                </li>
-                                <li className="flex items-start">
-                                <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>Puede cancelar cuando desee</span>
-                                </li>
-                                <li className="flex items-start">
-                                <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>Una instalación para todos los servicios</span>
-                                </li>
-                            </ul>
-                            </motion.div>
-
-                            {/* Opción: Con Permanencia */}
-                            <motion.div
-                              whileHover={{ scale: 1.03 }}
-                              whileTap={{ scale: 0.98 }}
-                              onClick={() => setFormData(prev => ({ ...prev, tipoPermanencia: 'con_permanencia' }))}
-                              className={`
-                                relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 overflow-hidden
-                                ${formData.tipoPermanencia === 'con_permanencia'
-                                  ? 'border-green-600 bg-gradient-to-br from-green-50 via-green-50 to-emerald-50 shadow-2xl ring-4 ring-green-100'
-                                  : 'border-gray-200 hover:border-green-300 hover:shadow-xl bg-white'
-                                }
-                              `}
-                            >
-                              {formData.tipoPermanencia === 'con_permanencia' && (
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 -mr-16 -mt-16"></div>
-                              )}
-                            
-                            <div className="mb-3">
-                                <div className="flex items-center gap-2 mb-2">
-                                <h4 className="font-bold text-xl text-gray-900">Con Permanencia</h4>
-                                <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">
-                                    AHORRA $100K
-                                </span>
-                                </div>
-                                <p className="text-3xl font-bold text-green-600 mt-2">
-                                $50,000
-                                </p>
-                                <p className="text-sm text-gray-600 mt-1">Una sola instalación - Ahorra $100,000</p>
-                            </div>
-                            
-                            <ul className="space-y-2 text-sm text-gray-700">
-                                <li className="flex items-start">
-                                <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>Compromiso mínimo de 6 meses</span>
-                                </li>
-                                <li className="flex items-start">
-                                <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>Precio de instalación reducido</span>
-                                </li>
-                                <li className="flex items-start">
-                                <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>Una instalación para todos los servicios</span>
-                                </li>
-                            </ul>
-                            </motion.div>
-                        </div>
-
-                        <div className="bg-blue-50 rounded-lg p-4 mt-4">
-                            <p className="text-sm text-blue-900">
-                            <strong>Nota:</strong> El costo de instalación se cobrará en tu primera factura junto con el primer mes de servicio.
-                            </p>
-                        </div>
-                        </div>
-
-                        {/* ============================================ */}
-                        {/* TÉRMINOS Y CONDICIONES */}
-                        {/* ============================================ */}
-                        <div className="space-y-3 pt-6 border-t">
-                        <label className="flex items-start cursor-pointer group">
-                            <input
-                            type="checkbox"
-                            name="aceptaTerminos"
-                            checked={formData.aceptaTerminos}
-                            onChange={handleChange}
-                            className="mt-1 mr-3 w-4 h-4"
-                            />
-                            <span className="text-sm group-hover:text-blue-600">
-                            Acepto los <a href="/terminos" className="text-blue-600 underline" target="_blank">términos y condiciones</a> del servicio
-                            </span>
-                        </label>
-                        {errors.terminos && <p className="text-red-500 text-sm ml-7">{errors.terminos}</p>}
-
-                        <label className="flex items-start cursor-pointer group">
-                            <input
-                            type="checkbox"
-                            name="aceptaTratamientoDatos"
-                            checked={formData.aceptaTratamientoDatos}
-                            onChange={handleChange}
-                            className="mt-1 mr-3 w-4 h-4"
-                            />
-                            <span className="text-sm group-hover:text-blue-600">
-                            Autorizo el <a href="/tratamiento" className="text-blue-600 underline" target="_blank">tratamiento de datos personales</a>
-                            </span>
-                        </label>
-                        {errors.tratamiento && <p className="text-red-500 text-sm ml-7">{errors.tratamiento}</p>}
-                        </div>
-
-                        {/* ============================================ */}
-                        {/* RESUMEN DEL PEDIDO */}
-                        {/* ============================================ */}
-                        {formData.planesSeleccionados.length > 0 && (
-                        <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-blue-200 shadow-xl">
-                            <h3 className="font-bold text-xl mb-4 text-blue-900">Resumen de tu pedido</h3>
-                            
-                            <div className="space-y-3 mb-4">
-                            <div className="font-semibold text-sm text-gray-700 mb-2">Planes mensuales:</div>
-                            {formData.planesSeleccionados.map(planId => {
-                                const plan = planes.find(p => p.id === planId);
-                                return plan ? (
-                                <div key={planId} className="flex justify-between text-sm bg-white rounded p-2">
-                                    <span>{plan.nombre}</span>
-                                    <span className="font-semibold">${parseFloat(plan.precio).toLocaleString('es-CO')}</span>
-                                </div>
-                                ) : null;
-                            })}
-
-                            <div className="border-t pt-3 mt-3">
-                                <div className="flex justify-between text-sm font-semibold">
-                                <span>Subtotal mensual:</span>
-                                <span>${calcularTotal().toLocaleString('es-CO')}</span>
-                                </div>
-                            </div>
-
-                            <div className="border-t pt-3 bg-yellow-50 rounded p-3 -mx-3">
-                                <div className="font-semibold text-sm text-gray-700 mb-2">Costo único de instalación:</div>
-                                <div className="flex justify-between items-center">
-                                <span className="text-sm">
-                                    {formData.tipoPermanencia === 'con_permanencia' ? 'Con permanencia (6 meses)' : 'Sin permanencia'}
-                                </span>
-                                <span className="text-lg font-bold text-orange-600">
-                                    ${formData.tipoPermanencia === 'con_permanencia' ? '50,000' : '150,000'}
-                                </span>
-                                </div>
-                            </div>
-                            </div>
-
-                            <div className="border-t pt-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg p-4 -mx-3">
-                            <div className="flex justify-between items-center mb-2">
-                                <span className="text-lg font-bold text-gray-900">Total primer mes:</span>
-                                <span className="text-3xl font-bold text-blue-600">
-                                ${(calcularTotal() + (formData.tipoPermanencia === 'con_permanencia' ? 50000 : 150000)).toLocaleString('es-CO')}
-                                </span>
-                            </div>
-                            <p className="text-xs text-gray-700 text-right">
-                                Incluye: Planes (${calcularTotal().toLocaleString('es-CO')}) + Instalación (${formData.tipoPermanencia === 'con_permanencia' ? '50,000' : '150,000'})
-                            </p>
-                            </div>
-
-                            <p className="text-xs text-gray-600 mt-3 text-center">
-                            * Precios sujetos a IVA según corresponda
-                            </p>
-                        </div>
-                        )}
-                    </div>
-                    )}
-
-                    <div className="flex justify-between mt-8 pt-6 border-t">
-                    {step > 1 && (
-                        <button
-                        type="button"
-                        onClick={() => {
-                            setStep(step - 1);
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                        className="px-8 py-3 border-2 border-gray-300 rounded-lg hover:bg-gray-50 font-semibold transition-colors"
-                        >
-                        ← Anterior
-                        </button>
-                    )}
-
-                    {step < 3 ? (
-                        <button
-                        type="button"
-                        onClick={handleNext}
-                        className="ml-auto px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold transition-colors"
-                        >
-                        Siguiente →
-                        </button>
+                    {loadingPlanes ? (
+                      <div className="text-center py-12">
+                        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                        <p className="text-gray-600">Cargando planes disponibles...</p>
+                      </div>
+                    ) : planes.length === 0 ? (
+                      <div className="text-center py-12 bg-yellow-50 rounded-lg">
+                        <AlertCircle className="w-16 h-16 text-yellow-600 mx-auto mb-4" />
+                        <p className="text-yellow-800 font-semibold">No hay planes disponibles</p>
+                        <p className="text-yellow-600 text-sm mt-2">Por favor, contacte con soporte</p>
+                      </div>
                     ) : (
-                        <button
-                          type="submit"
-                          disabled={loading}
-                          className="ml-auto px-12 py-4 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white rounded-xl hover:from-green-700 hover:via-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 animate-pulse-slow"
-                        >
-                        {loading ? (
-                            <>
-                            <span className="inline-block animate-spin mr-2">⏳</span>
-                            Procesando...
-                            </>
-                        ) : (
-                            <>
-                            ✓ Finalizar Registro
-                            </>
-                        )}
-                        </button>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {planes.map((plan) => (
+                          <motion.div
+                            key={plan.id}
+                            whileHover={{ scale: 1.03, rotate: 0.5 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => handlePlanToggle(plan.id)}
+                            className={`
+                              relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300
+                              ${formData.planesSeleccionados.includes(plan.id)
+                                ? 'border-blue-600 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-2xl ring-4 ring-blue-100'
+                                : 'border-gray-200 hover:border-blue-300 hover:shadow-xl bg-white'
+                              }
+                            `}
+                          >
+                            {formData.planesSeleccionados.includes(plan.id) && (
+                              <CheckCircle className="absolute top-4 right-4 w-6 h-6 text-blue-600" />
+                            )}
+
+                            <div className="mb-3">
+                              <span className={`
+                                inline-block px-3 py-1 text-xs font-semibold rounded-full
+                                ${plan.tipo === 'internet' ? 'bg-blue-100 text-blue-800' :
+                                  plan.tipo === 'television' ? 'bg-purple-100 text-purple-800' :
+                                  'bg-green-100 text-green-800'}
+                              `}>
+                                {plan.tipo === 'internet' ? '🌐 Internet' :
+                                  plan.tipo === 'television' ? '📺 TV' :
+                                  '📦 Combo'}
+                              </span>
+                            </div>
+
+                            <h3 className="font-bold text-lg mb-3">{plan.nombre}</h3>
+
+                            <div className="space-y-1 text-sm text-gray-600 mb-4">
+                              {plan.velocidad_bajada && (
+                                <p className="flex items-center">
+                                  <span className="mr-2">⬇️</span>
+                                  {plan.velocidad_bajada} Mbps bajada
+                                </p>
+                              )}
+                              {plan.velocidad_subida && (
+                                <p className="flex items-center">
+                                  <span className="mr-2">⬆️</span>
+                                  {plan.velocidad_subida} Mbps subida
+                                </p>
+                              )}
+                              {plan.canales_tv && (
+                                <p className="flex items-center">
+                                  <span className="mr-2">📺</span>
+                                  {plan.canales_tv} canales
+                                </p>
+                              )}
+                              {plan.tecnologia && (
+                                <p className="flex items-center">
+                                  <span className="mr-2">🔧</span>
+                                  {plan.tecnologia}
+                                </p>
+                              )}
+                            </div>
+
+                            <div className="border-t pt-4">
+                              <p className="text-3xl font-bold text-blue-600">
+                                ${parseFloat(plan.precio).toLocaleString('es-CO')}
+                                <span className="text-sm text-gray-600 font-normal">/mes</span>
+                              </p>
+                              {plan.aplica_iva && (
+                                <p className="text-xs text-gray-500 mt-1">+ IVA (19%)</p>
+                              )}
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
                     )}
+
+                    {errors.planes && <p className="text-red-500 text-sm mt-3">{errors.planes}</p>}
+                  </div>
+
+                  {/* SELECTOR DE TIPO DE PERMANENCIA */}
+                  <div className="space-y-4 pt-6 border-t">
+                    <h3 className="font-bold text-lg text-gray-900 mb-4">
+                      Tipo de Instalación *
+                    </h3>
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {/* Opción: Sin Permanencia */}
+                      <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => setFormData(prev => ({ ...prev, tipoPermanencia: 'sin_permanencia' }))}
+                        className={`
+                          relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 overflow-hidden
+                          ${formData.tipoPermanencia === 'sin_permanencia'
+                            ? 'border-blue-600 bg-gradient-to-br from-blue-50 via-blue-50 to-indigo-50 shadow-2xl ring-4 ring-blue-100'
+                            : 'border-gray-200 hover:border-blue-300 hover:shadow-xl bg-white'
+                          }
+                        `}
+                      >
+                        {formData.tipoPermanencia === 'sin_permanencia' && (
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 rounded-full filter blur-3xl opacity-20 -mr-16 -mt-16"></div>
+                        )}
+                      
+                        <div className="mb-3">
+                          <h4 className="font-bold text-xl text-gray-900">Sin Permanencia</h4>
+                          <p className="text-3xl font-bold text-blue-600 mt-2">
+                            $150,000
+                          </p>
+                          <p className="text-sm text-gray-600 mt-1">Una sola instalación - IVA incluido</p>
+                        </div>
+                      
+                        <ul className="space-y-2 text-sm text-gray-700">
+                          <li className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Sin compromisos de tiempo</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Puede cancelar cuando desee</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Una instalación para todos los servicios</span>
+                          </li>
+                        </ul>
+                      </motion.div>
+
+                      {/* Opción: Con Permanencia */}
+                      <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => setFormData(prev => ({ ...prev, tipoPermanencia: 'con_permanencia' }))}
+                        className={`
+                          relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 overflow-hidden
+                          ${formData.tipoPermanencia === 'con_permanencia'
+                            ? 'border-green-600 bg-gradient-to-br from-green-50 via-green-50 to-emerald-50 shadow-2xl ring-4 ring-green-100'
+                            : 'border-gray-200 hover:border-green-300 hover:shadow-xl bg-white'
+                          }
+                        `}
+                      >
+                        {formData.tipoPermanencia === 'con_permanencia' && (
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 -mr-16 -mt-16"></div>
+                        )}
+                      
+                        <div className="mb-3">
+                          <div className="flex items-center gap-2 mb-2">
+                            <h4 className="font-bold text-xl text-gray-900">Con Permanencia</h4>
+                            <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">
+                              AHORRA $100K
+                            </span>
+                          </div>
+                          <p className="text-3xl font-bold text-green-600 mt-2">
+                            $50,000
+                          </p>
+                          <p className="text-sm text-gray-600 mt-1">Una sola instalación - Ahorra $100,000</p>
+                        </div>
+                      
+                        <ul className="space-y-2 text-sm text-gray-700">
+                          <li className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Compromiso mínimo de 6 meses</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Precio de instalación reducido</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Una instalación para todos los servicios</span>
+                          </li>
+                        </ul>
+                      </motion.div>
                     </div>
+
+                    <div className="bg-blue-50 rounded-lg p-4 mt-4">
+                      <p className="text-sm text-blue-900">
+                        <strong>Nota:</strong> El costo de instalación se cobrará en tu primera factura junto con el primer mes de servicio.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* TÉRMINOS Y CONDICIONES */}
+                  <div className="space-y-3 pt-6 border-t">
+                    <label className="flex items-start cursor-pointer group">
+                      <input
+                        type="checkbox"
+                        name="aceptaTerminos"
+                        checked={formData.aceptaTerminos}
+                        onChange={handleChange}
+                        className="mt-1 mr-3 w-4 h-4"
+                      />
+                      <span className="text-sm group-hover:text-blue-600">
+                        Acepto los <a href="/terminos" className="text-blue-600 underline" target="_blank">términos y condiciones</a> del servicio
+                      </span>
+                    </label>
+                    {errors.terminos && <p className="text-red-500 text-sm ml-7">{errors.terminos}</p>}
+
+                    <label className="flex items-start cursor-pointer group">
+                      <input
+                        type="checkbox"
+                        name="aceptaTratamientoDatos"
+                        checked={formData.aceptaTratamientoDatos}
+                        onChange={handleChange}
+                        className="mt-1 mr-3 w-4 h-4"
+                      />
+                      <span className="text-sm group-hover:text-blue-600">
+                        Autorizo el <a href="/tratamiento" className="text-blue-600 underline" target="_blank">tratamiento de datos personales</a>
+                      </span>
+                    </label>
+                    {errors.tratamiento && <p className="text-red-500 text-sm ml-7">{errors.tratamiento}</p>}
+                  </div>
+
+                  {/* RESUMEN DEL PEDIDO */}
+                  {formData.planesSeleccionados.length > 0 && (
+                    <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-blue-200 shadow-xl">
+                      <h3 className="font-bold text-xl mb-4 text-blue-900">Resumen de tu pedido</h3>
+                      
+                      <div className="space-y-3 mb-4">
+                        <div className="font-semibold text-sm text-gray-700 mb-2">Planes mensuales:</div>
+                        {formData.planesSeleccionados.map(planId => {
+                          const plan = planes.find(p => p.id === planId);
+                          return plan ? (
+                            <div key={planId} className="flex justify-between text-sm bg-white rounded p-2">
+                              <span>{plan.nombre}</span>
+                              <span className="font-semibold">${parseFloat(plan.precio).toLocaleString('es-CO')}</span>
+                            </div>
+                          ) : null;
+                        })}
+
+                        <div className="border-t pt-3 mt-3">
+                          <div className="flex justify-between text-sm font-semibold">
+                            <span>Subtotal mensual:</span>
+                            <span>${calcularTotal().toLocaleString('es-CO')}</span>
+                          </div>
+                        </div>
+
+                        <div className="border-t pt-3 bg-yellow-50 rounded p-3 -mx-3">
+                          <div className="font-semibold text-sm text-gray-700 mb-2">Costo único de instalación:</div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">
+                              {formData.tipoPermanencia === 'con_permanencia' ? 'Con permanencia (6 meses)' : 'Sin permanencia'}
+                            </span>
+                            <span className="text-lg font-bold text-orange-600">
+                              ${formData.tipoPermanencia === 'con_permanencia' ? '50,000' : '150,000'}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="border-t pt-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg p-4 -mx-3">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-lg font-bold text-gray-900">Total primer mes:</span>
+                          <span className="text-3xl font-bold text-blue-600">
+                            ${(calcularTotal() + (formData.tipoPermanencia === 'con_permanencia' ? 50000 : 150000)).toLocaleString('es-CO')}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-700 text-right">
+                          Incluye: Planes (${calcularTotal().toLocaleString('es-CO')}) + Instalación (${formData.tipoPermanencia === 'con_permanencia' ? '50,000' : '150,000'})
+                        </p>
+                      </div>
+
+                      <p className="text-xs text-gray-600 mt-3 text-center">
+                        * Precios sujetos a IVA según corresponda
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <div className="flex justify-between mt-8 pt-6 border-t">
+                {step > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setStep(step - 1);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="px-8 py-3 border-2 border-gray-300 rounded-lg hover:bg-gray-50 font-semibold transition-colors"
+                  >
+                    ← Anterior
+                  </button>
+                )}
+
+                {step < 3 ? (
+                  <button
+                    type="button"
+                    onClick={handleNext}
+                    className="ml-auto px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold transition-colors"
+                  >
+                    Siguiente →
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="ml-auto px-12 py-4 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white rounded-xl hover:from-green-700 hover:via-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 animate-pulse-slow"
+                  >
+                    {loading ? (
+                      <>
+                        <span className="inline-block animate-spin mr-2">⏳</span>
+                        Procesando...
+                      </>
+                    ) : (
+                      <>
+                        ✓ Finalizar Registro
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
             </form>
           </div>
         </div>
