@@ -147,29 +147,6 @@ export default function BotonPagaAhora() {
 
                                 {/* Opciones de pago */}
                                 <div className="p-6 space-y-4">
-                                    {/* Opción MiPago */}
-                                    <motion.a
-                                        href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=7895&searchedCategoryId=&searchedAgreementName=PSI%20PROVEEDOR%20DE%20TELECOMUNICACIONES%20SAS"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        className="block p-5 bg-white rounded-2xl border-2 border-gray-200 hover:border-[#0e6493] hover:shadow-lg transition-all group"
-                                    >
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-4">
-                                                <div className="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center border border-blue-200">
-                                                    <Image src="/logos/mipago.png" alt="MiPago" width={48} height={48} />
-                                                </div>
-                                                <div>
-                                                    <div className="font-bold text-lg text-gray-800 mb-0.5">MiPago</div>
-                                                    <div className="text-sm text-gray-500">Pago fácil y rápido</div>
-                                                </div>
-                                            </div>
-                                            <ArrowRight size={20} className="text-gray-400 group-hover:text-[#0e6493] group-hover:translate-x-1 transition-all" />
-                                        </div>
-                                    </motion.a>
-
                                     {/* Opción PSE-ePayco */}
                                     <motion.a
                                         href="https://pde1565542.epayco.me/recaudo/psi"
