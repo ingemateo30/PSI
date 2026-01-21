@@ -215,7 +215,7 @@ export default function Navbar() {
                                 <Building2 size={18} />
                                 <span>Empresa</span>
                             </a>
-
+{/*}
                             <a
                                 href="/consultar"
                                 className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
@@ -223,7 +223,8 @@ export default function Navbar() {
                                 <Search size={18} />
                                 <span>Consultar</span>
                             </a>
-
+                            */}
+{/*
                             <a
                                 href="/Registro"
                                 className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-[#0e6493] font-medium text-base hover:scale-105 transition-transform border-b-2 border-transparent hover:border-[#0e6493] font-branding-sf"
@@ -231,6 +232,7 @@ export default function Navbar() {
                                 <UserPlus size={18} />
                                 <span>Registro</span>
                             </a>
+                            */}
                         </div>
 
                         <div className="hidden lg:flex items-center gap-4">
@@ -384,7 +386,7 @@ export default function Navbar() {
                                     <span className="font-medium">Empresa</span>
                                 </a>
 
-                                {/* Consultar */}
+                                {/* Consultar 
                                 <a
                                     href="/consultar"
                                     className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-blue-50 rounded-xl transition-colors font-branding-sf"
@@ -393,8 +395,8 @@ export default function Navbar() {
                                     <Search size={20} className="text-[#0e6493]" />
                                     <span className="font-medium">Consultar</span>
                                 </a>
-
-                                {/* Registro */}
+*/}
+                                {/* Registro 
                                 <a
                                     href="/Registro"
                                     className="flex items-center space-x-3 p-4 text-gray-700 hover:bg-blue-50 rounded-xl transition-colors font-branding-sf"
@@ -403,6 +405,7 @@ export default function Navbar() {
                                     <UserPlus size={20} className="text-[#0e6493]" />
                                     <span className="font-medium">Registro</span>
                                 </a>
+                                */}
 
                                 {/* Botón de contacto destacado */}
                                 <div className="pt-6 mt-6 border-t border-gray-200">

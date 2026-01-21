@@ -34,7 +34,7 @@ const sedes = [
     ciudad: "Socorro", 
     lat: 6.4668, 
     lng: -73.2620, 
-    direccion: "Carrera 14 # 10-45", 
+    direccion: "Carrera 14 # 13-41 Felipe Plaza local 101", 
     telefono: "3188237392",
     horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
     imagen: "/sedes/socorro.jpg"

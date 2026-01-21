@@ -139,7 +139,7 @@ export default function Empresa() {
                       <FaWhatsapp className="text-[#e31e25] mr-2" /> +573188237392
                       </div>
                     </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 14 # 10-45</td>
+                    <td className="py-4 px-6 whitespace-nowrap">Carrera 14 # 13- 41 Felipe Plaza local 101</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors">
                     <td className="py-4 px-6 font-medium whitespace-nowrap">Piedecuesta</td>
