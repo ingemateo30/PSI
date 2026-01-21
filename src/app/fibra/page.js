@@ -25,7 +25,7 @@ const internetPlans = [
     {
         speed: "100",
         name: "PLAN TURBO",
-        price: "$59.900",
+        price: "$69.900",
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
@@ -38,7 +38,7 @@ const internetPlans = [
     {
         speed: "300",
         name: "PLAN DELUXE",
-        price: "$79.900",
+        price: "$89.900",
         uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
@@ -52,7 +52,7 @@ const internetPlans = [
     {
         speed: "200",
         name: "PLAN PREMIUM",
-        price: "$69.900",
+        price: "$79.900",
         uploadSpeed: "150",
         benefits: [
             "Ideal para 4 dispositivos",
@@ -81,7 +81,7 @@ const internetPlans2 = [
     {
         speed: "100",
         name: "PLAN TURBO",
-        price: "$69.900",
+        price: "$79.900",
         uploadSpeed: "100",
         benefits: [
             "Ideal para 3 dispositivos",
@@ -92,7 +92,7 @@ const internetPlans2 = [
     {
         speed: "300",
         name: "PLAN DELUXE",
-        price: "$89.900",
+        price: "$99.900",
         uploadSpeed: "250",
         benefits: [
             "Ideal para +5 dispositivos",
@@ -104,7 +104,7 @@ const internetPlans2 = [
     {
         speed: "200",
         name: "PLAN PREMIUM",
-        price: "$79.900",
+        price: "$89.900",
         uploadSpeed: "150",
         benefits: [
             "Ideal para 5 dispositivos",
@@ -115,7 +115,7 @@ const internetPlans2 = [
     {
         speed: "50",
         name: "PLAN ESPECIAL",
-        price: "$59.900",
+        price: "$69.900",
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
