@@ -69,9 +69,7 @@ const internetPlans = [
         uploadSpeed: "50",
         benefits: [
             "Ideal para 2 dispositivos",
-            "Wifi 5G",
-            "87 canales digitales",
-            "7 canales radio"
+            "Wifi 5G"
 
         ],
         color: "#0e6493",
