@@ -16,8 +16,10 @@ import {
   Copy,
   Check,
   ScanLine,
+  Loader2,
 } from "lucide-react";
 import { QRCodeCanvas } from "qrcode.react";
+import { toPng } from "html-to-image";
 import Navbar from "@/component/navbar";
 import FloatingSocial from "@/component/redes";
 import Boton from "@/component/botonsubir";
@@ -57,10 +59,14 @@ const values = [
   { icon: TrendingUp, label: "RESULTADOS" },
 ];
 
+// Proporción del logo incrustado respecto al tamaño real del QR (evita que se vea borroso al escalar).
+const LOGO_RATIO = 52 / 280;
+
 export default function Descubre() {
   const [qrUrl, setQrUrl] = useState("https://www.psitelecomunicaciones.com/sedes");
   const [copied, setCopied] = useState(false);
-  const qrRef = useRef(null);
+  const [downloading, setDownloading] = useState(false);
+  const flyerRef = useRef(null);
 
   useEffect(() => {
     setQrUrl(`${window.location.origin}/sedes`);
@@ -76,14 +82,26 @@ export default function Descubre() {
     }
   };
 
-  const handleDownload = () => {
-    const canvas = qrRef.current;
-    if (!canvas) return;
-    const url = canvas.toDataURL("image/png");
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "psi-qr-sedes.png";
-    link.click();
+  const handleDownloadFlyer = async () => {
+    if (!flyerRef.current || downloading) return;
+    setDownloading(true);
+    try {
+      if (document.fonts?.ready) await document.fonts.ready;
+      const dataUrl = await toPng(flyerRef.current, {
+        width: 1080,
+        height: 1080,
+        pixelRatio: 2,
+        cacheBust: true,
+      });
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = "psi-flyer-qr.png";
+      link.click();
+    } catch (err) {
+      console.error("No se pudo generar el flyer:", err);
+    } finally {
+      setDownloading(false);
+    }
   };
 
   return (
@@ -161,18 +179,19 @@ export default function Descubre() {
               <div className="relative">
                 <div className="absolute -inset-3 rounded-[2rem] bg-[#4fb0e8]/40 blur-2xl"></div>
                 <div className="relative bg-white rounded-[2rem] p-6 sm:p-8 shadow-2xl">
+                  {/* Resolución interna 2x respecto al tamaño mostrado para que se vea nítido en pantallas retina. */}
                   <QRCodeCanvas
-                    ref={qrRef}
                     value={qrUrl}
-                    size={280}
+                    size={560}
+                    style={{ width: 280, height: 280 }}
                     level="H"
                     marginSize={2}
                     fgColor="#0e3a5c"
                     bgColor="#ffffff"
                     imageSettings={{
                       src: "/logo.png",
-                      height: 52,
-                      width: 52,
+                      height: Math.round(560 * LOGO_RATIO),
+                      width: Math.round(560 * LOGO_RATIO),
                       excavate: true,
                     }}
                   />
@@ -191,11 +210,12 @@ export default function Descubre() {
                   Ver nuestras sedes
                 </Link>
                 <button
-                  onClick={handleDownload}
-                  className="inline-flex items-center gap-2 bg-white/10 border border-white/25 hover:bg-white/20 text-white font-semibold py-3 px-5 rounded-xl transition-all"
+                  onClick={handleDownloadFlyer}
+                  disabled={downloading}
+                  className="inline-flex items-center gap-2 bg-white/10 border border-white/25 hover:bg-white/20 text-white font-semibold py-3 px-5 rounded-xl transition-all disabled:opacity-60"
                 >
-                  <Download size={18} />
-                  Descargar QR
+                  {downloading ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
+                  {downloading ? "Generando..." : "Descargar flyer"}
                 </button>
                 <button
                   onClick={handleCopy}
@@ -253,6 +273,127 @@ export default function Descubre() {
         notification={true}
         chatboxHeight={340}
       />
+
+      {/* Flyer cuadrado oculto: se usa solo para generar la imagen descargable */}
+      <div style={{ position: "absolute", top: 0, left: 0, width: 0, height: 0, overflow: "hidden" }}>
+        <div
+          ref={flyerRef}
+          style={{
+            width: 1080,
+            height: 1080,
+            fontFamily: "BrandingSF, sans-serif",
+          }}
+          className="relative flex flex-col justify-between overflow-hidden bg-gradient-to-br from-[#071a2b] via-[#0e3a5c] to-[#0e6493] p-16"
+        >
+          <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#0e6493]/50 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -right-16 w-80 h-80 bg-[#e31e25]/25 rounded-full blur-3xl"></div>
+
+          {/* Encabezado */}
+          <div className="relative flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="bg-white rounded-2xl p-3 shadow-xl">
+                <img src="/logo.png" alt="PSI" width={64} height={64} style={{ objectFit: "contain" }} />
+              </div>
+              <div className="text-white">
+                <p className="text-2xl font-extrabold leading-none">PSI</p>
+                <p className="text-xs tracking-widest text-blue-200">TELECOMUNICACIONES</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-2xl px-5 py-3 text-white">
+              <div className="bg-white/15 rounded-full p-2">
+                <ScanLine size={20} />
+              </div>
+              <div>
+                <p className="font-bold leading-tight text-sm">ESCANEA Y DESCUBRE</p>
+                <p className="text-xs text-blue-100">sedes, planes y servicios</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Cuerpo: titular + QR */}
+          <div className="relative flex items-center gap-10">
+            <div className="flex-1 text-white">
+              <p className="text-xl font-light italic text-blue-100 mb-1">Conoce todo lo que</p>
+              <h1 className="text-5xl font-extrabold leading-[1.05] mb-3">
+                PSI <span className="text-[#4fb0e8]">puede</span>
+                <br />
+                hacer por ti
+              </h1>
+              <p className="text-base italic text-blue-100 max-w-sm mb-8">
+                Soluciones inteligentes para{" "}
+                <span className="not-italic font-bold text-white bg-[#e31e25] px-2 py-0.5 rounded">
+                  hogares y empresas
+                </span>{" "}
+                que quieren crecer.
+              </p>
+
+              <div className="space-y-4">
+                {features.map((f, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="shrink-0 bg-white/10 border border-white/20 rounded-full p-2.5">
+                      <f.icon size={20} className="text-[#4fb0e8]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm leading-tight">
+                        {f.title} <span className="text-[#4fb0e8]">{f.highlight}</span>
+                      </p>
+                      <p className="text-blue-100 text-xs">{f.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="shrink-0 flex flex-col items-center">
+              <div className="relative">
+                <div className="absolute -inset-3 rounded-[2rem] bg-[#4fb0e8]/40 blur-2xl"></div>
+                <div className="relative bg-white rounded-[2rem] p-6 shadow-2xl">
+                  <QRCodeCanvas
+                    value={qrUrl}
+                    size={760}
+                    style={{ width: 300, height: 300 }}
+                    level="H"
+                    marginSize={2}
+                    fgColor="#0e3a5c"
+                    bgColor="#ffffff"
+                    imageSettings={{
+                      src: "/logo.png",
+                      height: Math.round(760 * LOGO_RATIO),
+                      width: Math.round(760 * LOGO_RATIO),
+                      excavate: true,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Pie */}
+          <div className="relative pt-8 border-t border-white/15">
+            <div className="grid grid-cols-4 gap-4 mb-8">
+              {values.map((v, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-2">
+                  <div className="bg-white/10 border border-white/20 rounded-full p-2.5">
+                    <v.icon size={20} className="text-[#4fb0e8]" />
+                  </div>
+                  <span className="text-white text-xs font-bold tracking-wide">{v.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-end justify-between">
+              <div>
+                <p className="text-white text-2xl font-extrabold tracking-tight leading-tight">INNOVAMOS HOY,</p>
+                <p className="text-[#4fb0e8] text-2xl font-extrabold tracking-tight leading-tight">
+                  TRANSFORMAMOS TU MAÑANA.
+                </p>
+              </div>
+              <p className="text-blue-100 text-sm font-semibold">www.psitelecomunicaciones.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
