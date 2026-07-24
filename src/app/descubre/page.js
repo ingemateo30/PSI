@@ -43,12 +43,6 @@ const values = [
 // Proporción del logo incrustado respecto al tamaño real del QR (para que no se vea borroso al escalar).
 const LOGO_RATIO = 52 / 280;
 
-// Fondo de puntos sutil que evoca la red de conectividad de PSI.
-const dotPattern = {
-  backgroundImage: "radial-gradient(rgba(255,255,255,0.14) 1.4px, transparent 1.4px)",
-  backgroundSize: "24px 24px",
-};
-
 export default function Descubre() {
   const [qrUrl, setQrUrl] = useState("https://www.psi.net.co/sedes");
   const [copied, setCopied] = useState(false);
@@ -109,7 +103,6 @@ export default function Descubre() {
 
       <div className="relative overflow-hidden bg-gradient-to-br from-[#071a2b] via-[#0e3a5c] to-[#0e6493]">
         {/* Decoración de fondo */}
-        <div className="absolute inset-0" style={dotPattern}></div>
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#0e6493]/40 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-32 -right-24 w-96 h-96 bg-[#e31e25]/20 rounded-full blur-3xl"></div>
 
@@ -119,9 +112,9 @@ export default function Descubre() {
             <Image
               src="/psi.png"
               alt="PSI Telecomunicaciones"
-              width={200}
-              height={200}
-              className="h-16 md:h-20 w-auto object-contain"
+              width={320}
+              height={320}
+              className="h-24 md:h-32 w-auto object-contain"
             />
 
             <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-2xl px-5 py-3 text-white backdrop-blur-sm w-fit">
@@ -300,24 +293,16 @@ export default function Descubre() {
           style={{ width: 1080, height: 1080, fontFamily: "BrandingSF, sans-serif" }}
           className="relative flex flex-col overflow-hidden bg-gradient-to-br from-[#071a2b] via-[#0e3a5c] to-[#0e6493] p-14"
         >
-          <div className="absolute inset-0" style={dotPattern}></div>
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#0e6493]/50 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-24 -right-16 w-96 h-96 bg-[#e31e25]/25 rounded-full blur-3xl"></div>
 
-          {/* Encabezado: logo blanco + insignia de 23 años */}
-          <div className="relative flex items-center justify-between">
-            <img src="/psi.png" alt="PSI" style={{ height: 92, objectFit: "contain" }} />
-
-            <div className="relative w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-yellow-300 via-yellow-500 to-yellow-600 shadow-xl border-4 border-yellow-200 shrink-0">
-              <div className="text-center leading-none">
-                <p className="text-3xl font-extrabold text-[#0e3a5c]">23</p>
-                <p className="text-[9px] font-bold tracking-widest text-[#0e3a5c]">AÑOS</p>
-              </div>
-            </div>
+          {/* Encabezado: logo blanco, grande */}
+          <div className="relative flex items-center mb-12">
+            <img src="/psi.png" alt="PSI" style={{ height: 170, objectFit: "contain" }} />
           </div>
 
           {/* Cuerpo: titular + QR */}
-          <div className="relative mt-16">
+          <div className="relative">
             <div className="flex items-center gap-12 w-full">
               <div className="flex-1 text-white">
                 <p className="text-xl font-light italic text-blue-100 mb-1">Conoce todo lo que</p>
@@ -335,8 +320,8 @@ export default function Descubre() {
                 <div className="grid grid-cols-2 gap-x-6 gap-y-6 max-w-md">
                   {features.map((f, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 border border-white/20">
-                        <f.icon size={22} className="text-[#4fb0e8]" />
+                      <div className="shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-white/10 border border-white/20">
+                        <f.icon size={24} className="text-[#4fb0e8]" />
                       </div>
                       <div>
                         <p className="font-bold text-sm leading-tight">{f.title}</p>
@@ -362,16 +347,16 @@ export default function Descubre() {
                     <div className="bg-white rounded-[calc(2.2rem-3px)] p-7">
                       <QRCodeCanvas
                         value={qrUrl}
-                        size={760}
-                        style={{ width: 300, height: 300 }}
+                        size={820}
+                        style={{ width: 330, height: 330 }}
                         level="H"
                         marginSize={2}
                         fgColor="#0e3a5c"
                         bgColor="#ffffff"
                         imageSettings={{
                           src: "/logo.png",
-                          height: Math.round(760 * LOGO_RATIO),
-                          width: Math.round(760 * LOGO_RATIO),
+                          height: Math.round(820 * LOGO_RATIO),
+                          width: Math.round(820 * LOGO_RATIO),
                           excavate: true,
                         }}
                       />
@@ -382,8 +367,8 @@ export default function Descubre() {
             </div>
           </div>
 
-          {/* Franja de valores, ocupa el espacio antes del cierre */}
-          <div className="relative mt-auto mb-10 grid grid-cols-4 gap-6">
+          {/* Franja de valores */}
+          <div className="relative mt-12 mb-10 grid grid-cols-4 gap-6">
             {values.map((v, i) => (
               <div key={i} className="flex flex-col items-center text-center gap-2">
                 <div className="bg-white/10 border border-white/20 rounded-full p-3">
