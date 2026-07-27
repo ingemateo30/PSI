@@ -5,7 +5,18 @@ import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X, Home, UserPlus, Sear
 import { useState, useRef, useEffect } from "react";
 import Boton from "@/component/contratarnav"
 
-export default function Navbar() {
+const CONTACTOS_TODAS = [
+    { label: "San Gil", phone: "573184550936", display: "3184550936" },
+    { label: "Socorro", phone: "573188237392", display: "3188237392" },
+    { label: "Piedecuesta", phone: "573187305239", display: "3187305239" },
+];
+
+const CONTACTOS_CAMPOALEGRE = [
+    { label: "Campoalegre", phone: "573165602425", display: "3165602425" },
+];
+
+export default function Navbar({ contactScope }) {
+    const contactos = contactScope === "campoalegre" ? CONTACTOS_CAMPOALEGRE : CONTACTOS_TODAS;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPagoMenuOpen, setIsPagoMenuOpen] = useState(false);
     const [isServiciosOpen, setIsServiciosOpen] = useState(false);
@@ -81,27 +92,20 @@ export default function Navbar() {
                         </a>
                     </div>
                     <div className="flex flex-wrap gap-4 sm:gap-6 text-xs">
-                        <a
-                            href="https://wa.me/573184550936"
-                            className="hover:underline py-1 hidden md:flex items-center group transition-all duration-300"
-                        >
-                            <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300" />
-                            <span className="group-hover:text-yellow-300">San Gil 3184550936</span>
-                        </a>
-                        <a
-                            href="https://wa.me/573188237392"
-                            className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
-                        >
-                            <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300" />
-                            <span className="group-hover:text-yellow-300">Socorro 3188237392</span>
-                        </a>
-                        <a
-                            href="https://wa.me/573187305239"
-                            className="hover:underline py-1 hidden lg:flex items-center group transition-all duration-300"
-                        >
-                            <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300" />
-                            <span className="group-hover:text-yellow-300">Piedecuesta 3187305239</span>
-                        </a>
+                        {contactos.map((c, i) => (
+                            <a
+                                key={c.label}
+                                href={`https://wa.me/${c.phone}`}
+                                className={`hover:underline py-1 items-center group transition-all duration-300 flex ${
+                                    i === 0 ? "hidden md:flex" : "hidden lg:flex"
+                                }`}
+                            >
+                                <FaWhatsapp className="w-3 h-3 mr-1 group-hover:text-yellow-300" />
+                                <span className="group-hover:text-yellow-300">
+                                    {c.label} {c.display}
+                                </span>
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -410,7 +414,7 @@ export default function Navbar() {
                                 {/* Botón de contacto destacado */}
                                 <div className="pt-6 mt-6 border-t border-gray-200">
                                     <a
-                                        href="https://wa.me/573184550936"
+                                        href={`https://wa.me/${contactos[0].phone}`}
                                         className="flex items-center justify-center space-x-2 w-full py-4 px-6 bg-gradient-to-r from-[#e31e25] to-[#ff3c42] text-white rounded-xl font-semibold hover:shadow-lg transition-all transform hover:scale-105 font-branding-sf"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
@@ -422,27 +426,18 @@ export default function Navbar() {
                                 {/* Números de contacto móvil */}
                                 <div className="pt-4 space-y-3">
                                     <p className="text-xs text-gray-500 font-semibold px-2">Contáctanos:</p>
-                                    <a
-                                        href="https://wa.me/573184550936"
-                                        className="flex items-center space-x-3 p-3 text-sm text-gray-600 hover:bg-green-50 rounded-lg transition-colors"
-                                    >
-                                        <FaWhatsapp className="w-4 h-4 text-green-600" />
-                                        <span>San Gil: 318 455 0936</span>
-                                    </a>
-                                    <a
-                                        href="https://wa.me/573188237392"
-                                        className="flex items-center space-x-3 p-3 text-sm text-gray-600 hover:bg-green-50 rounded-lg transition-colors"
-                                    >
-                                        <FaWhatsapp className="w-4 h-4 text-green-600" />
-                                        <span>Socorro: 318 823 7392</span>
-                                    </a>
-                                    <a
-                                        href="https://wa.me/573187305239"
-                                        className="flex items-center space-x-3 p-3 text-sm text-gray-600 hover:bg-green-50 rounded-lg transition-colors"
-                                    >
-                                        <FaWhatsapp className="w-4 h-4 text-green-600" />
-                                        <span>Piedecuesta: 318 730 5239</span>
-                                    </a>
+                                    {contactos.map((c) => (
+                                        <a
+                                            key={c.label}
+                                            href={`https://wa.me/${c.phone}`}
+                                            className="flex items-center space-x-3 p-3 text-sm text-gray-600 hover:bg-green-50 rounded-lg transition-colors"
+                                        >
+                                            <FaWhatsapp className="w-4 h-4 text-green-600" />
+                                            <span>
+                                                {c.label}: {c.display}
+                                            </span>
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </div>

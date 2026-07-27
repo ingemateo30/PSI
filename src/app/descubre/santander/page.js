@@ -6,20 +6,20 @@ import DescubreFlyer from "@/component/DescubreFlyer";
 const features = [
   { icon: Wifi, title: "Fibra Óptica", caption: "Internet ultra veloz" },
   { icon: Tv, title: "TV Digital HD", caption: "+87 canales" },
-  { icon: MapPin, title: "4 Sedes", caption: "Cerca de ti" },
+  { icon: MapPin, title: "3 Sedes", caption: "San Gil, Socorro y Piedecuesta" },
   { icon: Headset, title: "Soporte 24/7", caption: "Siempre contigo" },
 ];
 
-export default function Descubre() {
+export default function DescubreSantander() {
   return (
     <DescubreFlyer
-      targetPath="/sedes"
-      fallbackUrl="https://www.psi.net.co/sedes"
+      targetPath="/sedes/santander"
+      fallbackUrl="https://www.psi.net.co/sedes/santander"
       features={features}
       ctaLabel="Ver nuestras sedes"
-      flyerFileName="psi-flyer-qr.png"
-      qrFileName="psi-qr.png"
-      scanTagline="nuestras sedes, planes y servicios."
+      flyerFileName="psi-flyer-santander.png"
+      qrFileName="psi-qr-santander.png"
+      scanTagline="nuestras sedes en Santander: planes y contacto."
     />
   );
 }
