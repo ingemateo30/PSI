@@ -3,7 +3,7 @@ import SedeLanding from "@/component/SedeLanding";
 import { sedesConPlanes } from "@/lib/content";
 import { readContent } from "@/lib/contentStore";
 
-// Una página por sede (/sedes/sangil, /sedes/socorro, ...), con su propio código QR en /descubre/<sede>.
+// Una página pública por sede (/sedes/sangil, /sedes/socorro, ...): es a donde lleva el código QR de esa sede.
 export default async function SedePage({ params }) {
   const { sede: id } = await params;
   const sede = sedesConPlanes(await readContent()).find((s) => s.id === id);

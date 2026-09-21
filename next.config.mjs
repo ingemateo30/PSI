@@ -2,8 +2,9 @@
 const nextConfig = {
   async redirects() {
     return [
-      // El flyer conjunto de Santander se dividió: ahora hay un QR y un flyer por sede.
-      { source: "/descubre/santander", destination: "/descubre", permanent: false },
+      // El flyer y el QR ahora son una herramienta interna del panel de administración (pestaña "Códigos QR").
+      { source: "/descubre", destination: "/admin", permanent: false },
+      { source: "/descubre/santander", destination: "/sedes/santander", permanent: false },
     ];
   },
 };

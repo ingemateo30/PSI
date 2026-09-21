@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { MapPin, Phone, Clock, Wifi, Tv, QrCode } from "lucide-react";
+import { MapPin, Phone, Clock, Wifi, Tv } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Navbar from "@/component/navbar";
 import FloatingSocial from "@/component/redes";
@@ -43,14 +42,6 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, contac
             <h1 className="text-4xl md:text-6xl font-extrabold mb-3">{heroTitle}</h1>
             <div className="w-24 h-1 bg-[#e31e25] mb-6"></div>
             <p className="text-lg md:text-xl max-w-2xl font-light">{heroSubtitle}</p>
-
-            <Link
-              href={`/descubre/${sede.id}`}
-              className="mt-8 inline-flex items-center gap-2 bg-white/10 border border-white/30 hover:bg-white/20 text-white font-semibold py-2.5 px-5 rounded-xl transition-all"
-            >
-              <QrCode size={18} />
-              Ver el código QR de {sede.ciudad}
-            </Link>
           </div>
         </div>
 
@@ -258,11 +249,6 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, contac
                 <li>
                   <a href="/television" className="text-gray-300 hover:text-white transition-colors duration-200">
                     Televisión HD
-                  </a>
-                </li>
-                <li>
-                  <a href="/descubre" className="text-gray-300 hover:text-white transition-colors duration-200">
-                    Código QR de PSI
                   </a>
                 </li>
               </ul>

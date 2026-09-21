@@ -11,6 +11,7 @@ import {
   Loader2,
   LogOut,
   Plus,
+  QrCode,
   RotateCcw,
   Save,
   Trash2,
@@ -21,6 +22,7 @@ const TABS = [
   { id: "planes", label: "Planes y precios" },
   { id: "sedes", label: "Sedes" },
   { id: "inicio", label: "Página de inicio" },
+  { id: "qr", label: "Códigos QR" },
 ];
 
 const SEDE_NUEVA = {
@@ -377,8 +379,8 @@ export default function AdminPanel({ content }) {
         {tab === "sedes" && (
           <>
             <p className="text-sm text-gray-600">
-              Cada sede tiene su propia página (<code className="font-mono">/sedes/nombre</code>) y su propio código QR (
-              <code className="font-mono">/descubre/nombre</code>). El enlace de una sede no cambia aunque se edite su nombre.
+              Cada sede tiene su propia página pública (<code className="font-mono">/sedes/nombre</code>) y su propio código QR.
+              El enlace de una sede no cambia aunque se edite su nombre.
             </p>
             {draft.sedes.map((sede, i) => (
               <Tarjeta
@@ -487,6 +489,41 @@ export default function AdminPanel({ content }) {
               {precios.length > 0 && <> (hoy {formatCOP(Math.min(...precios))})</>}.
             </p>
           </div>
+        )}
+
+        {tab === "qr" && (
+          <>
+            <p className="text-sm text-gray-600">
+              Cada código QR lleva a la página pública de su sede, que solo muestra la información de esa sede. Esta
+              herramienta (flyer y QR descargables) solo se ve con la sesión de administrador iniciada. Las sedes nuevas
+              aparecen aquí después de guardar.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {content.sedes.map((sede) => (
+                <Tarjeta key={sede.id} titulo={sede.ciudad}>
+                  <p className="text-sm text-gray-500 mb-4">{sede.direccion}</p>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href={`/descubre/${sede.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#0e6493] hover:bg-[#073a57] text-white text-sm font-semibold rounded-lg px-4 py-2.5 transition-colors"
+                    >
+                      <QrCode size={16} /> QR y flyer
+                    </a>
+                    <a
+                      href={`/sedes/${sede.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-gray-700 border border-gray-300 hover:bg-gray-100 rounded-lg px-4 py-2.5 transition-colors"
+                    >
+                      <ExternalLink size={16} /> Página del cliente
+                    </a>
+                  </div>
+                </Tarjeta>
+              ))}
+            </div>
+          </>
         )}
 
         <div className="pt-4">

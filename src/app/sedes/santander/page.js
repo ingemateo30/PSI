@@ -3,7 +3,7 @@ import { listaY, sedesConPlanes } from "@/lib/content";
 import { readContent } from "@/lib/contentStore";
 
 // Página del grupo Santander: se conserva porque el QR anterior apuntaba aquí.
-// Cada sede tiene además su propia página y su propio QR (/sedes/<sede>, /descubre/<sede>).
+// Cada sede tiene además su propia página y su propio QR (/sedes/<sede>).
 export default async function SedesSantander() {
   const sedes = sedesConPlanes(await readContent()).filter((s) => s.grupo === "santander");
 
