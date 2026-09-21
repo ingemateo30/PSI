@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 import { CheckCircle, Home, Phone, Mail } from "lucide-react";
 import Navbar from "@/component/navbar";
 import Link from "next/link";
+import { useSedesVisibles } from "@/component/ContentProvider";
 
 // ✅ COMPONENTE INTERNO que usa useSearchParams
 function ExitoContent() {
   const searchParams = useSearchParams();
   const clienteId = searchParams.get("id");
+  const sedes = useSedesVisibles();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 flex items-center justify-center py-12 px-4">
@@ -73,18 +75,12 @@ function ExitoContent() {
         <div className="bg-[#0e6493] text-white rounded-lg p-6 mb-8">
           <h3 className="font-bold text-xl mb-4">¿Necesitas ayuda?</h3>
           <div className="space-y-2 text-sm">
-            <div className="flex items-center justify-center">
-              <Phone size={16} className="mr-2" />
-              <span>San Gil: 318 455 0936</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Phone size={16} className="mr-2" />
-              <span>Socorro: 318 823 7392</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Phone size={16} className="mr-2" />
-              <span>Piedecuesta: 318 730 5239</span>
-            </div>
+            {sedes.map((sede) => (
+              <div key={sede.id} className="flex items-center justify-center">
+                <Phone size={16} className="mr-2" />
+                <span>{sede.ciudad}: {sede.whatsappDisplay}</span>
+              </div>
+            ))}
             <div className="flex items-center justify-center mt-4">
               <Mail size={16} className="mr-2" />
               <span>contacto@psi.net.co</span>

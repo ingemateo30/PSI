@@ -2,28 +2,10 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
+import { useSedesVisibles } from "@/component/ContentProvider";
 
 export default function CoberturaSection() {
-    const sedes = [
-        {
-            ciudad: "San Gil",
-            descripcion: "Conectividad premium en San Gil.",
-            imagen: "/sangil.jpeg", 
-            alt: "Sede de San Gil",
-        },
-        {
-            ciudad: "Socorro",
-            descripcion: "Conectividad de última generación en Socorro.",
-            imagen: "/Socorro.jpeg", 
-            alt: "Sede de Socorro",
-        },
-        {
-            ciudad: "Piedecuesta",
-            descripcion: "Infraestructura de fibra óptica en Piedecuesta.",
-            imagen: "/psi.jpeg",
-            alt: "Sede de Piedecuesta",
-        }
-    ];
+    const sedes = useSedesVisibles();
 
     return (
         <motion.section
@@ -49,7 +31,7 @@ export default function CoberturaSection() {
                 <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
                     {sedes.map((sede, index) => (
                         <motion.div
-                            key={sede.ciudad}
+                            key={sede.id}
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.1 * index }}
@@ -64,7 +46,7 @@ export default function CoberturaSection() {
                             <div className="w-full h-48 mb-4 overflow-hidden rounded-lg shadow-lg">
                                 <Image
                                     src={sede.imagen}
-                                    alt={sede.alt}
+                                    alt={`Sede de ${sede.ciudad}`}
                                     width={400}
                                     height={300}
                                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"

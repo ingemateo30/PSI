@@ -2,8 +2,12 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import BotonContratacion from '@/component/contratarahora'
+import { useContent, usePlanesPrincipales } from "@/component/ContentProvider";
+import { formatCOP, precioDesde } from "@/lib/content";
 
 export default function Hero() {
+    const { inicio } = useContent();
+    const desde = precioDesde(usePlanesPrincipales().plans);
     const [isVisible, setIsVisible] = useState(false);
     const [isPulsing, setIsPulsing] = useState(true);
 
@@ -46,16 +50,17 @@ export default function Hero() {
                 {/* Texto */}
                 <div className={`max-w-xl text-center md:text-left transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
                     <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight text-white">
-                        ¡Velocidad y entretenimiento{" "}
-                        <span className="relative inline-block">
-                            al mejor precio!
-                            <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#e31e25] rounded-full"></span>
-                        </span>
+                        {inicio.heroTitulo}{" "}
+                        {inicio.heroResaltado && (
+                            <span className="relative inline-block">
+                                {inicio.heroResaltado}
+                                <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#e31e25] rounded-full"></span>
+                            </span>
+                        )}
                     </h1>
 
                     <p className="text-base sm:text-lg mt-4 text-gray-100">
-                        Disfruta fibra óptica de alta velocidad y TV premium sin costos ocultos.
-                        ¡Contrata hoy y aprovecha esta oferta exclusiva!
+                        {inicio.heroTexto}
                     </p>
                 </div>
                 <div className="relative bg-gradient-to-br from-[#0e6493] to-[#0a4f7a] text-white p-6 rounded-2xl shadow-2xl w-full max-w-md border border-[#3a84b3]/40 transition-all duration-700 text-center flex flex-col items-center space-y-4">
@@ -63,19 +68,19 @@ export default function Hero() {
                         🔥 ¡OFERTA EXCLUSIVA! 🔥
                     </div>
                     <h2 className="text-2xl font-bold mt-4">
-                        PACK FIBRA + TV PREMIUM
+                        {inicio.ofertaTitulo}
                     </h2>
 
                     <div className="relative inline-block text-center">
                         <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-sm font-bold text-[#e31e25]">desde</span>
-                        <span className="text-4xl font-extrabold text-white block">$89.900</span>
+                        <span className="text-4xl font-extrabold text-white block">{formatCOP(desde)}</span>
                         <span className="text-base font-medium text-gray-100">/mes</span>
                     </div>
 
                     <div className="bg-[#0a4f7a]/60 rounded-lg p-3 w-full">
                         <p className="text-base font-bold text-white mb-2">Tu pack incluye:</p>
                         <ul className="space-y-2 text-left">
-                            {["300 Mbps en fibra óptica", "80 canales Digitales", "7 canales de radio"].map((item, index) => (
+                            {inicio.ofertaIncluye.map((item, index) => (
                                 <li key={index} className="flex items-center gap-2 text-sm">
                                     <svg className="w-4 h-4 text-[#e31e25]" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>

@@ -18,156 +18,14 @@ import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
 import WhatsAppModal from '@/component/modal';
 import Boton from '@/component/botonsubir';
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from '@/component/WhatsAppFlotante';
+import { useContent, usePlanesPrincipales } from '@/component/ContentProvider';
+import { formatCOP, planTitle } from '@/lib/content';
 import Image from "next/image";
 
-const internetPlans = [
-    {
-        speed: "100",
-        name: "PLAN TURBO",
-        price: "$69.900",
-        uploadSpeed: "100",
-        benefits: [
-            "Ideal para 3 dispositivos",
-            "Wifi 5G",
-            "87 canales digitales",
-            "7 canales radio"
-        ],
-        color: "#0e6493",
-    },
-    {
-        speed: "300",
-        name: "PLAN DELUXE",
-        price: "$89.900",
-        uploadSpeed: "250",
-        benefits: [
-            "Ideal para +5 dispositivos",
-            "Wifi 5G",
-            "87 canales digitales",
-            "7 canales radio"
-        ],
-        featured: true,
-        color: "#0e6493",
-    },
-    {
-        speed: "200",
-        name: "PLAN PREMIUM",
-        price: "$79.900",
-        uploadSpeed: "150",
-        benefits: [
-            "Ideal para 4 dispositivos",
-            "Wifi 5G",
-            "87 canales digitales",
-            "7 canales radio"
-        ],
-        color: "#0e6493",
-    },
-    {
-        speed: "50",
-        name: "PLAN ESPECIAL",
-        price: "$59.900",
-        uploadSpeed: "50",
-        benefits: [
-            "Ideal para 2 dispositivos",
-            "Wifi 5G"
-
-        ],
-        color: "#0e6493",
-    }
-];
-const internetPlans2 = [
-    {
-        speed: "100",
-        name: "PLAN TURBO",
-        price: "$79.900",
-        uploadSpeed: "100",
-        benefits: [
-            "Ideal para 3 dispositivos",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    },
-    {
-        speed: "300",
-        name: "PLAN DELUXE",
-        price: "$99.900",
-        uploadSpeed: "250",
-        benefits: [
-            "Ideal para +5 dispositivos",
-            "Wifi 5G"
-        ],
-        featured: true,
-        color: "#0e6493",
-    },
-    {
-        speed: "200",
-        name: "PLAN PREMIUM",
-        price: "$89.900",
-        uploadSpeed: "150",
-        benefits: [
-            "Ideal para 5 dispositivos",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    },
-    {
-        speed: "50",
-        name: "PLAN ESPECIAL",
-        price: "$69.900",
-        uploadSpeed: "50",
-        benefits: [
-            "Ideal para 2 dispositivos",
-            "Wifi 5G"
-        ],
-        color: "#0e6493",
-    }
-];
-
-
-const bundlePlans = [
-    {
-        name: "PAQUETE FULL",
-        price: "$99.900",
-        includes: [
-            { icon: Wifi, text: "300 Megas" },
-            { icon: Wifi, text: "Wifi y cable de red" }
-        ],
-        benefits: [
-            "Múltiples dispositivos conectados",
-            "Ideal para familias",
-            "Entretenimiento completo"
-        ],
-        featured: true,
-    },
-    {
-        name: "PAQUETE AVANZADO",
-        price: "$89.900",
-        includes: [
-            { icon: Wifi, text: "200 Megas" },
-            { icon: Wifi, text: "Wifi y cable de red" }
-        ],
-        benefits: [
-            "Gaming y streaming 4K",
-            "canales HD",
-            "Contenido exclusivo"
-        ],
-    },
-    {
-        name: "PAQUETE INTERMEDIO",
-        price: "$79.900",
-        includes: [
-            { icon: Wifi, text: "100 Megas" },
-            { icon: Wifi, text: "Wifi y cable de red" },
-            { icon: Tv, text: "87 canales HD" },
-        ],
-        benefits: [
-            "Conexión ultrarrápida",
-            "Ideal para gamers"
-        ],
-    }
-];
-
 export default function EnhancedPlansSection() {
+    const { recargoEmpresa } = useContent();
+    const { plans } = usePlanesPrincipales();
     const [activeTab, setActiveTab] = useState("internet");
     const [selectedPlan, setSelectedPlan] = useState(1);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -233,7 +91,7 @@ export default function EnhancedPlansSection() {
                             >
                                 Internet Fibra Hogar
                             </button>
-                            <button
+                            {recargoEmpresa > 0 && <button
                                 onClick={() => setActiveTab("internet2")}
                                 className={`px-6 py-3 rounded-full font-bold transition-all duration-300 ${activeTab === "internet2"
                                     ? "bg-gradient-to-r from-[#0e6493] to-[#073a57] text-white shadow-lg"
@@ -241,327 +99,127 @@ export default function EnhancedPlansSection() {
                                     }`}
                             >
                                 Internet Fibra Comercial
-                            </button>
+                            </button>}
                         </div>
                     </div>
 
 
-                    {activeTab === "internet" && (
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {internetPlans.map((plan, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {plans.map((plan, index) => {
+                            const esComercial = activeTab === "internet2";
+                            const price = plan.price + (esComercial ? recargoEmpresa : 0);
+                            const numerico = /^\d+$/.test(plan.megas);
+                            const tema = plan.destacado;
+                            return (
                                 <div
                                     key={index}
-                                    className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl shadow-xl text-center transform transition-all duration-500 hover:translate-y-2 ${plan.featured
+                                    className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl shadow-xl text-center transform transition-all duration-500 hover:translate-y-2 ${tema
                                         ? "bg-gradient-to-br from-[#0e6493] to-[#073a57] text-white"
                                         : "bg-white border-2 border-gray-100"
                                         }`}
                                 >
-                                    {plan.featured && (
+                                    {tema && (
                                         <div className="absolute -top-3 -right-3 bg-[#e31e25] text-white text-sm font-bold p-3 rounded-full shadow-lg flex items-center justify-center">
                                             <Star className="h-5 w-5 fill-white" />
                                         </div>
                                     )}
 
-
                                     <div className="mb-6">
-                                        <div
-                                            className={`text-7xl font-extrabold leading-none ${plan.featured ? "text-white" : "text-[#e31e25]"
-                                                }`}
-                                        >
-                                            {plan.speed}
-                                        </div>
-                                        <div
-                                            className={`text-xl font-medium ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                }`}
-                                        >
-                                            Megas
-                                        </div>
+                                        {numerico ? (
+                                            <>
+                                                <div className={`text-7xl font-extrabold leading-none ${tema ? "text-white" : "text-[#e31e25]"}`}>
+                                                    {plan.megas}
+                                                </div>
+                                                <div className={`text-xl font-medium ${tema ? "text-blue-100" : "text-[#0e6493]"}`}>
+                                                    Megas
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <div className={`text-5xl font-extrabold leading-none uppercase break-words ${tema ? "text-white" : "text-[#e31e25]"}`}>
+                                                {plan.megas}
+                                            </div>
+                                        )}
                                     </div>
 
-
                                     <div className="mb-8">
-                                        <h3
-                                            className={`text-2xl font-bold ${plan.featured ? "text-white" : "text-[#0e6493]"
-                                                }`}
-                                        >
-                                            {plan.name}
+                                        <h3 className={`text-2xl font-bold ${tema ? "text-white" : "text-[#0e6493]"}`}>
+                                            + Televisión
                                         </h3>
                                         <div className="flex justify-center items-baseline">
-                                            <span
-                                                className={`text-4xl font-bold ${plan.featured ? "text-white" : "text-[#e31e25]"
-                                                    }`}
-                                            >
-                                                {plan.price}
+                                            <span className={`text-4xl font-bold ${tema ? "text-white" : "text-[#e31e25]"}`}>
+                                                {formatCOP(price)}
                                             </span>
-                                            <span
-                                                className={`text-sm ml-2 ${plan.featured ? "text-blue-100" : "text-gray-500"
-                                                    }`}
-                                            >
+                                            <span className={`text-sm ml-2 ${tema ? "text-blue-100" : "text-gray-500"}`}>
                                                 /mes
                                             </span>
                                         </div>
-                                        <p
-                                            className={`text-sm mt-1 ${plan.featured ? "text-gray-200" : "text-gray-600"
-                                                }`}
-                                        >
+                                        <p className={`text-sm mt-1 ${tema ? "text-gray-200" : "text-gray-600"}`}>
                                             IVA Incluido
                                         </p>
                                     </div>
 
+                                    {plan.descarga && plan.subida && (
+                                        <div className={`flex justify-between p-4 mb-6 rounded-xl ${tema ? "bg-white/10" : "bg-blue-50"}`}>
+                                            <div className="text-center">
+                                                <div className="flex justify-center">
+                                                    <Download className={`h-5 w-5 ${tema ? "text-blue-100" : "text-[#0e6493]"}`} />
+                                                </div>
+                                                <div className={`font-bold text-lg ${tema ? "text-white" : "text-[#0e6493]"}`}>
+                                                    {plan.descarga} MB
+                                                </div>
+                                                <div className={`text-xs ${tema ? "text-blue-100" : "text-gray-500"}`}>
+                                                    Descarga
+                                                </div>
+                                            </div>
 
-                                    <div
-                                        className={`flex justify-between p-4 mb-6 rounded-xl ${plan.featured ? "bg-white/10" : "bg-blue-50"
-                                            }`}
-                                    >
-                                        <div className="text-center">
-                                            <div className="flex justify-center">
-                                                <Download
-                                                    className={`h-5 w-5 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                        }`}
-                                                />
-                                            </div>
-                                            <div
-                                                className={`font-bold text-lg ${plan.featured ? "text-white" : "text-[#0e6493]"
-                                                    }`}
-                                            >
-                                                {plan.speed} MB
-                                            </div>
-                                            <div
-                                                className={`text-xs ${plan.featured ? "text-blue-100" : "text-gray-500"
-                                                    }`}
-                                            >
-                                                Descarga
+                                            <div className={`h-auto w-px ${tema ? "bg-white/20" : "bg-gray-300"}`}></div>
+
+                                            <div className="text-center">
+                                                <div className="flex justify-center">
+                                                    <Upload className={`h-5 w-5 ${tema ? "text-blue-100" : "text-[#0e6493]"}`} />
+                                                </div>
+                                                <div className={`font-bold text-lg ${tema ? "text-white" : "text-[#0e6493]"}`}>
+                                                    {plan.subida} MB
+                                                </div>
+                                                <div className={`text-xs ${tema ? "text-blue-100" : "text-gray-500"}`}>
+                                                    Subida
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div
-                                            className={`h-auto w-px ${plan.featured ? "bg-white/20" : "bg-gray-300"
-                                                }`}
-                                        ></div>
-
-                                        <div className="text-center">
-                                            <div className="flex justify-center">
-                                                <Upload
-                                                    className={`h-5 w-5 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                        }`}
-                                                />
-                                            </div>
-                                            <div
-                                                className={`font-bold text-lg ${plan.featured ? "text-white" : "text-[#0e6493]"
-                                                    }`}
-                                            >
-                                                {plan.uploadSpeed} MB
-                                            </div>
-                                            <div
-                                                className={`text-xs ${plan.featured ? "text-blue-100" : "text-gray-500"
-                                                    }`}
-                                            >
-                                                Subida
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    )}
 
                                     <div className="flex-grow">
-                                        <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
-                                            {plan.benefits.map((benefit, i) => (
+                                        <ul className={`space-y-4 mb-8 ${tema ? "text-gray-100" : "text-gray-700"}`}>
+                                            {plan.beneficios.map((benefit, i) => (
                                                 <li key={i} className="flex justify-center items-center space-x-3">
-                                                    <CheckCircle
-                                                        className={`h-4 w-4 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                            }`}
-                                                    />
+                                                    <CheckCircle className={`h-4 w-4 shrink-0 ${tema ? "text-blue-100" : "text-[#0e6493]"}`} />
                                                     <span className="font-medium">{benefit}</span>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
 
-                                    <>
-                                        <button
-                                            onClick={() => openModal(index)}
-                                            className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
-                                                ? "bg-white text-[#0e6493] hover:bg-gray-100"
-                                                : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
-                                                }`}
-                                        >
-                                            <span>¡LO QUIERO!</span>
-                                        </button>
-
-                                        {selectedPlanId === index && (
-                                            <WhatsAppModal
-                                                isOpen={true}
-                                                onClose={closeModal}
-                                                plan={plan}
-                                            />
-                                        )}
-
-                                    </>
-
-                                </div>
-
-                            ))}
-
-                        </div>
-
-                    )}
-
-                    {activeTab === "internet2" && (
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {internetPlans2.map((plan, index) => (
-                                <div
-                                    key={index}
-                                    className={`group relative h-full flex flex-col justify-between p-8 rounded-3xl shadow-xl text-center transform transition-all duration-500 hover:translate-y-2 ${plan.featured
-                                        ? "bg-gradient-to-br from-[#0e6493] to-[#073a57] text-white"
-                                        : "bg-white border-2 border-gray-100"
-                                        }`}
-                                >
-                                    {plan.featured && (
-                                        <div className="absolute -top-3 -right-3 bg-[#e31e25] text-white text-sm font-bold p-3 rounded-full shadow-lg flex items-center justify-center">
-                                            <Star className="h-5 w-5 fill-white" />
-                                        </div>
-                                    )}
-
-
-                                    <div className="mb-6">
-                                        <div
-                                            className={`text-7xl font-extrabold leading-none ${plan.featured ? "text-white" : "text-[#e31e25]"
-                                                }`}
-                                        >
-                                            {plan.speed}
-                                        </div>
-                                        <div
-                                            className={`text-xl font-medium ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                }`}
-                                        >
-                                            Megas
-                                        </div>
-                                    </div>
-
-
-                                    <div className="mb-8">
-                                        <h3
-                                            className={`text-2xl font-bold ${plan.featured ? "text-white" : "text-[#0e6493]"
-                                                }`}
-                                        >
-                                            {plan.name}
-                                        </h3>
-                                        <div className="flex justify-center items-baseline">
-                                            <span
-                                                className={`text-4xl font-bold ${plan.featured ? "text-white" : "text-[#e31e25]"
-                                                    }`}
-                                            >
-                                                {plan.price}
-                                            </span>
-                                            <span
-                                                className={`text-sm ml-2 ${plan.featured ? "text-blue-100" : "text-gray-500"
-                                                    }`}
-                                            >
-                                                /mes
-                                            </span>
-                                        </div>
-                                        <p
-                                            className={`text-sm mt-1 ${plan.featured ? "text-gray-200" : "text-gray-600"
-                                                }`}
-                                        >
-                                            IVA Incluido
-                                        </p>
-                                    </div>
-
-
-                                    <div
-                                        className={`flex justify-between p-4 mb-6 rounded-xl ${plan.featured ? "bg-white/10" : "bg-blue-50"
+                                    <button
+                                        onClick={() => openModal(index)}
+                                        className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${tema
+                                            ? "bg-white text-[#0e6493] hover:bg-gray-100"
+                                            : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
                                             }`}
                                     >
-                                        <div className="text-center">
-                                            <div className="flex justify-center">
-                                                <Download
-                                                    className={`h-5 w-5 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                        }`}
-                                                />
-                                            </div>
-                                            <div
-                                                className={`font-bold text-lg ${plan.featured ? "text-white" : "text-[#0e6493]"
-                                                    }`}
-                                            >
-                                                {plan.speed} MB
-                                            </div>
-                                            <div
-                                                className={`text-xs ${plan.featured ? "text-blue-100" : "text-gray-500"
-                                                    }`}
-                                            >
-                                                Descarga
-                                            </div>
-                                        </div>
+                                        <span>¡LO QUIERO!</span>
+                                    </button>
 
-                                        <div
-                                            className={`h-auto w-px ${plan.featured ? "bg-white/20" : "bg-gray-300"
-                                                }`}
-                                        ></div>
-
-                                        <div className="text-center">
-                                            <div className="flex justify-center">
-                                                <Upload
-                                                    className={`h-5 w-5 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                        }`}
-                                                />
-                                            </div>
-                                            <div
-                                                className={`font-bold text-lg ${plan.featured ? "text-white" : "text-[#0e6493]"
-                                                    }`}
-                                            >
-                                                {plan.uploadSpeed} MB
-                                            </div>
-                                            <div
-                                                className={`text-xs ${plan.featured ? "text-blue-100" : "text-gray-500"
-                                                    }`}
-                                            >
-                                                Subida
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div className="flex-grow">
-                                        <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
-                                            {plan.benefits.map((benefit, i) => (
-                                                <li key={i} className="flex justify-center items-center space-x-3">
-                                                    <CheckCircle
-                                                        className={`h-4 w-4 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"
-                                                            }`}
-                                                    />
-                                                    <span className="font-medium">{benefit}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    <>
-                                        <button
-                                            onClick={() => openModal(index)}
-                                            className={`w-full py-4 rounded-xl font-bold text-base flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl ${plan.featured
-                                                ? "bg-white text-[#0e6493] hover:bg-gray-100"
-                                                : "bg-gradient-to-r from-[#0e6493] to-[#0a4f7a] text-white hover:from-[#0a4f7a] hover:to-[#073a57]"
-                                                }`}
-                                        >
-                                            <span>¡LO QUIERO!</span>
-                                        </button>
-
-                                        {selectedPlanId === index && (
-                                            <WhatsAppModal
-                                                isOpen={true}
-                                                onClose={closeModal}
-                                                plan={plan}
-                                            />
-                                        )}
-
-                                    </>
-
+                                    {selectedPlanId === index && (
+                                        <WhatsAppModal
+                                            isOpen={true}
+                                            onClose={closeModal}
+                                            plan={{ name: planTitle(plan), price: formatCOP(price), featured: tema }}
+                                        />
+                                    )}
                                 </div>
-
-                            ))}
-
-                        </div>
-                    )}
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
             <footer className="bg-gray-800 text-white py-12">
@@ -656,17 +314,7 @@ export default function EnhancedPlansSection() {
 
             <FloatingSocial />
             <Boton />
-            <FloatingWhatsApp
-                phoneNumber="+573184550936"
-                accountName="PSI"
-                avatar="/logo.png"
-                darkMode={true}
-                statusMessage="Normalmente responde en 1 hora"
-                chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-                placeholder="Escribe un mensaje"
-                notification={true}
-                chatboxHeight={340}
-            />
+            <WhatsAppFlotante />
         </>
     );
 }

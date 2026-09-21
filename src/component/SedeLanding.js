@@ -7,10 +7,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import Navbar from "@/component/navbar";
 import FloatingSocial from "@/component/redes";
 import Boton from "@/component/botonsubir";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 import { canalesDestacados } from "@/lib/sedesData";
+import { formatCOP, planTitle } from "@/lib/content";
 
-export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descubreHref, contactScope }) {
+// sedesList: sedes (con sus planes) que muestra la página; con más de una aparece el selector.
+// contactScope: id de sede o de grupo que limita los contactos del menú superior.
+export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, contactScope }) {
   const [activa, setActiva] = useState(sedesList[0].id);
   const sede = sedesList.find((s) => s.id === activa) || sedesList[0];
   const mostrarSelector = sedesList.length > 1;
@@ -42,11 +45,11 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descub
             <p className="text-lg md:text-xl max-w-2xl font-light">{heroSubtitle}</p>
 
             <Link
-              href={descubreHref}
+              href={`/descubre/${sede.id}`}
               className="mt-8 inline-flex items-center gap-2 bg-white/10 border border-white/30 hover:bg-white/20 text-white font-semibold py-2.5 px-5 rounded-xl transition-all"
             >
               <QrCode size={18} />
-              Ver la página con el código QR
+              Ver el código QR de {sede.ciudad}
             </Link>
           </div>
         </div>
@@ -111,7 +114,7 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descub
                   <Tv className="text-[#0e6493]" size={20} />
                   <span className="text-sm">Televisión Digital sola</span>
                 </div>
-                <span className="text-xl font-bold text-[#e31e25]">{sede.tvPrice}</span>
+                <span className="text-xl font-bold text-[#e31e25]">{formatCOP(sede.tvPrice)}</span>
               </div>
             </div>
 
@@ -122,7 +125,7 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descub
 
               <div className="grid grid-cols-2 gap-5">
                 {sede.plans.map((plan, i) => {
-                  const featured = i === sede.plans.length - 1;
+                  const featured = plan.destacado;
                   return (
                     <div
                       key={i}
@@ -140,13 +143,13 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descub
                         <Wifi className={featured ? "text-white" : "text-[#0e6493]"} size={22} />
                       </div>
                       <p className={`text-lg font-bold ${featured ? "text-white" : "text-gray-800"}`}>
-                        {plan.megas} Megas
+                        {planTitle(plan)}
                       </p>
                       <p className={`text-sm mb-2 ${featured ? "text-blue-100" : "text-gray-500"}`}>
                         + Televisión
                       </p>
                       <p className={`text-3xl font-extrabold ${featured ? "text-white" : "text-[#e31e25]"}`}>
-                        {plan.price}
+                        {formatCOP(plan.price)}
                       </p>
                     </div>
                   );
@@ -258,7 +261,7 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descub
                   </a>
                 </li>
                 <li>
-                  <a href={descubreHref} className="text-gray-300 hover:text-white transition-colors duration-200">
+                  <a href="/descubre" className="text-gray-300 hover:text-white transition-colors duration-200">
                     Código QR de PSI
                   </a>
                 </li>
@@ -290,17 +293,7 @@ export default function SedeLanding({ sedesList, heroTitle, heroSubtitle, descub
 
       <FloatingSocial />
       <Boton />
-      <FloatingWhatsApp
-        phoneNumber={`+${sede.whatsapp}`}
-        accountName={`PSI ${sede.ciudad}`}
-        avatar="/logo.png"
-        darkMode={true}
-        statusMessage="Normalmente responde en 1 hora"
-        chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-        placeholder="Escribe un mensaje"
-        notification={true}
-        chatboxHeight={340}
-      />
+      <WhatsAppFlotante scope={sede.id} accountName={`PSI ${sede.ciudad}`} />
     </>
   );
 }

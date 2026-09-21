@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 const Map = dynamic(() => import("@/component/mapa"), {
@@ -111,17 +111,7 @@ export default function Cobertura() {
 
       <FloatingSocial />
       <Boton />
-     <FloatingWhatsApp
-            phoneNumber="+573184550936"
-            accountName="PSI"
-            avatar="/logo.png"
-            darkMode={true}
-            statusMessage="Normalmente responde en 1 hora"
-            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-            placeholder="Escribe un mensaje"
-            notification={true}
-            chatboxHeight={340}
-          />
+     <WhatsAppFlotante />
     </>
   );
 }

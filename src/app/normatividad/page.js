@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Head from 'next/head';
 import Navbar from '@/component/navbar';
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 import {
     ChevronRight, Shield, FileText, User, Lock, Database,
     Phone, AlertTriangle, CheckCircle, ExternalLink, List
@@ -529,17 +529,7 @@ export default function InternetSano() {
         </div>
       </footer>
             
-                  <FloatingWhatsApp
-                        phoneNumber="+573184550936"
-                        accountName="PSI"
-                        avatar="/logo.png"
-                        darkMode={true}
-                        statusMessage="Normalmente responde en 1 hora"
-                        chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-                        placeholder="Escribe un mensaje"
-                        notification={true}
-                        chatboxHeight={340}
-                      />
+                  <WhatsAppFlotante />
                   <FloatingSocial />
                   <Boton />
         </div>

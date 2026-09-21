@@ -4,11 +4,13 @@ import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
 import { FaWhatsapp } from "react-icons/fa";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import { useSedesVisibles } from "@/component/ContentProvider";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Empresa() {
+  const sedes = useSedesVisibles();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -123,33 +125,17 @@ export default function Empresa() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b hover:bg-gray-50 transition-colors">
-                    <td className="py-4 px-6 font-medium whitespace-nowrap">San Gil</td>
-                    <td className="py-4 px-6 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <FaWhatsapp className="text-[#e31e25] mr-2" /> +573184550936
-                      </div>
-                    </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 9 # 9-94</td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-50 transition-colors">
-                    <td className="py-4 px-6 font-medium whitespace-nowrap">Socorro</td>
-                    <td className="py-4 px-6 whitespace-nowrap">
-                      <div className="flex items-center">
-                      <FaWhatsapp className="text-[#e31e25] mr-2" /> +573188237392
-                      </div>
-                    </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 14 # 13- 41 Felipe Plaza local 101</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50 transition-colors">
-                    <td className="py-4 px-6 font-medium whitespace-nowrap">Piedecuesta</td>
-                    <td className="py-4 px-6 whitespace-nowrap">
-                      <div className="flex items-center">
-                      <FaWhatsapp className="text-[#e31e25] mr-2" /> +573187305239
-                      </div>
-                    </td>
-                    <td className="py-4 px-6 whitespace-nowrap">Carrera 7 # 4-63</td>
-                  </tr>
+                  {sedes.map((sede, i) => (
+                    <tr key={sede.id} className={`${i < sedes.length - 1 ? "border-b " : ""}hover:bg-gray-50 transition-colors`}>
+                      <td className="py-4 px-6 font-medium whitespace-nowrap">{sede.ciudad}</td>
+                      <td className="py-4 px-6 whitespace-nowrap">
+                        <div className="flex items-center">
+                          <FaWhatsapp className="text-[#e31e25] mr-2" /> +{sede.whatsapp}
+                        </div>
+                      </td>
+                      <td className="py-4 px-6 whitespace-nowrap">{sede.direccion}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -249,17 +235,7 @@ export default function Empresa() {
 
       <FloatingSocial />
       <Boton />
-      <FloatingWhatsApp
-            phoneNumber="+573184550936"
-            accountName="PSI"
-            avatar="/logo.png"
-            darkMode={true}
-            statusMessage="Normalmente responde en 1 hora"
-            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-            placeholder="Escribe un mensaje"
-            notification={true}
-            chatboxHeight={340}
-          />
+      <WhatsAppFlotante />
     </>
   );
 }

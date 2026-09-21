@@ -1,40 +1,13 @@
 "use client";
 import { Wifi, Tv, Star } from "lucide-react";
 import Link from "next/link";
-
-const plans = [
-  {
-    name: "PAQUETE FULL",
-    price: "$89.900",
-    includes: [
-      { icon: Wifi, text: "300 Megas" },
-    ],
-    featured: true,
-  },
-  {
-    name: "PAQUETE 200MB",
-    price: "$79.900",
-    includes: [
-      { icon: Wifi, text: "500 Megas" },
-    ],
-  },
-  {
-    name: "PAQUETE 100MB",
-    price: "$69.900",
-    includes: [
-      { icon: Wifi, text: "100 Megas" },
-    ],
-  },
-  {
-    name: "PAQUETE 50MB",
-    price: "$59.900",
-    includes: [
-      { icon: Wifi, text: "50 Megas" },
-    ],
-  },
-];
+import { useContent, usePlanesPrincipales } from "@/component/ContentProvider";
+import { formatCOP, planTitle } from "@/lib/content";
 
 export default function PlansSection() {
+  const { recargoEmpresa } = useContent();
+  const plans = usePlanesPrincipales().plans;
+
   return (
     <div className="relative py-12 bg-white overflow-hidden">
       <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/3.svg')] before:bg-cover before:bg-center before:opacity-20"></div>
@@ -54,6 +27,7 @@ export default function PlansSection() {
         <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
           Disfruta de la mejor conexión de internet y entretenimiento con nuestros planes diseñados para ti.
         </p>
+        <p className="text-sm font-bold uppercase tracking-wide text-[#e31e25] mt-3">Planes Hogar y Microempresas</p>
       </div>
 
       {/*Planes */}
@@ -74,11 +48,12 @@ export default function PlansSection() {
 
            
             <div>
-              <h3 className={`text-2xl font-extrabold ${plan.featured ? "text-white" : "text-[#0e6493]"} mb-4`}>
-                {plan.name}
+              <h3 className={`text-2xl font-extrabold ${plan.featured ? "text-white" : "text-[#0e6493]"} mb-1`}>
+                {planTitle(plan)}
               </h3>
+              <p className={`text-sm font-semibold mb-4 ${plan.featured ? "text-blue-100" : "text-[#0e6493]"}`}>+ televisión</p>
               <div className={`text-5xl font-bold ${plan.featured ? "text-white" : "text-[#e31e25]"} mb-1`}>
-                {plan.price}
+                {formatCOP(plan.price)}
               </div>
               <p className={`text-sm ${plan.featured ? "text-gray-200" : "text-gray-600"} mb-8`}>
                 IVA Incluido
@@ -91,23 +66,25 @@ export default function PlansSection() {
             {/* Lista de beneficios */}
             <div className="flex-grow">
               <ul className={`space-y-4 mb-8 ${plan.featured ? "text-gray-100" : "text-gray-700"}`}>
-                {plan.includes.map((item, i) => (
-                  <li key={i} className="flex justify-center items-center space-x-3">
-                    {item.icon ? (
-                      <div className={`flex items-center justify-center p-2 rounded-full shadow-md ${plan.featured ? "bg-white/20" : "bg-[#0e6493]/10"}`}>
-                        <item.icon className={`${plan.featured ? "text-white" : "text-[#0e6493]"} h-5 w-5`} />
-                      </div>
-                    ) : (
-                      <div className="w-9"></div>
-                    )}
-                    <span className="font-medium">{item.text}</span>
-                  </li>
-                ))}
+                <li className="flex justify-center items-center space-x-3">
+                  <div className={`flex items-center justify-center p-2 rounded-full shadow-md ${plan.featured ? "bg-white/20" : "bg-[#0e6493]/10"}`}>
+                    <Wifi className={`${plan.featured ? "text-white" : "text-[#0e6493]"} h-5 w-5`} />
+                  </div>
+                  <span className="font-medium">Fibra óptica ultraveloz</span>
+                </li>
+                <li className="flex justify-center items-center space-x-3">
+                  <div className={`flex items-center justify-center p-2 rounded-full shadow-md ${plan.featured ? "bg-white/20" : "bg-[#0e6493]/10"}`}>
+                    <Tv className={`${plan.featured ? "text-white" : "text-[#0e6493]"} h-5 w-5`} />
+                  </div>
+                  <span className="font-medium">Televisión digital</span>
+                </li>
               </ul>
             </div>
-            <div className={`mt-4 text-xs ${plan.featured ? "text-white" : "text-[#0e6493]"}`}>
-              * Para empresas, se cobra un adicional de $10.000.
-            </div>
+            {recargoEmpresa > 0 && (
+              <div className={`mt-4 text-xs ${plan.featured ? "text-white" : "text-[#0e6493]"}`}>
+                * Para empresas, se cobra un adicional de {formatCOP(recargoEmpresa)}.
+              </div>
+            )}
           </div>
         ))}
       </div>

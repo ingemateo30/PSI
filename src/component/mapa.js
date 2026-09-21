@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import Boton from "@/component/contratarmapa"
 import L from "leaflet";
 import { MapPin, Phone, Clock, Mail, ExternalLink } from "lucide-react";
+import { useSedesVisibles } from "@/component/ContentProvider";
 
 
 
@@ -20,37 +21,9 @@ const iconoPersonalizado = new L.Icon({
   shadowAnchor: [12, 41]
 });
 
-const sedes = [
-  { 
-    ciudad: "San Gil", 
-    lat: 6.5536, 
-    lng: -73.1308, 
-    direccion: "Carrera 9 # 9-94", 
-    telefono: "3184550936",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
-    imagen: "/sedes/sangil.jpg"
-  },
-  { 
-    ciudad: "Socorro", 
-    lat: 6.4668, 
-    lng: -73.2620, 
-    direccion: "Carrera 14 # 13-41 Felipe Plaza local 101", 
-    telefono: "3188237392",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
-    imagen: "/sedes/socorro.jpg"
-  },
-  { 
-    ciudad: "Piedecuesta", 
-    lat: 6.9895, 
-    lng: -73.0516, 
-    direccion: "Carrera 7 # 4-63", 
-    telefono: "3187305239",
-    horario: "Lunes a Viernes: 8:00 AM - 6:00 PM / Sábados: 8:00 AM – 12:00 PM",
-    imagen: "/sedes/piedecuesta.jpg"
-  },
-];
-
 export default function MapaSedes() {
+  // Solo las sedes con coordenadas se pueden ubicar en el mapa.
+  const sedes = useSedesVisibles().filter((s) => s.lat !== null);
   const [selectedSede, setSelectedSede] = useState(null);
   const [mapKey, setMapKey] = useState(1);
 
@@ -135,12 +108,12 @@ export default function MapaSedes() {
                 
                 <div className="flex items-start">
                   <Phone className="text-[#e31e25] mr-3 mt-1" size={18} />
-                  <p className="text-gray-700">{selectedSede.telefono}</p>
+                  <p className="text-gray-700">{selectedSede.whatsappDisplay}</p>
                 </div>
                 
                 <div className="flex items-start">
                   <Clock className="text-[#e31e25] mr-3 mt-1" size={18} />
-                  <p className="text-gray-700">{selectedSede.horario}</p>
+                  <p className="text-gray-700">{selectedSede.horario || "Consulta el horario por WhatsApp"}</p>
                 </div>
               </div>
                       </div>
@@ -158,8 +131,9 @@ export default function MapaSedes() {
               zoomControl={false}
             >
               <TileLayer
-                url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                maxZoom={19}
               />
               {sedes.map((sede, index) => (
                 <Marker 
@@ -174,7 +148,7 @@ export default function MapaSedes() {
                       <div className="flex justify-center space-x-2 text-xs">
                         <span className="inline-flex items-center">
                           <Phone size={12} className="mr-1" />
-                          {sede.telefono}
+                          {sede.whatsappDisplay}
                         </span>
                       </div>
                     </div>

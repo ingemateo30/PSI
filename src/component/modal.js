@@ -1,30 +1,21 @@
 import { useState } from "react";
 import { Wifi, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useSedesVisibles } from "@/component/ContentProvider";
 
+// plan: { name: "50 Megas", price: "$59.900", featured }
 const WhatsAppModal = ({ isOpen, onClose, plan }) => {
+    const visibles = useSedesVisibles();
     if (!isOpen) return null;
 
-    const sedes = [
-        {
-            name: "Sede San Gil",
-            address: "Carrera 9 # 9-94",
-            phone: "573184550936"
-        },
-        {
-            name: "Sede Socorro",
-            address: "Carrera 14 # 10-45",
-            phone: "573188237392"
-        },
-        {
-            name: "Sede Piedecuesta",
-            address: "Carrera 7 # 4-63",
-            phone: "573187305239"
-        }
-    ];
+    const sedes = visibles.map((s) => ({
+        name: `Sede ${s.ciudad}`,
+        address: s.direccion,
+        phone: s.whatsapp,
+    }));
 
     const handleContactClick = (phone) => {
-        const message = encodeURIComponent(`Hola, estoy interesado en el plan ${plan.name} de ${plan.speed} Megas por ${plan.price}/mes. ¿Podrían brindarme más información?`);
+        const message = encodeURIComponent(`Hola, estoy interesado en el plan ${plan.name} por ${plan.price}/mes. ¿Podrían brindarme más información?`);
         window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
         onClose();
     };

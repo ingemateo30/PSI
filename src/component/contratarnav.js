@@ -2,9 +2,10 @@
 import { useState, useEffect, useRef } from "react";
 import { X, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSedesContacto } from "@/component/ContentProvider";
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function BotonContratacion() {
+export default function BotonContratacion({ scope }) {
     const [showModal, setShowModal] = useState(false);
     const modalRef = useRef(null);
 
@@ -31,11 +32,7 @@ export default function BotonContratacion() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const sedes = [
-        { id: 1, nombre: "San Gil", direccion: "Carrera 9 # 9-94", telefono: "573184550936", mensaje: "Hola, quiero más información sobre su servicio en San Gil" },
-        { id: 2, nombre: "Socorro", direccion: "Carrera 14 # 10-45", telefono: "573188237392", mensaje: "Hola, quiero más información sobre su servicio en Socorro" },
-        { id: 4, nombre: "Piedecuesta", direccion: "Carrera 7 # 4-63", telefono: "573187305239", mensaje: "Hola, quiero más información sobre su servicio en Piedecuesta" },
-    ];
+    const sedes = useSedesContacto(scope);
 
     const abrirWhatsApp = (telefono, mensaje) => {
         const mensajeCodificado = encodeURIComponent(mensaje);

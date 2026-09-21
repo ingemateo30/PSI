@@ -6,10 +6,13 @@ import Navbar from '@/component/navbar';
 import FloatingSocial from '@/component/redes';
 import Boton from '@/component/botonsubir';
 import Suscribirse from '@/component/botonsuscripcion'
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 import { motion } from "framer-motion";
+import { usePlanesPrincipales } from "@/component/ContentProvider";
+import { formatCOP } from "@/lib/content";
 
 export default function Television() {
+  const { tvPrice } = usePlanesPrincipales();
   const canales = {
     "Noticias": {
       channels: ["CNN", "BBC News", "Caracol Noticias", "RCN Noticias", "NTN24"],
@@ -91,7 +94,7 @@ export default function Television() {
             <div className="p-8">
               <div className="flex justify-between items-center mb-8">
                 <div>
-                  <p className="text-4xl font-bold text-[#e31e25]">$46.900 <span className="text-lg text-gray-600 font-normal">/mes</span></p>
+                  <p className="text-4xl font-bold text-[#e31e25]">{formatCOP(tvPrice)} <span className="text-lg text-gray-600 font-normal">/mes</span></p>
                   <p className="text-gray-600 mt-1">Sin cláusulas de permanencia</p>
                 </div>
                 <Suscribirse />
@@ -280,17 +283,7 @@ export default function Television() {
 
       <FloatingSocial />
       <Boton />
-      <FloatingWhatsApp
-        phoneNumber="+573184550936"
-        accountName="PSI"
-        avatar="/logo.png"
-        darkMode={true}
-        statusMessage="Normalmente responde en 1 hora"
-        chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-        placeholder="Escribe un mensaje"
-        notification={true}
-        chatboxHeight={340}
-      />
+      <WhatsAppFlotante />
     </>
   );
 }

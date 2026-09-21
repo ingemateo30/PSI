@@ -19,7 +19,7 @@ import { toPng } from "html-to-image";
 import Navbar from "@/component/navbar";
 import FloatingSocial from "@/component/redes";
 import Boton from "@/component/botonsubir";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 
 const values = [
   { icon: Shield, label: "CONFIANZA" },
@@ -247,17 +247,7 @@ export default function DescubreFlyer({
 
       <FloatingSocial />
       <Boton />
-      <FloatingWhatsApp
-        phoneNumber="+573184550936"
-        accountName="PSI"
-        avatar="/logo.png"
-        darkMode={true}
-        statusMessage="Normalmente responde en 1 hora"
-        chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-        placeholder="Escribe un mensaje"
-        notification={true}
-        chatboxHeight={340}
-      />
+      <WhatsAppFlotante scope={contactScope} />
 
       {/* Elementos ocultos usados solo para generar las imágenes descargables */}
       <div style={{ position: "absolute", top: 0, left: 0, width: 0, height: 0, overflow: "hidden" }}>

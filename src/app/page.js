@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 const Map = dynamic(() => import("@/component/mapa"), { ssr: false });
 import Caracteristica from '@/component/caracteristicas';
 import Enlaces from '@/component/enlaces'
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsAppFlotante from "@/component/WhatsAppFlotante";
 import { ArrowRight, MapPin, Phone, Star, UserCheck, Leaf, Recycle, Sun, Truck, CloudLightning } from "lucide-react";
 import BotonPagaAhora from '@/component/BotonPagaAhora';
 
@@ -242,17 +242,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <FloatingWhatsApp
-        phoneNumber="+573184550936"
-        accountName="PSI"
-        avatar="/logo.png"
-        darkMode={true}
-        statusMessage="Normalmente responde en 1 hora"
-        chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-        placeholder="Escribe un mensaje"
-        notification={true}
-        chatboxHeight={340}
-      />
+      <WhatsAppFlotante />
       <FloatingSocial />
       <Boton />
       <BotonPagaAhora />

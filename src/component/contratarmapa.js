@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSedesContacto } from "@/component/ContentProvider";
 
 export default function BotonContratacion() {
   const [showModal, setShowModal] = useState(false);
@@ -25,11 +26,7 @@ export default function BotonContratacion() {
     };
   }, [showModal]);
 
-  const sedes = [
-    { id: 1, nombre: "San Gil", direccion: "Carrera 9 # 9-94", telefono: "573184550936", mensaje: "Hola, quiero más información sobre su servicio en San Gil" },
-    { id: 2, nombre: "Socorro", direccion: "Carrera 14 # 10-45", telefono: "573188237392", mensaje: "Hola, quiero más información sobre su servicio en Socorro" },
-    { id: 4, nombre: "Piedecuesta", direccion: "Carrera 7 # 4-63", telefono: "573187305239", mensaje: "Hola, quiero más información sobre su servicio en Piedecuesta" },
-  ];
+  const sedes = useSedesContacto();
 
   const abrirWhatsApp = (telefono, mensaje) => {
     const mensajeCodificado = encodeURIComponent(mensaje);

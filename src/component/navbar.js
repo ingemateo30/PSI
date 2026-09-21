@@ -4,19 +4,16 @@ import Image from "next/image";
 import { Globe, Tv, CreditCard, MapPin, Building2, Menu, X, Home, UserPlus, Search, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import Boton from "@/component/contratarnav"
+import { useSedesVisibles } from "@/component/ContentProvider";
 
-const CONTACTOS_TODAS = [
-    { label: "San Gil", phone: "573184550936", display: "3184550936" },
-    { label: "Socorro", phone: "573188237392", display: "3188237392" },
-    { label: "Piedecuesta", phone: "573187305239", display: "3187305239" },
-];
-
-const CONTACTOS_CAMPOALEGRE = [
-    { label: "Campoalegre", phone: "573165602425", display: "3165602425" },
-];
-
+// contactScope: id de una sede o de un grupo de sedes (p. ej. "campoalegre", "santander").
+// Sin contactScope se muestran las sedes del sitio principal.
 export default function Navbar({ contactScope }) {
-    const contactos = contactScope === "campoalegre" ? CONTACTOS_CAMPOALEGRE : CONTACTOS_TODAS;
+    const contactos = useSedesVisibles(contactScope).map((s) => ({
+        label: s.ciudad,
+        phone: s.whatsapp,
+        display: s.whatsappDisplay,
+    }));
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPagoMenuOpen, setIsPagoMenuOpen] = useState(false);
     const [isServiciosOpen, setIsServiciosOpen] = useState(false);
@@ -241,7 +238,7 @@ export default function Navbar({ contactScope }) {
 
                         <div className="hidden lg:flex items-center gap-4">
                             <div className="flex items-center">
-                                <Boton />
+                                <Boton scope={contactScope} />
                             </div>
                             <a
                                 href="https://pde1565542.epayco.me/recaudo/psi"
